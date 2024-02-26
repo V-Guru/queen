@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:id="@+id/activity_geo_automation_finish"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/background_screen_d_n"
+    android:paddingHorizontal="@dimen/uniform_extra_spacing">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+       android:paddingTop="@dimen/uniform_extra_spacing"
+        android:paddingBottom="@dimen/uniform_extra_spacing"
+        android:id="@+id/headerlayout"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/uniform_extra_spacing"
+            android:padding="@dimen/action_btn_padding"
+            app:srcCompat="@drawable/ic_back"/>
+
+        <TextView
+            android:id="@+id/tvTitle"
+            style="@style/TextViewTitleSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/uniform_extra_spacing"
+            android:layout_toEndOf="@id/home"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/uniform_extra_spacing"
+            android:layout_marginEnd="@dimen/margin_right_contact"
+            android:layout_centerHorizontal="true"
+            android:padding="6dp"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="2"
+            android:text="@string/contact_us"
+            android:textColor="@color/black_d_n" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="70dp">
+
+        <ImageView
+            android:id="@+id/logo_iv"
+            android:layout_width="@dimen/bottom_height"
+            android:layout_height="@dimen/grid_wallpaper_width_"
+            app:srcCompat="@drawable/ic_wozart_new_logo_svg"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_top_geo"
+            android:padding="@dimen/uniform_extra_spacing"
+            app:tint="@color/wozart_logo_color_d_n" />
+
+        <Button
+            android:id="@+id/btn_call"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/btn_mail"
+            android:layout_marginLeft="@dimen/scan_margin"
+            android:layout_marginRight="@dimen/scan_margin"
+            app:backgroundTint="@color/colorAccent"
+            android:background="@drawable/gradient_desin"
+            android:fontFamily="@font/gilroy_bold"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="@dimen/status_bar_height"
+            android:padding="@dimen/uniform_spacing"
+            android:text="Call us"
+            android:visibility="gone"
+            android:elevation="@dimen/uniform_half_spacing"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_title_size_big" />
+
+        <Button
+            android:id="@+id/btn_mail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            app:backgroundTint="@color/colorAccent"
+            android:layout_marginBottom="@dimen/statistics_load_width"
+            android:layout_marginLeft="@dimen/scan_margin"
+            android:layout_marginRight="@dimen/scan_margin"
+            android:background="@drawable/gradient_desin"
+            android:fontFamily="@font/gilroy_bold"
+            android:gravity="center"
+            android:padding="@dimen/uniform_spacing"
+            android:text="Mail us"
+            android:elevation="@dimen/uniform_half_spacing"
+            android:layout_centerInParent="true"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_title_size_big" />
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

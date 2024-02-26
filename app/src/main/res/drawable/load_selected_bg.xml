@@ -1,0 +1,14 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+    <!-- larger circle at the back -->
+    <item>
+        <shape xmlns:android="http://schemas.android.com/apk/res/android"
+            android:innerRadius="0dp"
+            android:shape="rectangle"
+            android:thicknessRatio="2"
+            android:useLevel="false" >
+            <solid android:color="?attr/loadBgIn" />
+            <stroke
+                android:width="@dimen/min_padding"
+                android:color="?attr/loadBgOut" /></shape>
+    </item>
+</layer-list>

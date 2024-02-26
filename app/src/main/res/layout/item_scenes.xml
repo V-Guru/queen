@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_scene"
+    android:layout_width="@dimen/wallpaper_grid"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/uniform_spacing"
+    card_view:cardCornerRadius="@dimen/uniform_spacing"
+    card_view:cardElevation="@dimen/uniform_half_spacing"
+    card_view:cardMaxElevation="@dimen/uniform_half_spacing">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rlScenes"
+        android:padding="@dimen/uniform_spacing"
+        android:orientation="vertical">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/scenesIcon"
+            android:layout_width="@dimen/small_icon_size"
+            android:layout_height="@dimen/small_icon_size"
+            android:layout_marginStart="@dimen/uniform_spacing"
+            android:paddingTop="@dimen/uniform_spacing"
+            android:paddingBottom="@dimen/uniform_spacing"
+            android:layout_centerVertical="true"
+            card_view:srcCompat="@drawable/ic_enter_off" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/scene_update"
+            android:layout_width="@dimen/uniform_extra_spacing"
+            android:layout_height="@dimen/uniform_extra_spacing"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="@dimen/uniform_half_spacing"
+            android:scaleType="fitXY"
+            android:visibility="gone"
+            card_view:srcCompat="@drawable/ic_spin_scene_update" />
+        <TextView
+            android:id="@+id/scenesTitle"
+            style="@style/TextViewNormal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_centerVertical="true"
+            android:ems="10"
+            android:layout_toEndOf="@+id/scenesIcon"
+            android:maxLines="1"
+            android:padding="@dimen/uniform_half_spacing"
+            android:textSize="@dimen/forteen_sp" />
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

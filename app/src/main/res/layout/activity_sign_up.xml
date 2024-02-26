@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/activity_horizontal_margin"
+    android:id="@+id/activity_main"
+    android:background="@color/white"
+    android:clipToPadding="false">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="3">
+
+            <RelativeLayout
+                android:layout_width="@dimen/logo_border"
+                android:layout_height="@dimen/logo_border"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/layout_padding_medium"
+                android:layout_weight="1"
+                android:background="@drawable/circle_no_theme">
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/logo_iv"
+                    android:layout_width="@dimen/logo_profile"
+                    android:layout_height="@dimen/logo_profile"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/round_account" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_weight="2"
+
+                android:orientation="vertical">
+
+
+                <RelativeLayout
+                    android:id="@+id/et_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:id="@+id/name_rl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/til_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginTop="@dimen/normal_margin"
+                            >
+
+
+                            <com.wozart.aura.ui.customview.CustomEditText
+                                android:id="@+id/input_name"
+                                style="@style/EditTextStyle"
+                                android:hint="@string/hint_name"
+                                android:imeOptions="actionNext"
+                                android:inputType="textPersonName"
+                                android:maxLines="1"
+                                android:singleLine="true"
+                                android:textColor="@color/black"
+                                />
+
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/email_rl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/name_rl">
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/til_email"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginTop="@dimen/normal_margin"
+                            >
+
+
+                            <com.wozart.aura.ui.customview.CustomEditText
+                                android:id="@+id/input_email"
+                                style="@style/EditTextStyle"
+                                android:hint="@string/hint_email_id"
+                                android:imeOptions="actionNext"
+                                android:inputType="textEmailAddress"
+                                android:maxLines="1"
+                                android:singleLine="true"
+                                android:textColor="@color/black"
+                                />
+
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/mobile_rl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/email_rl">
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/til_mobile"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            >
+
+                            <com.wozart.aura.aura.ui.customview.CustomEditText
+                                android:id="@+id/input_mobile"
+                                style="@style/EditTextStyle"
+                                android:hint="@string/hint_mobile_number"
+                                android:imeOptions="actionNext"
+                                android:inputType="phone"
+                                android:maxLength="18"
+                                android:maxLines="1"
+                                android:singleLine="true"
+                                android:textColor="@color/black"
+                                />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/pin_rl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/mobile_rl">
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/til_pin"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            >
+
+                            <com.wozart.aura.ui.customview.CustomEditText
+                                android:id="@+id/input_password"
+                                style="@style/EditTextStyle"
+                                android:hint="@string/hint_password"
+                                android:inputType="textPassword"
+                                android:maxLength="18"
+                                android:maxLines="1"
+                                android:singleLine="true"
+                                android:imeOptions="actionNext"
+                                android:textColor="@color/black"
+                                />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/confirm_pin_rl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/pin_rl">
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/til_confirm_pin"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            >
+
+                            <com.wozart.aura.ui.customview.CustomEditText
+                                android:id="@+id/input_confirm_password"
+                                style="@style/EditTextStyle"
+                                android:hint="@string/hint_cnf_password"
+                                android:inputType="textPassword"
+                                android:maxLength="18"
+                                android:maxLines="1"
+                                android:singleLine="true"
+                                android:imeOptions="actionDone"
+                                android:textColor="@color/black"
+                                />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                    </RelativeLayout>
+
+
+                    <com.wozart.aura.ui.customview.CustomButton
+                        android:id="@+id/btn_submit"
+                        style="@style/ButtonNoThemelStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_sign_up"
+                        android:textAllCaps="true"
+                        android:layout_below="@+id/confirm_pin_rl"
+                        android:layout_marginTop="@dimen/top_margin"
+                        app:elevation="2dp"
+                        android:stateListAnimator="@null"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/btn_submit"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/layout_padding"
+                        android:layout_marginBottom="@dimen/normal_margin"
+                        android:orientation="horizontal">
+
+                        <com.wozart.aura.ui.customview.CustomTextView
+                            android:id="@+id/text_existingUser"
+                            style="@style/TextViewSmall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:text="@string/text_existing_user"
+                           />
+
+                        <com.wozart.aura.ui.customview.CustomTextView
+                            android:id="@+id/text_login"
+                            style="@style/TextViewAccent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:padding="@dimen/normal_padding"
+                            android:text="@string/text_login_here"
+
+                             />
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

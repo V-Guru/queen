@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background_screen_d_n"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/uniform_extra_spacing">
+
+    <RelativeLayout
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="@dimen/uniform_extra_spacing"
+        android:paddingBottom="@dimen/uniform_extra_spacing">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            app:tint="@color/black_d_n"
+            android:padding="@dimen/action_btn_padding"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/gilroy_bold"
+            android:textSize="@dimen/text_normal_size"
+            android:gravity="center"
+            android:padding="6dp"
+            android:text="@string/about_us"
+            android:textColor="@color/black_d_n" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top_layout"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/logo_layout"
+            android:layout_width="@dimen/logo_border"
+            android:layout_height="@dimen/logo_border"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/layout_padding_medium">
+
+            <ImageView
+                android:layout_width="@dimen/logo_border"
+                android:layout_height="@dimen/logo_border"
+                android:src="@drawable/wozart_logo_about" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/text_company"
+            style="@style/TextViewTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/logo_layout"
+            android:layout_marginTop="@dimen/uniform_extra_spacing"
+            android:gravity="center_horizontal"
+            android:text="@string/wozart_company_name" />
+
+        <TextView
+            android:id="@+id/info_company_mail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_company"
+            android:fontFamily="@font/gilroy_bold"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/forteen_sp"
+            android:gravity="center_horizontal"
+            android:linksClickable="true"
+            android:text="www.wozart.com" />
+
+        <View
+            android:id="@+id/seperator_company_details"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/info_company_mail"
+            android:layout_marginTop="@dimen/top_margin"
+            android:background="@color/gray" />
+
+        <TextView
+            android:id="@+id/text_platform"
+            style="@style/TextViewNormal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/home_plus_size"
+            android:layout_below="@+id/seperator_company_details"
+            android:layout_marginTop="@dimen/uniform_extra_spacing"
+            android:text="@string/platform"
+            android:textColor="@color/black_d_n" />
+
+        <TextView
+            android:id="@+id/text_version"
+            style="@style/TextViewNormal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/seperator_company_details"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/uniform_extra_spacing"
+            android:layout_marginEnd="@dimen/uniform_large_spacing"
+            android:text="@string/build_version" />
+
+
+        <RelativeLayout
+            android:id="@+id/layout_platform"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_platform">
+
+            <TextView
+                android:id="@+id/platform"
+                style="@style/TextViewNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/uniform_half_spacing"
+                android:paddingHorizontal="@dimen/home_plus_size"
+                android:gravity="center_horizontal"
+                android:text="Android" />
+
+            <TextView
+                android:id="@+id/version_number"
+                style="@style/TextViewNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/uniform_half_spacing"
+                android:layout_marginEnd="@dimen/more_menu_icon"
+                android:textColor="@color/gray" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_platform"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="@dimen/uniform_extra_spacing">
+
+            <TextView
+                android:id="@+id/build_date"
+                style="@style/TextViewNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/build_date"
+                android:textColor="@color/gray" />
+
+            <TextView
+                android:id="@+id/build_date_info"
+                style="@style/TextViewNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/build_date"
+                android:textColor="@color/gray" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

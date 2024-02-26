@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/btn_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/uniform_extra_spacing">
+
+    <RelativeLayout
+        android:layout_width="@dimen/margin_top_geo"
+        android:layout_height="@dimen/margin_top_geo"
+        android:id="@+id/rlImage"
+        android:background="@drawable/circle_no_theme"
+        android:visibility="visible">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/btn_control"
+            android:layout_width="@dimen/plus_size"
+            android:layout_height="@dimen/plus_size"
+            android:layout_centerInParent="true"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="@dimen/action_btn_padding" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/btn_ac_control"
+            android:layout_width="@dimen/plus_size"
+            android:layout_height="@dimen/plus_size"
+            android:layout_centerInParent="true"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="@dimen/action_btn_padding"
+            android:visibility="gone" />
+        <TextView
+            android:id="@+id/ac_temp_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:padding="@dimen/action_btn_padding"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_menu_size"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</RelativeLayout>

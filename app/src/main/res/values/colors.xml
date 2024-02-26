@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3eb0f7</color>
+    <color name="colorPrimaryDark">#6E6E6E</color>
+    <color name="colorAccent">#3eb0f7</color>
+    <color name="colorAccent_transparent">#BF3eb0f7</color>
+    <color name="normal_text">#6E6E6E</color>
+    <color name="splash_background">#000000</color>
+    <color name="edit_text_line">#48393E</color>
+    <color name="white">#FFFFFF</color>
+    <color name="transparent_white">#AEFFFFFF</color>
+    <color name="header_background">#F5F5F5</color>
+    <color name="black_d_n">#000000</color>
+    <color name="black">#000000</color>
+    <color name="transparent_black">#BF000000</color>
+    <color name="gray">#6E6E6E</color>
+    <color name="light_gray">#B7B7B7</color>
+    <color name="hint">#D88E8888</color>
+    <color name="white_smoke_d_n">#F5F5F5</color>
+    <color name="white_smoke_transparent">#BFF5F5F5</color>
+    <color name="grid_text">#7B7B7B</color>
+    <color name="more_text_d_n">#212121</color>
+    <color name="colorGrey">#ACACAC</color>
+    <color name="divider_color">#D0D0D0</color>
+    <color name="section_color">#8A8A8A</color>
+    <color name="Red">#FF0000</color>
+    <color name="light_black">#170A0A</color>
+    <color name="white_gray">#F5F5F5</color>
+    <color name="white_gray_item_load">#40F5F5F5</color>
+    <color name="transparent_white_gray">#BFF5F5F5</color>
+    <color name="light_silver">#EAEAEA</color>
+    <color name="smoke_black">#2C2C2C</color>
+    <color name="circle_red">#cef93946</color>
+    <color name="inbox_primary">#f3f9f3</color>
+    <color name="trans">#7fbadef5</color>
+    <color name="leave_trans">#88ffffff</color>
+    <color name="gray_light1">#ededed</color>
+    <color name="colorMapCircleFill">#40651FFF</color>
+    <color name="lightColorPrimary">#3eb0f7</color>
+    <color name="lightColorPrimaryDark">#FFFFFF</color>
+    <color name="lightColorAccent">#3eb0f7</color>
+    <color name="darkColorPrimary">#FF0000</color>
+    <color name="darkColorPrimaryDark">#000000</color>
+    <color name="darkColorAccent">#FF0000</color>
+    <color name="secondairy_color">#FCA72B</color>
+    <color name="green">#008000</color>
+    <color name="nav_bar_bg">#BFFFFFFF</color>
+    <color name="nav_item_active">@color/colorAccent</color>
+    <color name="nav_item_inactive">#6E000000</color>
+    <color name="time_layout_color">#791D1D1D</color>
+    <color name="list_item_inactive">#B3FFFFFF</color>
+    <color name="sjhcdh">#242f3e</color>
+    <color name="btn_deselect">#F0EDED</color>
+    <color name="background_screen_d_n">#E8EEEF</color>
+    <color name="stroke_color">#CCCCCC</color>
+    <color name="wozart_logo_color_d_n">#142C59</color>
+    <color name="icon_color_d_n">#595959</color>
+    <color name="popup_background_d_n">#FFFFFF</color>
+    <color name="point_color">#EFBA8C</color>
+    <color name="point_halo_color">#EAC3A1</color>
+    <color name="wheel_unactive_color">#BDBBBB</color>
+    <color name="wheel_active_color">#F4B456</color>
+    <color name="transparent_bg">#41B5B2AF</color>
+    <color name="stroke_d_n">#DDDDDD</color>
+    <color name="card_d_n">#FBFAFA</color>
+    <color name="light_black_screen">#121212</color>
+
+
+    <array name="text_colors">
+        <item>#03A9F4</item>
+        <item>#ACDEF4</item>
+        <item>#FFFFFF</item>
+        <item>#FF9800</item>
+        <item>#F8E0BC</item>
+
+    </array>
+
+</resources>

@@ -1,0 +1,40 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    ext.kotlin_version = '1.7.10'
+    ext.anko_version='0.10.5'
+
+
+    repositories {
+        google()
+        jcenter()
+        maven { url 'https://maven.google.com' }
+        maven { url "https://jitpack.io" }
+        mavenLocal()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:4.2.2'
+        classpath 'com.google.gms:google-services:4.3.3'
+        //classpath 'io.fabric.tools:gradle:1.31.2'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath 'com.google.protobuf:protobuf-gradle-plugin:0.8.18'
+        classpath 'com.google.firebase:firebase-crashlytics-gradle:2.3.0'
+        classpath 'com.amazonaws:aws-android-sdk-appsync-gradle-plugin:2.7.10'
+        classpath 'com.amplifyframework:amplify-tools-gradle-plugin:1.0.0'
+
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven { url 'https://maven.google.com' }
+        maven { url "https://jitpack.io" }
+        mavenLocal()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

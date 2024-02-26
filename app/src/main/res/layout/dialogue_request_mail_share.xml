@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_centerInParent="true"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_horizontal_margin"
+    android:paddingLeft="@dimen/dialog_margin"
+    android:paddingRight="@dimen/dialog_margin"
+    android:paddingTop="@dimen/activity_horizontal_margin"
+    android:background="@drawable/dialogue_drawable">
+
+
+    <TextView
+        android:id="@+id/tv_title"
+        style="@style/TextViewTitle"
+        android:layout_width="match_parent"
+        android:gravity="center_horizontal"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/uniform_extra_spacing"
+        android:text="Add Member"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_title"
+        android:id="@+id/mail_register"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:fontFamily="@font/opensans_regular"
+        android:textColor="@color/black_d_n"
+        android:layout_margin="@dimen/uniform_half_spacing"
+        android:text="@string/dialog_share"
+        />
+
+    <RelativeLayout
+        android:id="@+id/email_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/uniform_half_spacing"
+        android:layout_below="@+id/mail_register">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/hint"
+            android:layout_centerVertical="true"
+            app:hintTextColor="@color/hint"
+            android:padding="@dimen/uniform_spacing">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:fontFamily="@font/radomir_tinkov_gilroy_light"
+                android:inputType="textEmailAddress"
+                android:background="@android:color/transparent"
+                android:maxLines="1"
+                android:textStyle="bold"
+                android:singleLine="true"
+                android:paddingEnd="0dp"
+                android:paddingStart="0dp"
+                android:textSize="@dimen/text_sub_header_size"
+                android:hint="@string/dialog_title_email_required"
+                android:textColor="@color/black_d_n" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_normal_size"
+        android:layout_below="@id/email_rl"
+        android:layout_marginTop="@dimen/uniform_spacing"
+        android:background="@drawable/gradient_desin"
+        app:backgroundTint="@color/colorAccent"
+        android:elevation="@dimen/uniform_half_spacing"
+        android:padding="@dimen/uniform_spacing"
+        android:id="@+id/tv_share"
+        android:layout_alignParentRight="true"
+        android:textAllCaps="false"
+        android:text="@string/send_invite"
+        android:textColor="@color/white" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_normal_size"
+        android:layout_marginTop="@dimen/uniform_spacing"
+        android:layout_below="@id/email_rl"
+        android:elevation="@dimen/uniform_half_spacing"
+        android:background="@drawable/curved_rectangle_bg"
+        app:backgroundTint="@color/white_smoke_d_n"
+        android:padding="@dimen/uniform_spacing"
+        android:id="@+id/btn_cancel"
+        android:textAllCaps="false"
+        android:text="@string/txt_cancel"
+        android:textColor="@color/light_black" />
+
+
+</RelativeLayout>
+

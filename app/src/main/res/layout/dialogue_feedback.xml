@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_horizontal_margin"
+    android:paddingLeft="@dimen/dialog_margin"
+    android:paddingRight="@dimen/dialog_margin"
+    android:paddingTop="@dimen/activity_horizontal_margin"
+    android:background="@drawable/dialogue_drawable">
+
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:textSize="@dimen/text_title_size"
+        android:fontFamily="@font/gilroy_bold"
+        android:paddingTop="@dimen/dialog_margin"
+        android:text="@string/have_a_question"
+        />
+
+    <RelativeLayout
+        android:id="@+id/message_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/one_dp"
+        android:paddingBottom="@dimen/one_dp"
+        android:layout_below="@+id/tv_title">
+        <TextView
+            android:id="@+id/message"
+            android:textSize="@dimen/text_normal_size"
+            android:fontFamily="@font/gilroy_bold"
+            android:shadowRadius="2"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black_d_n"
+            android:text="@string/we_all_ears"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/device"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/normal_margin"
+            android:layout_below="@+id/message"
+            android:textColorHint="@color/light_gray"
+            app:boxStrokeColor="@color/stroke_d_n"
+            android:theme="@style/TextInputLayoutAppearance"
+            app:hintTextColor="@color/light_gray">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/device_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/radomir_tinkov_gilroy_light"
+                android:layout_below="@+id/message"
+                android:textSize="@dimen/forteen_sp"
+                android:hint="@string/enter_device_name"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/black_d_n" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/normal_margin"
+            android:layout_below="@+id/device"
+            android:textColorHint="@color/light_gray"
+            app:boxStrokeColor="@color/stroke_d_n"
+            android:theme="@style/TextInputLayoutAppearance"
+            app:hintTextColor="@color/light_gray">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/info_report"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/radomir_tinkov_gilroy_light"
+                android:layout_below="@+id/message"
+                android:textSize="@dimen/forteen_sp"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/black_d_n" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_normal_size"
+        android:layout_below="@+id/message_rl"
+        android:layout_marginTop="@dimen/uniform_spacing"
+        android:background="@drawable/gradient_desin"
+        app:backgroundTint="@color/colorAccent"
+        android:elevation="@dimen/uniform_half_spacing"
+        android:padding="@dimen/uniform_spacing"
+        android:id="@+id/btn_report_issue"
+        android:layout_alignParentEnd="true"
+        android:textAllCaps="false"
+        android:text="@string/text_submit"
+        android:textColor="@color/white" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_normal_size"
+        android:layout_marginTop="@dimen/uniform_spacing"
+        android:layout_below="@+id/message_rl"
+        android:elevation="@dimen/uniform_half_spacing"
+        android:background="@drawable/curved_rectangle_bg"
+        app:backgroundTint="@color/white_smoke_d_n"
+        android:padding="@dimen/uniform_spacing"
+        android:id="@+id/btn_cancel_issue"
+        android:textAllCaps="false"
+        android:text="@string/txt_cancel"
+        android:textColor="@color/light_black" />
+
+
+</RelativeLayout>

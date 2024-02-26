@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/uniform_spacing"
+    android:paddingBottom="@dimen/uniform_spacing"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="@dimen/normal_margin"
+    app:cardElevation="@dimen/elevation">
+
+    <LinearLayout
+        android:id="@+id/layout_remote"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/channelImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:padding="@dimen/uniform_spacing"
+            android:src="@drawable/netflix"
+            android:visibility="visible" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ivDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/channelName"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/uniform_spacing"
+                android:src="@drawable/ic_delete"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/channelName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/elevation"
+                android:layout_marginEnd="@dimen/elevation"
+                android:maxLength="13"
+                android:fontFamily="@font/radomir_tinkov_gilroy_light"
+                android:gravity="center_horizontal"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_medium_size"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/tvChannelNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/channelName"
+                android:layout_marginEnd="@dimen/elevation"
+                android:layout_marginTop="@dimen/uniform_half_spacing"
+                android:layout_marginBottom="@dimen/elevation"
+                android:fontFamily="@font/radomir_tinkov_gilroy_light"
+                android:gravity="center_horizontal"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_medium_size" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

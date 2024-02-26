@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient android:angle="0"
+        android:startColor="@color/secondairy_color"
+        android:endColor="@color/secondairy_color"
+        android:centerColor="@color/secondairy_color"/>
+    <padding
+        android:left="@dimen/one_dp"
+        android:right="@dimen/one_dp"
+        android:top="@dimen/one_dp"
+        android:bottom="@dimen/one_dp"/>
+
+    <corners
+        android:bottomLeftRadius="@dimen/uniform_spacing"
+        android:bottomRightRadius="@dimen/uniform_spacing"
+        android:topLeftRadius="@dimen/uniform_spacing"
+        android:topRightRadius="@dimen/uniform_spacing" />
+
+
+
+</shape>

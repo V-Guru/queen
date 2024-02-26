@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dialogue_drawable"
+    android:minWidth="@dimen/dialog_width"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvDialogTitle_"
+            style="@style/TextViewTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/btnEdit_"
+            android:padding="@dimen/uniform_spacing"
+            android:ellipsize="end"
+            android:maxLength="30"
+            android:text="@string/fan_dimming" />
+        <TextView
+            android:id="@+id/btnEdit_"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            app:drawableTint="@color/black_d_n"
+            android:drawableEnd="@drawable/ic_edit_new"
+            android:padding="@dimen/uniform_extra_spacing"
+            android:textColor="@color/colorAccent"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iconDevice"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:tint="@color/colorAccent"
+        android:layout_margin="@dimen/uniform_half_spacing"
+        app:srcCompat="@drawable/ic_fan_off" />
+
+
+    <com.warkiz.widget.IndicatorSeekBar
+        android:id="@+id/fanDim"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/uniform_spacing"
+        android:layout_marginRight="@dimen/uniform_spacing"
+        android:layout_marginTop="@dimen/uniform_spacing"
+        app:isb_indicator_color="@color/colorAccent"
+        app:isb_indicator_stay="true"
+        app:isb_indicator_type="circular_bubble"
+        app:isb_text_array="@array/dimming_value"
+        app:isb_tick_num="4"
+        app:isb_text_color="@color/black_d_n"
+        android:layout_marginBottom="@dimen/uniform_extra_spacing"
+        android:padding="@dimen/uniform_spacing"
+        app:isb_min="0"
+        app:isb_progress="0"
+        app:isb_seek_bar_type="discrete_ticks_texts"
+        app:isb_show_indicator="true"
+        app:isb_thumb_color="@color/colorAccent"
+        app:isb_track_background_bar_color="@color/secondairy_color"
+        app:isb_track_background_bar_size="@dimen/layout_padding"
+        app:isb_track_progress_bar_color="@color/colorAccent"
+        app:isb_track_progress_bar_size="@dimen/uniform_half_spacing" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:visibility="visible"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/btnEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/sickbar_width"
+            android:layout_marginEnd="@dimen/uniform_extra_spacing"
+            android:text="@string/action_edit"
+            android:visibility="gone"
+            android:padding="@dimen/action_btn_padding"
+            android:textColor="@color/colorAccent"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/btnDoneFan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/uniform_extra_spacing"
+            android:layout_marginTop="@dimen/uniform_spacing"
+            android:layout_marginBottom="@dimen/uniform_spacing"
+            android:background="@drawable/gradient_desin"
+            android:text="@string/text_done"
+            android:padding="@dimen/uniform_spacing"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_normal_size" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_screen_d_n"
+    android:paddingHorizontal="@dimen/uniform_extra_spacing"
+    tools:context=".ui.dashboard.more.NotificationActivity">
+
+    <TextView
+        android:id="@+id/emptyNotificationTv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fontFamily="@font/gilroy_bold"
+        android:gravity="center"
+        android:text="@string/notification_empty_screen"
+        android:textColor="@color/light_gray"
+        android:textSize="@dimen/twenty_two_sp"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/layout_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/uniform_extra_spacing"
+        android:paddingBottom="@dimen/uniform_extra_spacing"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/action_btn_padding"
+            android:src="@drawable/ic_back"
+            app:tint="@color/black_d_n" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/gilroy_bold"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/action_btn_padding"
+            android:text="@string/notification_title"
+            android:textColor="@color/black_d_n"
+            android:textSize="@dimen/text_normal_size" />
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout_header">
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list_notification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false" />
+    </FrameLayout>
+</RelativeLayout>

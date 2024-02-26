@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <!--Splash screen remove tag-->
+    <ImageView
+        android:id="@+id/background_login"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/login_screen_empty" />
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:padding="@dimen/activity_horizontal_margin"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false">
+
+            <RelativeLayout
+                android:id="@+id/toplogo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/logo_iv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="80dp"
+                    android:fontFamily="@font/opensans_regular"
+                    android:text="@string/login_text"
+                    android:textColor="#d8a330"
+                    android:textSize="@dimen/twenty_five_sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/logo_iv_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/logo_iv"
+                    android:fontFamily="@font/opensans_regular"
+                    android:text="@string/login_text_2"
+                    android:textColor="#d8a330"
+                    android:textSize="@dimen/twenty_five_sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/verify_account"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center_horizontal"
+                    android:text="@string/login_text_1"
+                    android:textColor="#dadfcf"
+                    android:textSize="@dimen/thirty_sp" />
+
+                <TextView
+                    android:id="@+id/verify_account_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/verify_account"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/opensans_regular"
+                    android:gravity="center_horizontal"
+                    android:text="@string/login_text_3"
+                    android:textColor="#dadfcf"
+                    android:textSize="@dimen/thirty_sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/verified_mail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_above="@+id/btn_submit"
+                android:gravity="center"
+                android:fontFamily="@font/gilroy_bold"
+                android:text="@string/verified"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/text_title_size"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btn_submit"
+                style="@style/ButtonNoThemelStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:elevation="@dimen/uniform_spacing"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="@dimen/plus_size"
+                app:backgroundTint="@color/secondairy_color"
+                android:background="@drawable/light_gradient"
+                android:fontFamily="@font/gilroy_bold"
+                android:gravity="center"
+                android:stateListAnimator="@null"
+                android:text="@string/login"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/twenty_two_sp"
+                android:visibility="visible" />
+
+        </RelativeLayout>
+    </ScrollView>
+</FrameLayout>

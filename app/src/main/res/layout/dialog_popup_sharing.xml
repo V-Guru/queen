@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerInParent="true"
+    android:background="@drawable/dialogue_drawable"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/dialog_margin"
+    android:paddingTop="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/dialog_margin"
+    android:paddingBottom="@dimen/plus_size">
+
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/radomir_tinkov_gilroy_light"
+        android:paddingTop="@dimen/normal_margin"
+        android:text="@string/delete_room"
+        android:textColor="@color/black_d_n"
+        android:textSize="@dimen/text_title_size"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/message_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_title"
+        android:paddingTop="@dimen/one_dp"
+        android:paddingBottom="@dimen/one_dp">
+
+        <TextView
+            android:id="@+id/message"
+            style="@style/TextViewSubHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_logout_message"
+            android:textColor="@color/black_d_n" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_yes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/message_rl"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/one_dp"
+        android:background="@drawable/gradient_desin"
+        android:elevation="@dimen/uniform_half_spacing"
+        android:padding="@dimen/uniform_spacing"
+        android:text="@string/txt_yes"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_normal_size"
+        app:backgroundTint="@color/colorAccent" />
+
+    <Button
+        android:id="@+id/btn_no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/message_rl"
+        android:layout_marginTop="@dimen/one_dp"
+        android:background="@drawable/curved_rectangle_bg"
+        android:elevation="@dimen/uniform_half_spacing"
+        android:padding="@dimen/uniform_spacing"
+        android:text="@string/txt_no"
+        android:textAllCaps="false"
+        android:textColor="@color/light_black"
+        android:textSize="@dimen/text_normal_size"
+        app:backgroundTint="@color/white_smoke_d_n" />
+
+</RelativeLayout>
+

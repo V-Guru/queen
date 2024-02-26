@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="contentDescription">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/dialog_padding">
+
+        <TextView
+            android:id="@+id/addAuraSwitchTv"
+            style="@style/TextViewPopup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/add_aura_switch_text"
+            android:textColor="@color/colorPrimary" />
+
+        <TextView
+            android:id="@+id/createScenesTv"
+            style="@style/TextViewPopup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/sub_header_vertical_margin"
+            android:text="@string/create_scenes_text" />
+
+        <TextView
+            android:id="@+id/addRoomTv"
+            style="@style/TextViewPopup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/sub_header_vertical_margin"
+            android:text="@string/add_room" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

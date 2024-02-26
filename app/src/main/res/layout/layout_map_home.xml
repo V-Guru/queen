@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_screen_d_n">
+
+    <RelativeLayout
+        android:id="@+id/layout_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/uniform_extra_spacing"
+        android:paddingTop="@dimen/uniform_extra_spacing"
+        android:paddingBottom="@dimen/uniform_extra_spacing"
+        tools:ignore="MissingConstraints">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/action_btn_padding"
+            android:src="@drawable/ic_keyboard_backspace_black_24px"
+            android:tint="@color/black"
+            app:tint="@color/black_d_n"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/gilroy_bold"
+            android:gravity="center"
+            android:padding="@dimen/action_btn_padding"
+            android:text="@string/locate_home"
+            android:textColor="@color/black_d_n"
+            android:textSize="@dimen/text_normal_size" />
+
+        <TextView
+            android:id="@+id/save_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/action_btn_padding"
+            android:text="@string/text_finish"
+            android:textColor="@color/black_d_n"
+            android:textSize="@dimen/text_title_small_size"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/uniform_spacing"
+        app:layout_constraintTop_toBottomOf="@+id/layout_header">
+
+        <RelativeLayout
+            android:id="@+id/rlSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/uniform_extra_spacing"
+            android:background="@drawable/curved_rectangle_bg">
+
+            <AutoCompleteTextView
+                android:id="@+id/enter_place"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/plus_size"
+                android:layout_toStartOf="@+id/cancel"
+                android:background="@null"
+                android:drawableStart="@drawable/ic_search_black_24dp"
+                android:drawablePadding="@dimen/action_btn_padding"
+                android:focusable="true"
+                android:hint="@string/place_autocomplete_search_hint"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingLeft="@dimen/uniform_spacing"
+                android:paddingRight="@dimen/uniform_spacing"
+                android:textColor="@color/black"
+                android:textColorHint="@color/light_gray" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/uniform_spacing"
+                android:src="@drawable/ic_close_black_24dp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/btn_search"
+                android:layout_width="@dimen/margin_top_geo"
+                android:layout_height="@dimen/margin_top_geo"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/uniform_spacing"
+                android:src="@drawable/ic_search_black_24dp"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlSearch"
+            android:background="@color/white_smoke_d_n"
+            android:layout_marginTop="@dimen/uniform_half_spacing"
+            android:layout_marginHorizontal="@dimen/layout_padding"
+            android:clipToPadding="false"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+
+        <fragment
+            android:id="@+id/map_id"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/recyclerView"
+            android:layout_marginTop="@dimen/uniform_extra_spacing" />
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

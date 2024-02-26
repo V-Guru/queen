@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/addAuraSwitch"
+        android:title="@string/add_devices" />
+    <item android:id="@+id/createScenes"
+        android:title="@string/create_scenes_text"
+        />
+    <item android:id="@+id/addRoom"
+        android:title="@string/add_room" />
+    <item android:id="@+id/addRemote"
+        android:title="@string/add_remote"
+        android:visible="false"/>
+    <item android:id="@+id/addCamera"
+        android:title="@string/add_camera"/>
+</menu>

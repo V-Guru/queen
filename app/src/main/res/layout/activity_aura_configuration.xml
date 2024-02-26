@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingHorizontal="@dimen/uniform_extra_spacing"
+    android:background="@color/background_screen_d_n"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="@dimen/uniform_extra_spacing"
+        android:paddingBottom="@dimen/uniform_extra_spacing">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/action_btn_padding"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:fontFamily="@font/gilroy_bold"
+            android:textSize="@dimen/text_normal_size"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:padding="6dp"
+            android:text="@string/how_to_configure"
+            android:textColor="@color/black_d_n" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top_layout"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/scene_extra_spacing">
+            <RelativeLayout
+                android:id="@+id/layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/uniform_half_spacing">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/radomir_tinkov_gilroy_light"
+                    android:text="@string/configure_aura_title"
+                    android:textColor="@color/black_d_n"
+                    android:justificationMode="inter_word"
+                    android:id="@+id/text"
+                    android:textSize="@dimen/text_medium_size"
+                    android:textStyle="bold"
+                    tools:targetApi="o" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/gray"
+                    android:layout_below="@+id/text"
+                    android:layout_marginTop="@dimen/uniform_half_spacing"
+                    android:layout_marginLeft="@dimen/uniform_half_spacing"
+                    android:layout_marginRight="@dimen/uniform_half_spacing"/>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/aura_configure_1"
+                android:layout_width="wrap_content"
+                android:layout_below="@+id/layout"
+                android:layout_marginTop="@dimen/scene_extra_spacing"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/configure_text_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/opensans_regular"
+                    android:text="@string/aura_configure"
+                    android:textColor="@color/black_d_n"
+                    android:textSize="@dimen/text_sub_header_size" />
+
+                <ImageView
+                    android:id="@+id/add_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/configure_text_1"
+                    android:padding="3dp"
+                    android:src="@drawable/icon_faq_add"
+                    app:tint="@color/black_d_n"/>
+
+                <TextView
+                    android:id="@+id/configure_text_1_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/add_icon"
+                    android:fontFamily="@font/opensans_regular"
+                    android:textColor="@color/black_d_n"
+                    android:text="@string/aura_configure_"
+                    android:textSize="@dimen/text_sub_header_size" />
+
+                <ImageView
+                    android:id="@+id/configure_1"
+                    android:layout_width="@dimen/width_button"
+                    android:layout_height="@dimen/width_button"
+                    android:layout_below="@+id/configure_text_1"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="@dimen/songs_count"
+                    android:src="@drawable/add_configure_1" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@+id/configure_1"
+                    android:layout_marginLeft="@dimen/uniform_spacing"
+                    android:layout_marginTop="@dimen/songs_count"
+                    android:layout_marginRight="@dimen/uniform_spacing"
+                    android:background="@color/gray" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/aura_configure_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/aura_configure_1"
+                android:layout_marginTop="@dimen/scene_extra_spacing">
+
+                <TextView
+                    android:id="@+id/configure_text_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/opensans_regular"
+                    android:text="@string/aura_configure_note"
+                    android:textColor="@color/black_d_n"
+                    android:textSize="@dimen/text_sub_header_size" />
+
+                <ImageView
+                    android:id="@+id/configure_2"
+                    android:layout_width="@dimen/width_button"
+                    android:layout_height="@dimen/width_button"
+                    android:layout_below="@+id/configure_text_2"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="@dimen/songs_count"
+                    android:src="@drawable/add_configure_2" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@+id/configure_2"
+                    android:layout_marginLeft="@dimen/uniform_spacing"
+                    android:layout_marginTop="@dimen/songs_count"
+                    android:layout_marginRight="@dimen/uniform_spacing"
+                    android:background="@color/gray" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/aura_configure_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/aura_configure_2"
+                android:layout_marginTop="@dimen/scene_extra_spacing">
+
+                <TextView
+                    android:id="@+id/configure_text_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/opensans_regular"
+                    android:text="@string/aura_configure_2"
+                    android:textColor="@color/black_d_n"
+                    android:textSize="@dimen/text_sub_header_size" />
+
+                <ImageView
+                    android:id="@+id/configure_3"
+                    android:layout_width="@dimen/width_button"
+                    android:layout_height="@dimen/width_button"
+                    android:layout_below="@+id/configure_text_3"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="@dimen/songs_count"
+                    android:src="@drawable/add_configure_3" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@+id/configure_3"
+                    android:layout_marginLeft="@dimen/uniform_spacing"
+                    android:layout_marginTop="@dimen/songs_count"
+                    android:layout_marginRight="@dimen/uniform_spacing"
+                    android:background="@color/gray" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/aura_configure_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/aura_configure_3"
+                android:layout_marginTop="@dimen/scene_extra_spacing">
+
+                <TextView
+                    android:id="@+id/configure_text_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/opensans_regular"
+                    android:text="@string/aura_configure_3"
+                    android:textColor="@color/black_d_n"
+                    android:textSize="@dimen/text_sub_header_size" />
+
+
+                <ImageView
+                    android:id="@+id/image_2"
+                    android:layout_width="@dimen/width_button"
+                    android:layout_height="@dimen/width_button"
+                    android:layout_below="@+id/configure_text_4"
+                    android:layout_marginStart="60dp"
+                    android:layout_marginTop="@dimen/songs_count"
+                    android:src="@drawable/add_configure_4" />
+
+                <ImageView
+                    android:layout_width="@dimen/width_button"
+                    android:layout_height="@dimen/width_button"
+                    android:layout_below="@+id/configure_text_4"
+                    android:layout_marginTop="@dimen/songs_count"
+                    android:layout_toEndOf="@+id/image_2"
+                    android:src="@drawable/add_configure_5" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@+id/image_2"
+                    android:layout_marginLeft="@dimen/uniform_spacing"
+                    android:layout_marginTop="@dimen/songs_count"
+                    android:layout_marginRight="@dimen/uniform_spacing"
+                    android:background="@color/gray" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/aura_configure_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/aura_configure_4"
+                android:layout_marginTop="@dimen/scene_extra_spacing">
+
+                <TextView
+                    android:id="@+id/configure_text_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/opensans_regular"
+                    android:text="@string/aura_configure_3_"
+                    android:textColor="@color/black_d_n"
+                    android:textSize="@dimen/text_sub_header_size" />
+
+                <ImageView
+                    android:id="@+id/configure_4"
+                    android:layout_width="@dimen/width_button"
+                    android:layout_height="@dimen/width_button"
+                    android:layout_below="@+id/configure_text_5"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="@dimen/songs_count"
+                    android:src="@drawable/add_configure_6" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@+id/configure_4"
+                    android:layout_marginLeft="@dimen/uniform_spacing"
+                    android:layout_marginTop="@dimen/songs_count"
+                    android:layout_marginRight="@dimen/uniform_spacing"
+                    android:background="@color/gray" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/aura_configure_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/aura_configure_5"
+                android:layout_marginTop="@dimen/scene_extra_spacing">
+
+                <TextView
+                    android:id="@+id/configure_text_6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/opensans_regular"
+                    android:text="@string/aura_configure_5"
+                    android:textColor="@color/black_d_n"
+                    android:textSize="@dimen/text_sub_header_size" />
+
+                <ImageView
+                    android:id="@+id/configure_6"
+                    android:layout_width="@dimen/width_button"
+                    android:layout_height="@dimen/width_button"
+                    android:layout_below="@+id/configure_text_6"
+                    android:layout_marginStart="@dimen/margin_top_geo"
+                    android:layout_marginTop="@dimen/songs_count"
+                    android:src="@drawable/add_configure_7" />
+
+                <ImageView
+                    android:layout_width="@dimen/width_button"
+                    android:layout_height="@dimen/width_button"
+                    android:layout_below="@+id/configure_text_6"
+                    android:layout_marginTop="@dimen/songs_count"
+                    android:layout_toEndOf="@+id/configure_6"
+                    android:src="@drawable/add_configure_8" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@+id/configure_6"
+                    android:layout_marginLeft="@dimen/uniform_spacing"
+                    android:layout_marginTop="@dimen/songs_count"
+                    android:layout_marginRight="@dimen/uniform_spacing"
+                    android:background="@color/gray" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/aura_configure_7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/aura_configure_6"
+                android:layout_marginTop="@dimen/scene_extra_spacing">
+
+                <TextView
+                    android:id="@+id/configure_text_7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/opensans_regular"
+                    android:text="@string/aura_configure_6"
+                    android:textColor="@color/black_d_n"
+                    android:textSize="@dimen/text_sub_header_size" />
+
+                <ImageView
+                    android:id="@+id/image_1"
+                    android:layout_width="@dimen/width_button"
+                    android:layout_height="@dimen/width_button"
+                    android:layout_below="@+id/configure_text_7"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="@dimen/songs_count"
+                    android:src="@drawable/add_configure_9" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@+id/image_1"
+                    android:layout_marginLeft="@dimen/uniform_spacing"
+                    android:layout_marginTop="@dimen/songs_count"
+                    android:layout_marginRight="@dimen/uniform_spacing"
+                    android:background="@color/gray" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/aura_configure_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/aura_configure_7"
+                android:layout_marginTop="@dimen/scene_extra_spacing">
+
+                <TextView
+                    android:id="@+id/configure_text_8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/opensans_regular"
+                    android:text="@string/aura_configure_7"
+                    android:textColor="@color/black_d_n"
+                    android:textSize="@dimen/text_sub_header_size" />
+                <ImageView
+                    android:layout_width="@dimen/width_button"
+                    android:layout_height="@dimen/width_button"
+                    android:layout_below="@+id/configure_text_8"
+                    android:id="@+id/image_7"
+                    android:layout_marginStart="@dimen/connect_button_width"
+                    android:layout_marginTop="@dimen/songs_count"
+                    android:src="@drawable/add_configure_10" />
+
+                <ImageView
+                    android:id="@+id/configure_7"
+                    android:layout_width="@dimen/width_button"
+                    android:layout_height="@dimen/width_button"
+                    android:layout_below="@+id/configure_text_8"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/connect_button_width"
+                    android:layout_marginTop="@dimen/songs_count"
+                    android:src="@drawable/add_configure_11" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@+id/configure_7"
+                    android:layout_marginLeft="@dimen/uniform_spacing"
+                    android:layout_marginTop="@dimen/songs_count"
+                    android:layout_marginRight="@dimen/uniform_spacing"
+                    android:background="@color/gray" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/aura_configure_9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/plus_size"
+                android:layout_below="@+id/aura_configure_8"
+                android:layout_marginTop="@dimen/scene_extra_spacing">
+
+                <TextView
+                    android:id="@+id/configure_text_9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/opensans_regular"
+                    android:text="@string/aura_configure_8"
+                    android:textColor="@color/black_d_n"
+                    android:textSize="@dimen/text_sub_header_size" />
+
+                <ImageView
+                    android:id="@+id/images"
+                    android:layout_width="@dimen/width_button"
+                    android:layout_height="@dimen/width_button"
+                    android:layout_below="@+id/configure_text_9"
+                    android:layout_marginStart="@dimen/connect_button_width"
+                    android:layout_marginTop="@dimen/uniform_spacing"
+                    android:src="@drawable/add_configure_12" />
+
+                <ImageView
+                    android:layout_width="@dimen/width_button"
+                    android:layout_height="@dimen/width_button"
+                    android:layout_below="@+id/configure_text_9"
+                    android:layout_marginTop="@dimen/songs_count"
+                    android:layout_marginEnd="@dimen/connect_button_width"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/add_configure_13" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@+id/images"
+                    android:layout_marginLeft="@dimen/uniform_spacing"
+                    android:layout_marginTop="@dimen/songs_count"
+                    android:layout_marginRight="@dimen/uniform_spacing"
+                    android:background="@color/gray" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <FrameLayout
+        android:id="@+id/rlCameraView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/uniform_extra_spacing"
+        android:background="@drawable/curved_rectangle_bg"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <SurfaceView
+            android:id="@+id/surfaceView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dialog_width"
+            android:layout_margin="@dimen/uniform_spacing" />
+
+        <ImageView
+            android:id="@+id/closeCamera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:padding="@dimen/uniform_spacing"
+            android:src="@drawable/ic_close_black_24dp" />
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/margin_top_geo"
+    android:layout_height="@dimen/margin_top_geo"
+    android:id="@+id/remote"
+    android:layout_margin="@dimen/uniform_spacing">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/layout_remote"
+        android:background="@drawable/filled_circle_grey">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/brand_name"
+            android:textSize="@dimen/text_small_size"
+            android:textColor="@color/black"
+            android:maxLines="1"
+            android:padding="@dimen/uniform_half_spacing"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"/>
+        <ImageView
+            android:layout_width="@dimen/plus_size"
+            android:layout_height="@dimen/plus_size"
+            android:layout_centerVertical="true"
+            android:id="@+id/appliance_image"
+            android:layout_centerInParent="true"
+            android:padding="@dimen/action_btn_padding"
+            android:src="@drawable/ic_tv_av" />
+        <TextView
+            android:id="@+id/ac_temp_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:padding="@dimen/action_btn_padding"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_menu_size"
+            android:visibility="gone" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/appliance_image"
+            android:id="@+id/model_number"
+            android:maxLines="1"
+            style="@style/TextViewNormal"
+            android:layout_centerHorizontal="true"
+            android:padding="@dimen/uniform_half_spacing"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

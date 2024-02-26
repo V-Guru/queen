@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.wozart.aura.ui.wifisettings.BLEProvisionLanding">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:theme="@style/AppTheme.NoActionBar"
+        tools:ignore="ExtraText">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:titleTextColor="@color/black_d_n">
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/uniform_spacing"
+                android:src="@drawable/ic_back" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/uniform_spacing"
+                android:id="@+id/textTitle"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_title_size"
+                android:textColor="@color/black_d_n"
+                style="@style/TextViewNormal"
+                android:text="Connect Device"/>
+        </androidx.appcompat.widget.Toolbar>>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <include layout="@layout/content_bleprovision_landing" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

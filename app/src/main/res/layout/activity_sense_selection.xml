@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_screen_d_n"
+    android:padding="@dimen/uniform_extra_spacing"
+    android:scrollbars="none">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/layout_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btnConnect"
+        android:layout_below="@+id/header"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvSlectSenseRange"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/uniform_extra_spacing"
+            android:layout_marginTop="@dimen/uniform_spacing"
+            android:layout_marginRight="@dimen/uniform_extra_spacing"
+            android:layout_marginBottom="@dimen/uniform_spacing"
+            android:fontFamily="@font/radomir_tinkov_gilroy_light"
+            android:text="@string/select_sense_device"
+            android:textColor="@color/black_d_n"
+            android:textSize="@dimen/text_normal_size"
+            android:visibility="visible"
+            app:layout_constraintTop_toBottomOf="@+id/header" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/sense_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"
+            android:padding="@dimen/uniform_extra_spacing" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnConnect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/plus_size"
+        android:layout_marginEnd="@dimen/plus_size"
+        android:layout_marginBottom="@dimen/uniform_spacing"
+        android:background="@drawable/gradient_desin"
+        app:backgroundTint="@color/colorAccent"
+        android:fontFamily="@font/gilroy_bold"
+        android:padding="@dimen/action_btn_padding"
+        android:text="@string/connect_scene"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_normal_size" />
+
+</RelativeLayout>

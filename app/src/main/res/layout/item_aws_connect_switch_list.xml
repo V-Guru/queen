@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:paddingTop="@dimen/uniform_spacing"
+    android:paddingBottom="@dimen/uniform_spacing"
+    android:background="@color/white"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/border_image"
+        android:layout_width="@dimen/statistics_load_border_width"
+        android:layout_height="@dimen/statistics_load_border_width"
+        android:layout_centerVertical="true"
+        android:background="@drawable/circle_no_theme">
+        <ImageView
+            android:id="@+id/IVdevice"
+            android:layout_width="@dimen/statistics_load_width"
+            android:layout_height="@dimen/statistics_load_width"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_device"
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/item_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/normal_margin"
+        android:layout_toEndOf="@+id/border_image">
+    <TextView
+        android:id="@+id/tvName"
+        style="@style/TextViewNormal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        />
+        <TextView
+            android:id="@+id/device_status"
+            style="@style/TextViewSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvName"
+            android:text="Connected"
+
+            />
+
+        <TextView
+            android:id="@+id/awsSwitch"
+            style="@style/TextViewAccent"
+            android:layout_width="wrap_content"
+            android:padding="@dimen/min_padding"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:text="Connect"
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>

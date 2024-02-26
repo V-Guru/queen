@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_scene"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/elevation"
+    android:background="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    card_view:cardBackgroundColor="@color/white"
+    card_view:cardCornerRadius="@dimen/corner_radious_card">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/elevation">
+
+        <TextView
+            android:id="@+id/tvTimeNotify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/black"
+            android:fontFamily="@font/radomir_tinkov_gilroy_light"
+            android:textSize="@dimen/forteen_sp"
+            android:padding="@dimen/uniform_spacing" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/uniform_spacing"
+            android:layout_toEndOf="@+id/tvTimeNotify"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/ivErrorInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/tv_notificationDate"
+                    android:padding="@dimen/uniform_half_spacing"
+                    android:src="@drawable/error_info"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_notificationDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/elevation"
+                    android:fontFamily="@font/gilroy_bold"
+                    android:padding="@dimen/elevation"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_normal_size" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_notificationTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/gilroy_bold"
+                android:padding="@dimen/elevation"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_normal_size" />
+
+            <TextView
+                android:id="@+id/tv_notificationMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/elevation"
+                android:fontFamily="@font/radomir_tinkov_gilroy_light"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_normal_size" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

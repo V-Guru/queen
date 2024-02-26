@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_id"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_screen_d_n">
+
+    <RelativeLayout
+        android:id="@+id/header_remote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/uniform_extra_spacing"
+        android:paddingTop="@dimen/uniform_extra_spacing"
+        android:paddingBottom="@dimen/uniform_extra_spacing"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:onClick="onbackPressed"
+            android:padding="@dimen/action_btn_padding"
+            android:src="@drawable/ic_back"
+            app:tint="@color/black_d_n" />
+
+        <TextView
+            android:id="@+id/aura_sense"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/tvSave"
+            android:layout_toEndOf="@+id/back_btn"
+            android:fontFamily="@font/gilroy_bold"
+            android:gravity="center"
+            android:padding="@dimen/action_btn_padding"
+            android:text="@string/aura_sense_title"
+            android:textColor="@color/black_d_n"
+            android:textSize="@dimen/text_popup_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/radomir_tinkov_gilroy_light"
+            android:padding="@dimen/action_btn_padding"
+            android:text="@string/text_finish"
+            android:textColor="@color/black_d_n"
+            android:textSize="@dimen/text_normal_size"
+            android:textStyle="bold"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rlAnimView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header_remote">
+
+
+        <RelativeLayout
+            android:id="@+id/default_ac_btn_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:id="@+id/temp_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/ivAc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ac_wave" />
+
+                <TextView
+                    android:id="@+id/text_temp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/gilroy_bold"
+                    android:gravity="center"
+                    android:text="26"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/fifty" />
+
+                <ImageView
+                    android:layout_width="@dimen/margin_top_geo"
+                    android:layout_height="@dimen/margin_top_geo"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/text_temp"
+                    android:padding="@dimen/action_btn_padding"
+                    android:src="@drawable/celcius_temp" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ac_remote_temp_btn_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:paddingHorizontal="@dimen/uniform_extra_spacing"
+        android:paddingTop="@dimen/uniform_extra_spacing"
+        android:paddingBottom="@dimen/map_height"
+        android:isScrollContainer="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rlAnimView" />
+
+    <include
+        android:id="@+id/circularProgress"
+        layout="@layout/layout_refresh_home"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header_remote" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

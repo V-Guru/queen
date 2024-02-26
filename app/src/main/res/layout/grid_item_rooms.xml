@@ -1,0 +1,42 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/uniform_half_spacing"
+    android:clickable="true"
+    android:focusable="true"
+    card_view:cardBackgroundColor="@color/white"
+    card_view:cardCornerRadius="@dimen/corner_radious_card">
+
+    <LinearLayout
+        android:id="@+id/image_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/min_padding"
+        android:paddingRight="@dimen/min_padding"
+        android:paddingTop="@dimen/min_padding">
+
+        <com.wozart.aura.ui.customview.CustomTextView
+            android:id="@+id/room_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:paddingLeft="@dimen/min_padding"
+            android:text="gfgfg"
+            android:textColor="@color/gray" />
+
+        <ImageView
+            android:id="@+id/grid_image"
+            android:layout_width="@dimen/room_grid_image"
+            android:layout_height="@dimen/room_grid_image"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/normal_padding"
+            android:adjustViewBounds="true"
+            android:padding="@dimen/normal_padding"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_bathroom"></ImageView>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

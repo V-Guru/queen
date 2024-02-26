@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_marginBottom="@dimen/uniform_extra_spacing"
+tools:ignore="contentDescription">
+<RelativeLayout
+    android:layout_width="40dp"
+    android:layout_height="40dp"
+    android:id="@+id/bg_home_layout">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/home_wallpaper"
+        android:padding="@dimen/uniform_half_spacing"
+        android:visibility="visible"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true" />
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/selected_home"
+        android:padding="@dimen/uniform_half_spacing"
+        android:visibility="gone"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_checked_cirlce_home"/>
+</RelativeLayout>
+
+<TextView
+    android:id="@+id/homeTitle"
+    style="@style/TextViewPopup"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textColor="@color/colorAccent"
+    android:layout_marginLeft="2dp"
+    android:layout_toEndOf="@+id/bg_home_layout"
+    android:layout_marginRight="@dimen/uniform_half_spacing"
+    android:layout_centerVertical="true"
+    android:layout_toStartOf="@id/shareHome" />
+
+<ImageView
+    android:id="@+id/shareHome"
+    android:layout_centerVertical="true"
+    android:layout_width="30dp"
+    android:layout_height="25dp"
+    android:layout_marginEnd="25dp"
+    android:padding="5dp"
+    android:layout_toStartOf="@id/editHome"
+    app:srcCompat="@drawable/svg_share_inactive" />
+
+<ImageView
+    android:id="@+id/editHome"
+    android:layout_centerVertical="true"
+    android:layout_width="25dp"
+    android:layout_height="25dp"
+    android:layout_alignParentEnd="true"
+    android:padding="5dp"
+    app:srcCompat="@drawable/svg_edit_inactive" />
+
+
+</RelativeLayout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerInParent="true"
+    android:background="@drawable/dialogue_drawable"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/dialog_margin"
+    android:paddingTop="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_horizontal_margin">
+
+
+    <TextView
+        android:id="@+id/tv_title"
+        style="@style/TextViewTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:paddingTop="@dimen/normal_margin"
+        android:text="@string/learn_remote"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/message_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_title"
+        android:paddingTop="@dimen/one_dp"
+        android:paddingBottom="@dimen/one_dp">
+
+        <TextView
+            android:id="@+id/message"
+            style="@style/TextViewSubHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:gravity="center_horizontal"
+            android:text="@string/empty_remote_learn"
+            android:textColor="@color/black_d_n" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/message"
+            android:layout_marginTop="@dimen/uniform_extra_spacing"
+            android:layout_marginBottom="@dimen/uniform_spacing"
+            android:id="@+id/llButton"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/learn_remote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:layout_margin="@dimen/elevation"
+                android:background="@drawable/gradient_desin"
+                android:elevation="@dimen/uniform_half_spacing"
+                android:text="@string/learn"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_sub_header_size" />
+
+            <Button
+                android:id="@+id/cancel_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:layout_margin="@dimen/elevation"
+                android:background="@drawable/curved_rectangle_bg"
+                android:elevation="@dimen/uniform_half_spacing"
+                android:maxLines="1"
+                android:text="@string/not_confirmed"
+                android:textAllCaps="false"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/text_sub_header_size"
+                android:visibility="visible"
+                app:backgroundTint="@color/white" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/tvor"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_margin="@dimen/uniform_half_spacing"
+            android:layout_below="@+id/llButton"
+            android:background="@color/gray" />
+
+        <Switch
+            android:id="@+id/switchFav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvor"
+            android:layout_alignParentEnd="true"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/radomir_tinkov_gilroy_light"
+            android:padding="@dimen/uniform_half_spacing"
+            android:text="@string/add_as_favourite"
+            android:textColor="@color/black_d_n"
+            android:textSize="@dimen/text_normal_size"
+            android:textStyle="bold"
+            android:visibility="gone"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_screen_d_n"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/uniform_extra_spacing">
+
+    <RelativeLayout
+        android:id="@+id/layout_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:paddingTop="@dimen/uniform_extra_spacing"
+        android:paddingBottom="@dimen/uniform_extra_spacing">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="6dp"
+            android:src="@drawable/ic_back"
+            app:tint="@color/black_d_n" />
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/TextViewTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/edit_profile"
+            android:layout_toEndOf="@+id/back"
+            android:gravity="center_horizontal"
+            android:padding="6dp"
+            android:text="@string/profile" />
+
+        <TextView
+            android:id="@+id/edit_profile"
+            style="@style/TextViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:gravity="end"
+            android:padding="6dp"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:text="@string/edit" />
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout_header"
+        android:layout_marginTop="@dimen/uniform_extra_spacing"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="@dimen/logo_border"
+                    android:layout_height="@dimen/logo_border"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/layout_padding_medium"
+                    android:background="@drawable/circle_no_theme">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/logo_iv"
+                        android:layout_width="@dimen/logo_profile"
+                        android:layout_height="@dimen/logo_profile"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/round_account" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/et_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/uniform_extra_spacing"
+                    android:paddingRight="@dimen/uniform_extra_spacing">
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tvFirstName"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:theme="@style/TextInputLayoutAppearance"
+                            app:hintTextColor="@color/hint"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintWidth_percent="0.45">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/input_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@android:color/transparent"
+                                android:enabled="false"
+                                android:fontFamily="@font/radomir_tinkov_gilroy_light"
+                                android:hint="@string/first_name"
+                                android:inputType="textCapWords"
+                                android:paddingStart="0dp"
+                                android:paddingEnd="0dp"
+                                android:textColor="@color/black_d_n"
+                                android:textColorHint="@color/light_gray"
+                                android:textSize="@dimen/text_sub_header_size" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tvLastName"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:theme="@style/TextInputLayoutAppearance"
+                            app:hintTextColor="@color/hint"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintWidth_percent="0.45">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/input_lastname"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@android:color/transparent"
+                                android:enabled="false"
+                                android:fontFamily="@font/radomir_tinkov_gilroy_light"
+                                android:hint="@string/last_name"
+                                android:inputType="textCapWords"
+                                android:paddingStart="0dp"
+                                android:paddingEnd="0dp"
+                                android:textColor="@color/black_d_n"
+                                android:textColorHint="@color/light_gray"
+                                android:textSize="@dimen/text_sub_header_size" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/normal_margin"
+                        android:theme="@style/TextInputLayoutAppearance"
+                        app:hintTextColor="@color/hint">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/input_email"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:enabled="false"
+                            android:hint="@string/hint_email_id"
+                            android:imeOptions="actionNext"
+                            android:fontFamily="@font/radomir_tinkov_gilroy_light"
+                            android:inputType="textEmailAddress"
+                            android:maxLines="1"
+                            android:paddingStart="0dp"
+                            android:paddingEnd="0dp"
+                            android:singleLine="true"
+                            android:textSize="@dimen/text_sub_header_size"
+                            android:textColor="@color/black_d_n" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_mobile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/normal_margin"
+                        android:theme="@style/TextInputLayoutAppearance"
+                        app:hintTextColor="@color/hint">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/input_mobile"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:enabled="false"
+                            android:hint="@string/phone_number"
+                            android:imeOptions="actionDone"
+                            android:inputType="phone"
+                            android:maxLength="12"
+                            android:maxLines="1"
+                            android:paddingStart="0dp"
+                            android:paddingEnd="0dp"
+                            android:textSize="@dimen/text_sub_header_size"
+                            android:singleLine="true"
+                            android:textColor="@color/black_d_n" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </LinearLayout>
+
+                <com.wozart.aura.ui.customview.CustomButton
+                    android:id="@+id/delete_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="@dimen/uniform_extra_spacing"
+                    android:background="@drawable/gradient_desin"
+                    android:stateListAnimator="@null"
+                    android:text="DELETE ACCOUNT"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_title_small_size"
+                    android:visibility="gone"
+                    app:elevation="2dp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

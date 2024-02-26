@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background_screen_d_n"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/uniform_extra_spacing">
+
+    <RelativeLayout
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/uniform_extra_spacing"
+        android:paddingBottom="@dimen/uniform_extra_spacing">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/action_btn_padding"
+            android:tint="@color/black_d_n"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:fontFamily="@font/gilroy_bold"
+            android:textSize="@dimen/text_normal_size"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:padding="6dp"
+            android:text="@string/how_to_home"
+            android:textColor="@color/black_d_n" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top_layout"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/scene_extra_spacing"
+            >
+
+            <RelativeLayout
+                android:id="@+id/layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/uniform_half_spacing">
+
+                <TextView
+                    android:id="@+id/text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/radomir_tinkov_gilroy_light"
+                    android:text="@string/title_home_faq"
+                    android:textColor="@color/black_d_n"
+                    android:textSize="@dimen/text_medium_size"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@+id/text"
+                    android:layout_marginLeft="@dimen/uniform_half_spacing"
+                    android:layout_marginTop="@dimen/uniform_half_spacing"
+                    android:layout_marginRight="@dimen/uniform_half_spacing"
+                    android:background="@color/gray" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/aura_home_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout"
+                android:layout_marginTop="@dimen/scene_extra_spacing">
+
+                <TextView
+                    android:id="@+id/configure_text_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/opensans_regular"
+                    android:text="@string/how_to_home_1"
+                    android:textColor="@color/black_d_n"
+                    android:textSize="@dimen/text_sub_header_size" />
+
+                <ImageView
+                    android:id="@+id/add_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_toEndOf="@+id/configure_text_1"
+                    android:padding="3dp"
+                    android:src="@drawable/wozart_logo_faq"
+                    app:tint="@color/wozart_logo_color_d_n"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/add_icon"
+                    android:fontFamily="@font/opensans_regular"
+                    android:text="@string/how_to_home_1_1"
+                    android:textColor="@color/black_d_n"
+                    android:textSize="@dimen/text_sub_header_size" />
+
+                <ImageView
+                    android:id="@+id/home_1"
+                    android:layout_width="@dimen/width_button"
+                    android:layout_height="@dimen/width_button"
+                    android:layout_below="@+id/configure_text_1"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="@dimen/songs_count"
+                    android:src="@drawable/add_home_1" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@+id/home_1"
+                    android:layout_marginLeft="@dimen/uniform_spacing"
+                    android:layout_marginTop="@dimen/songs_count"
+                    android:layout_marginRight="@dimen/uniform_spacing"
+                    android:background="@color/gray" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/aura_home_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/aura_home_1"
+                android:layout_marginTop="@dimen/scene_extra_spacing">
+
+                <TextView
+                    android:id="@+id/configure_text_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/opensans_regular"
+                    android:text="@string/how_to_home_2"
+                    android:textColor="@color/black_d_n"
+                    android:textSize="@dimen/text_sub_header_size" />
+
+                <ImageView
+                    android:id="@+id/home_2"
+                    android:layout_width="@dimen/width_button"
+                    android:layout_height="@dimen/width_button"
+                    android:layout_below="@+id/configure_text_2"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="@dimen/songs_count"
+                    android:src="@drawable/add_home_2" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@+id/home_2"
+                    android:layout_marginLeft="@dimen/uniform_spacing"
+                    android:layout_marginTop="@dimen/songs_count"
+                    android:layout_marginRight="@dimen/uniform_spacing"
+                    android:background="@color/gray" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/aura_home_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/aura_home_2"
+                android:layout_marginTop="@dimen/scene_extra_spacing">
+
+                <TextView
+                    android:id="@+id/configure_text_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/opensans_regular"
+                    android:text="@string/how_to_home_3"
+                    android:textColor="@color/black_d_n"
+                    android:textSize="@dimen/text_sub_header_size" />
+
+                <ImageView
+                    android:id="@+id/configure_3"
+                    android:layout_width="@dimen/width_button"
+                    android:layout_height="@dimen/width_button"
+                    android:layout_below="@+id/configure_text_3"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="@dimen/songs_count"
+                    android:src="@drawable/add_home_3" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@+id/configure_3"
+                    android:layout_marginLeft="@dimen/uniform_spacing"
+                    android:layout_marginTop="@dimen/songs_count"
+                    android:layout_marginRight="@dimen/uniform_spacing"
+                    android:background="@color/gray" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/aura_home_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/aura_home_3"
+                android:layout_marginTop="@dimen/scene_extra_spacing">
+
+                <TextView
+                    android:id="@+id/configure_text_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/opensans_regular"
+                    android:text="@string/set_geo_home"
+                    android:textColor="@color/black_d_n"
+                    android:textSize="@dimen/text_sub_header_size" />
+
+                <ImageView
+                    android:id="@+id/configure_4"
+                    android:layout_width="@dimen/width_button"
+                    android:layout_height="@dimen/width_button"
+                    android:layout_below="@+id/configure_text_4"
+                    android:layout_marginStart="@dimen/margin_top_geo"
+                    android:layout_marginTop="@dimen/songs_count"
+                    android:src="@drawable/add_home_4" />
+
+                <ImageView
+                    android:layout_width="@dimen/width_button"
+                    android:layout_height="@dimen/width_button"
+                    android:layout_below="@+id/configure_text_4"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="@dimen/songs_count"
+                    android:layout_marginEnd="@dimen/margin_top_geo"
+                    android:src="@drawable/add_home_5" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@+id/configure_4"
+                    android:layout_marginLeft="@dimen/uniform_spacing"
+                    android:layout_marginTop="@dimen/songs_count"
+                    android:layout_marginRight="@dimen/uniform_spacing"
+                    android:background="@color/gray" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/aura_home_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/aura_home_4"
+                android:layout_marginTop="@dimen/scene_extra_spacing">
+
+                <TextView
+                    android:id="@+id/configure_text_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/opensans_regular"
+                    android:text="@string/set_back_home"
+                    android:textColor="@color/black_d_n"
+                    android:textSize="@dimen/text_sub_header_size" />
+
+                <ImageView
+                    android:id="@+id/configure_5"
+                    android:layout_width="@dimen/width_button"
+                    android:layout_height="@dimen/width_button"
+                    android:layout_below="@+id/configure_text_5"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="@dimen/songs_count"
+                    android:src="@drawable/add_home_6" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@+id/configure_5"
+                    android:layout_marginLeft="@dimen/uniform_spacing"
+                    android:layout_marginTop="@dimen/songs_count"
+                    android:layout_marginRight="@dimen/uniform_spacing"
+                    android:background="@color/gray" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/aura_home_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/aura_home_5"
+                android:layout_marginTop="@dimen/scene_extra_spacing">
+
+                <RelativeLayout
+                    android:id="@+id/layout_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/configure_text_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/opensans_regular"
+                        android:text="@string/how_to_home_4"
+                        android:textColor="@color/black_d_n"
+                        android:textSize="@dimen/text_sub_header_size" />
+
+                    <ImageView
+                        android:id="@+id/logo_wozart"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_toEndOf="@+id/configure_text_6"
+                        android:padding="3dp"
+                        android:src="@drawable/wozart_logo_faq"
+                        app:tint="@color/wozart_logo_color_d_n"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/logo_wozart"
+                        android:layout_marginStart="@dimen/left_margin"
+                        android:fontFamily="@font/opensans_regular"
+                        android:text="@string/how_to_home_4_4"
+                        android:textColor="@color/black_d_n"
+                        android:textSize="@dimen/text_sub_header_size" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/configure_6"
+                    android:layout_width="@dimen/width_button"
+                    android:layout_height="@dimen/width_button"
+                    android:layout_below="@+id/layout_text"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="@dimen/songs_count"
+                    android:src="@drawable/add_home_7" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@+id/configure_6"
+                    android:layout_marginLeft="@dimen/uniform_spacing"
+                    android:layout_marginTop="@dimen/songs_count"
+                    android:layout_marginRight="@dimen/uniform_spacing"
+                    android:background="@color/gray" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/aura_home_7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/aura_home_6"
+                android:layout_marginTop="@dimen/scene_extra_spacing"
+                android:layout_marginBottom="@dimen/uniform_large_spacing">
+
+                <TextView
+                    android:id="@+id/configure_text_7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/opensans_regular"
+                    android:text="@string/how_t0_home_5"
+                    android:textColor="@color/black_d_n"
+                    android:textSize="@dimen/text_sub_header_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/configure_text_8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/configure_text_7"
+                    android:fontFamily="@font/opensans_regular"
+                    android:text="@string/how_to_home_6"
+                    android:textColor="@color/black_d_n"
+                    android:textSize="@dimen/text_sub_header_size" />
+
+                <ImageView
+                    android:id="@+id/logo_wozart_faq"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/configure_text_7"
+                    android:layout_toEndOf="@+id/configure_text_8"
+                    android:padding="3dp"
+                    android:src="@drawable/wozart_logo_faq"
+                    app:tint="@color/wozart_logo_color_d_n"/>
+
+                <TextView
+                    android:id="@+id/text_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/configure_text_7"
+                    android:layout_toEndOf="@+id/logo_wozart_faq"
+                    android:fontFamily="@font/opensans_regular"
+                    android:text="@string/how_to_home_6_6"
+                    android:textColor="@color/black_d_n"
+                    android:textSize="@dimen/text_sub_header_size" />
+
+                <ImageView
+                    android:id="@+id/edit_faq_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="28dp"
+                    android:layout_below="@+id/configure_text_7"
+                    android:layout_toEndOf="@+id/text_edit"
+                    android:padding="4dp"
+                    android:src="@drawable/svg_edit_inactive"
+                    app:tint="@color/black_d_n"/>
+
+                <TextView
+                    android:id="@+id/configure_text_9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/configure_text_8"
+                    android:fontFamily="@font/opensans_regular"
+                    android:text="@string/how_to_home_7"
+                    android:textColor="@color/black_d_n"
+                    android:textSize="@dimen/text_sub_header_size" />
+
+                <TextView
+                    android:id="@+id/configure_text_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/configure_text_9"
+                    android:fontFamily="@font/opensans_regular"
+                    android:text="@string/how_to_home_8"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_sub_header_size" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

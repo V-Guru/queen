@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/normal_margin"
+    android:paddingBottom="@dimen/normal_margin"
+    android:background="@color/white"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <RelativeLayout
+            android:id="@+id/border_image"
+            android:layout_width="@dimen/statistics_load_border_width"
+            android:layout_height="@dimen/statistics_load_border_width"
+            android:layout_centerVertical="true"
+            android:background="@drawable/circle_no_theme">
+        <ImageView
+            android:id="@+id/IVload"
+            android:layout_width="@dimen/statistics_load_width"
+            android:layout_height="@dimen/statistics_load_width"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_bulb_off_new"
+             />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/load_name"
+            style="@style/TextViewSubHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_toRightOf="@+id/border_image"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/layout_padding"
+
+            />
+        <TextView
+            android:id="@+id/item_label"
+            style="@style/TextViewSubHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="233"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+
+
+            />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="@dimen/one_dp"
+    tools:ignore="contentDescription">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/dialog_padding">
+
+        <TextView
+            android:id="@+id/addSwitch"
+            style="@style/TextViewPopup"
+            android:clickable="true"
+            android:textColor="@color/black"
+            android:background="?android:attr/selectableItemBackground"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:layout_marginStart="@dimen/uniform_spacing"
+            android:paddingBottom="@dimen/uniform_spacing"
+            android:paddingTop="@dimen/uniform_spacing"
+            android:text="@string/add_switch"
+            android:focusable="true" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.8dp"
+            android:layout_margin="@dimen/uniform_spacing"
+            android:background="@color/gray"/>
+
+        <TextView
+            android:id="@+id/addAuraSense"
+            android:clickable="true"
+            style="@style/TextViewPopup"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:background="?android:attr/selectableItemBackground"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/uniform_spacing"
+            android:paddingBottom="@dimen/uniform_spacing"
+            android:paddingTop="@dimen/uniform_spacing"
+            android:text="@string/aura_sense_title"
+            android:focusable="true" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.8dp"
+            android:layout_margin="@dimen/uniform_spacing"
+            android:background="@color/gray"/>
+
+        <TextView
+            android:id="@+id/addAuraPlug"
+            android:clickable="true"
+            style="@style/TextViewPopup"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:background="?android:attr/selectableItemBackground"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/uniform_spacing"
+            android:paddingBottom="@dimen/uniform_spacing"
+            android:paddingTop="@dimen/uniform_spacing"
+            android:text="@string/aura_plug"
+            android:focusable="true" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.8dp"
+            android:layout_margin="@dimen/uniform_spacing"
+            android:background="@color/gray"/>
+
+        <TextView
+            android:id="@+id/addAuraSceneControll"
+            android:clickable="true"
+            style="@style/TextViewPopup"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:background="?android:attr/selectableItemBackground"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/uniform_spacing"
+            android:paddingBottom="@dimen/uniform_spacing"
+            android:paddingTop="@dimen/uniform_spacing"
+            android:text="@string/aura_scene_controll"
+            android:focusable="true" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.8dp"
+            android:layout_margin="@dimen/uniform_spacing"
+            android:background="@color/gray"/>
+
+        <TextView
+            android:id="@+id/addIR"
+            android:clickable="true"
+            style="@style/TextViewPopup"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:background="?android:attr/selectableItemBackground"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/uniform_spacing"
+            android:paddingBottom="@dimen/uniform_spacing"
+            android:paddingTop="@dimen/uniform_spacing"
+            android:text="@string/add_ir"
+            android:focusable="true" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="@dimen/uniform_extra_spacing"
+    android:background="@color/background_screen_d_n"
+    android:id="@+id/rooms_main_activity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/uniform_extra_spacing"
+        android:paddingTop="@dimen/uniform_extra_spacing"
+        android:id="@+id/add_room_layout">
+        <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_keyboard_backspace_black_24px"
+            android:padding="@dimen/action_btn_padding"
+            app:tint="@color/black_d_n" />
+
+        <TextView
+            android:id="@+id/scenesButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/uniform_spacing"
+            android:text="@string/aura_scene_controll"
+            android:visibility="visible"
+            android:fontFamily="@font/gilroy_bold"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:layout_toEndOf="@+id/back_btn"
+            android:layout_toStartOf="@id/addRoomBtn"
+            android:textColor="@color/black_d_n"
+            android:textSize="@dimen/text_popup_size"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/addRoomBtn"
+            android:layout_width="@dimen/plus_size"
+            android:layout_height="@dimen/plus_size"
+            android:layout_marginEnd="@dimen/uniform_extra_spacing"
+            android:padding="@dimen/action_btn_padding"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/ic_add_wallpaper_home"
+            tools:ignore="ContentDescription" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvButtonName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/add_room_layout"
+        android:padding="@dimen/uniform_extra_spacing"
+        android:text="@string/aura_scene_controll"
+        android:visibility="gone"
+        android:fontFamily="@font/radomir_tinkov_gilroy_light"
+        android:gravity="center"
+        android:textColor="@color/black_d_n"
+        android:textSize="@dimen/text_normal_size"
+        android:textStyle="normal" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvButton"
+        android:clipToPadding="false"
+        android:layout_marginTop="@dimen/uniform_spacing"
+        android:paddingHorizontal="@dimen/uniform_half_spacing"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tvButtonName" />
+</RelativeLayout>

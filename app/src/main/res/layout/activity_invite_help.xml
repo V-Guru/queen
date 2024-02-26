@@ -1,0 +1,714 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="@dimen/uniform_extra_spacing"
+    android:orientation="vertical"
+    android:background="@color/background_screen_d_n">
+
+    <RelativeLayout
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/uniform_extra_spacing"
+        android:paddingTop="@dimen/uniform_extra_spacing">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/action_btn_padding"
+            android:tint="@color/black_d_n"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:fontFamily="@font/gilroy_bold"
+            android:textSize="@dimen/text_normal_size"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:padding="6dp"
+            android:text="@string/how_to_invite"
+            android:textColor="@color/black_d_n" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top_layout"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/scene_extra_spacing">
+
+            <RelativeLayout
+                android:id="@+id/layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/uniform_half_spacing">
+
+                <TextView
+                    android:id="@+id/text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/radomir_tinkov_gilroy_light"
+                    android:text="@string/title_share_home"
+                    android:textColor="@color/black_d_n"
+                    android:textSize="@dimen/text_medium_size"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@+id/text"
+                    android:layout_marginLeft="@dimen/uniform_half_spacing"
+                    android:layout_marginTop="@dimen/uniform_half_spacing"
+                    android:layout_marginRight="@dimen/uniform_half_spacing"
+                    android:background="@color/gray" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/aura_home_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout"
+                android:layout_marginTop="@dimen/scene_extra_spacing">
+
+                <TextView
+                    android:id="@+id/share_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/opensans_regular"
+                    android:text="@string/owner"
+                    android:textColor="@color/black_d_n"
+                    android:textSize="@dimen/text_sub_header_size"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/configure_text_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/share_1"
+                    android:fontFamily="@font/opensans_regular"
+                    android:justificationMode="inter_word"
+                    android:text="@string/how_to_invite_1"
+                    android:textColor="@color/black_d_n"
+                    android:textSize="@dimen/text_sub_header_size" />
+                <TextView
+                    android:id="@+id/configure_text_1_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/left_margin"
+                    android:layout_below="@+id/configure_text_1"
+                    android:fontFamily="@font/opensans_regular"
+                    android:justificationMode="inter_word"
+                    android:text="@string/how_to_invite_1_1"
+                    android:textColor="@color/black_d_n"
+                    android:textSize="@dimen/text_sub_header_size" />
+                <ImageView
+                    android:id="@+id/add_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/configure_text_1"
+                    android:layout_toEndOf="@+id/configure_text_1_1"
+                    android:padding="3dp"
+                    android:src="@drawable/wozart_logo_faq"
+                    app:tint="@color/wozart_logo_color_d_n"/>
+                <TextView
+                    android:id="@+id/configure_text_1_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/add_icon"
+                    android:layout_below="@+id/configure_text_1"
+                    android:fontFamily="@font/opensans_regular"
+                    android:justificationMode="inter_word"
+                    android:text="@string/how_to_invite_1_2"
+                    android:textColor="@color/black_d_n"
+                    android:textSize="@dimen/text_sub_header_size" />
+                <TextView
+                    android:id="@+id/configure_text_1_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/left_margin"
+                    android:layout_below="@+id/configure_text_1_1"
+                    android:fontFamily="@font/opensans_regular"
+                    android:justificationMode="inter_word"
+                    android:text="@string/how_to_invite_1_3"
+                    android:textColor="@color/black_d_n"
+                    android:textSize="@dimen/text_sub_header_size" />
+
+
+                <ImageView
+                    android:id="@+id/images"
+                    android:layout_width="@dimen/width_button"
+                    android:layout_height="@dimen/width_button"
+                    android:layout_below="@+id/configure_text_1_3"
+                    android:layout_marginStart="@dimen/margin_top_geo"
+                    android:layout_marginTop="@dimen/songs_count"
+                    android:src="@drawable/add_share_1" />
+
+                <ImageView
+
+                    android:layout_width="@dimen/width_button"
+                    android:layout_height="@dimen/width_button"
+                    android:layout_below="@+id/configure_text_1_3"
+                    android:layout_marginTop="@dimen/songs_count"
+                    android:layout_toEndOf="@+id/images"
+                    android:src="@drawable/add_share_2" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@+id/images"
+                    android:layout_marginLeft="@dimen/uniform_spacing"
+                    android:layout_marginTop="@dimen/songs_count"
+                    android:layout_marginRight="@dimen/uniform_spacing"
+                    android:background="@color/gray" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/aura_home_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/aura_home_1"
+                android:layout_marginTop="@dimen/scene_extra_spacing">
+
+                <TextView
+                    android:id="@+id/configure_text_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/opensans_regular"
+                    android:text="@string/how_to_invite_2"
+                    android:textColor="@color/black_d_n"
+                    android:textSize="@dimen/text_sub_header_size" />
+
+                <ImageView
+                    android:id="@+id/image_1"
+                    android:layout_width="@dimen/width_button"
+                    android:layout_height="@dimen/width_button"
+                    android:layout_below="@+id/configure_text_2"
+                    android:layout_marginStart="@dimen/margin_top_geo"
+                    android:layout_marginTop="@dimen/songs_count"
+                    android:src="@drawable/add_share_3" />
+
+                <ImageView
+                    android:layout_width="@dimen/width_button"
+                    android:layout_height="@dimen/width_button"
+                    android:layout_below="@+id/configure_text_2"
+                    android:layout_marginTop="@dimen/songs_count"
+                    android:layout_toEndOf="@+id/image_1"
+                    android:src="@drawable/add_share_4" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@+id/image_1"
+                    android:layout_marginLeft="@dimen/uniform_spacing"
+                    android:layout_marginTop="@dimen/songs_count"
+                    android:layout_marginRight="@dimen/uniform_spacing"
+                    android:background="@color/gray" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/aura_home_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/aura_home_2"
+                android:layout_marginTop="@dimen/scene_extra_spacing">
+
+                <TextView
+                    android:id="@+id/configure_text_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/opensans_regular"
+                    android:text="@string/how_to_invite_3"
+                    android:textColor="@color/black_d_n"
+                    android:textSize="@dimen/text_sub_header_size" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="3dp"
+                    android:id="@+id/add_plus"
+                    android:layout_toEndOf="@+id/configure_text_3"
+                    android:src="@drawable/icon_faq_add"
+                    app:tint="@color/black_d_n" />
+                <TextView
+                    android:id="@+id/configure_text_3_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/opensans_regular"
+                    android:layout_toEndOf="@+id/add_plus"
+                    android:text="@string/how_to_invite_3_1"
+                    android:textColor="@color/black_d_n"
+                    android:textSize="@dimen/text_sub_header_size" />
+
+                <ImageView
+                    android:id="@+id/configure_3"
+                    android:layout_width="@dimen/width_button"
+                    android:layout_height="@dimen/width_button"
+                    android:layout_below="@+id/configure_text_3"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="@dimen/songs_count"
+                    android:src="@drawable/add_share_5" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@+id/configure_3"
+                    android:layout_marginLeft="@dimen/uniform_spacing"
+                    android:layout_marginTop="@dimen/songs_count"
+                    android:layout_marginRight="@dimen/uniform_spacing"
+                    android:background="@color/gray" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/aura_home_3.2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/aura_home_3"
+                android:layout_marginTop="@dimen/scene_extra_spacing">
+
+                <TextView
+                    android:id="@+id/configure_text_3.2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/opensans_regular"
+                    android:justificationMode="inter_word"
+                    android:text="@string/how_to_invite_4"
+                    android:textColor="@color/black_d_n"
+                    android:textSize="@dimen/text_sub_header_size" />
+
+                <ImageView
+                    android:id="@+id/configure_3.2"
+                    android:layout_width="@dimen/width_button"
+                    android:layout_height="@dimen/width_button"
+                    android:layout_below="@+id/configure_text_3.2"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="@dimen/songs_count"
+                    android:src="@drawable/add_share_6" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@+id/configure_3.2"
+                    android:layout_marginLeft="@dimen/uniform_spacing"
+                    android:layout_marginTop="@dimen/songs_count"
+                    android:layout_marginRight="@dimen/uniform_spacing"
+                    android:background="@color/gray" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/aura_home_3.3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/aura_home_3.2"
+                android:layout_marginTop="@dimen/scene_extra_spacing">
+
+                <TextView
+                    android:id="@+id/configure_text_3.3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/opensans_regular"
+                    android:text="@string/how_to_invite_5"
+                    android:textColor="@color/black_d_n"
+                    android:textSize="@dimen/text_sub_header_size" />
+
+                <ImageView
+                    android:id="@+id/configure_3.3"
+                    android:layout_width="@dimen/width_button"
+                    android:layout_height="@dimen/width_button"
+                    android:layout_below="@+id/configure_text_3.3"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="@dimen/songs_count"
+                    android:src="@drawable/add_share_7" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@+id/configure_3.3"
+                    android:layout_marginLeft="@dimen/uniform_spacing"
+                    android:layout_marginTop="@dimen/songs_count"
+                    android:layout_marginRight="@dimen/uniform_spacing"
+                    android:background="@color/gray" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/aura_home_3.4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/aura_home_3.3"
+                android:layout_marginTop="@dimen/scene_extra_spacing">
+
+                <TextView
+                    android:id="@+id/share_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/opensans_regular"
+                    android:text="Guest"
+                    android:textColor="@color/black_d_n"
+                    android:textSize="@dimen/text_sub_header_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/configure_text_3.4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/share_2"
+                    android:fontFamily="@font/opensans_regular"
+                    android:text="@string/how_to_invite_6"
+                    android:textColor="@color/black_d_n"
+                    android:textSize="@dimen/text_sub_header_size" />
+
+                <TextView
+                    android:id="@+id/configure_text_3.5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/configure_text_3.4"
+                    android:fontFamily="@font/opensans_regular"
+                    android:justificationMode="inter_word"
+                    android:text="@string/how_to_invite_7"
+                    android:textColor="@color/black_d_n"
+                    android:textSize="@dimen/text_sub_header_size" />
+
+                <ImageView
+                    android:id="@+id/configure_3.4"
+                    android:layout_width="@dimen/width_button"
+                    android:layout_height="@dimen/width_button"
+                    android:layout_below="@+id/configure_text_3.5"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="@dimen/songs_count"
+                    android:src="@drawable/invite_accept_1" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@+id/configure_3.4"
+                    android:layout_marginLeft="@dimen/uniform_spacing"
+                    android:layout_marginTop="@dimen/songs_count"
+                    android:layout_marginRight="@dimen/uniform_spacing"
+                    android:background="@color/gray" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/aura_home_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/aura_home_3.4"
+                android:layout_marginTop="@dimen/scene_extra_spacing">
+
+                <TextView
+                    android:id="@+id/configure_text_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/opensans_regular"
+                    android:text="@string/how_to_invite_8"
+                    android:textColor="@color/black_d_n"
+                    android:textSize="@dimen/text_sub_header_size" />
+
+                <ImageView
+                    android:id="@+id/configure_4"
+                    android:layout_width="@dimen/width_button"
+                    android:layout_height="@dimen/width_button"
+                    android:layout_below="@+id/configure_text_4"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="@dimen/songs_count"
+                    android:src="@drawable/invite_accept_2" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@+id/configure_4"
+                    android:layout_marginLeft="@dimen/uniform_spacing"
+                    android:layout_marginTop="@dimen/songs_count"
+                    android:layout_marginRight="@dimen/uniform_spacing"
+                    android:background="@color/gray" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/aura_home_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/aura_home_4"
+                android:layout_marginTop="@dimen/scene_extra_spacing">
+
+                <TextView
+                    android:id="@+id/configure_text_6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/opensans_regular"
+                    android:text="@string/how_to_accpet_invite"
+                    android:textColor="@color/black_d_n"
+                    android:textSize="@dimen/text_sub_header_size" />
+
+                <ImageView
+                    android:id="@+id/configure_5"
+                    android:layout_width="@dimen/width_button"
+                    android:layout_height="@dimen/width_button"
+                    android:layout_below="@+id/configure_text_6"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="@dimen/songs_count"
+                    android:src="@drawable/invite_accept_3" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@+id/configure_5"
+                    android:layout_marginLeft="@dimen/uniform_spacing"
+                    android:layout_marginTop="@dimen/songs_count"
+                    android:layout_marginRight="@dimen/uniform_spacing"
+                    android:background="@color/gray" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/aura_home_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/aura_home_5"
+                android:layout_marginTop="@dimen/scene_extra_spacing"
+                android:layout_marginBottom="@dimen/plus_size">
+
+                <TextView
+                    android:id="@+id/configure_text_7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/opensans_regular"
+                    android:justificationMode="inter_word"
+                    android:text="@string/how_to_invite_9"
+                    android:textColor="@color/black_d_n"
+                    android:textSize="@dimen/text_sub_header_size" />
+                <TextView
+                    android:id="@+id/configure_text_7_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/left_margin"
+                    android:layout_below="@+id/configure_text_7"
+                    android:fontFamily="@font/opensans_regular"
+                    android:justificationMode="inter_word"
+                    android:text="@string/how_to_invite_9_1"
+                    android:textColor="@color/black_d_n"
+                    android:textSize="@dimen/text_sub_header_size" />
+                <ImageView
+                    android:id="@+id/logo_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/configure_text_7"
+                    android:layout_toEndOf="@+id/configure_text_7_1"
+                    android:padding="3dp"
+                    android:src="@drawable/wozart_logo_faq"
+                    app:tint="@color/wozart_logo_color_d_n"/>
+                <TextView
+                    android:id="@+id/configure_text_7_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/logo_icon"
+                    android:layout_below="@+id/configure_text_7"
+                    android:fontFamily="@font/opensans_regular"
+                    android:justificationMode="inter_word"
+                    android:text="@string/how_to_invite_9_2"
+                    android:textColor="@color/black_d_n"
+                    android:textSize="@dimen/text_sub_header_size" />
+
+
+                <TextView
+                    android:id="@+id/configure_text_8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/configure_text_7_2"
+                    android:layout_marginTop="@dimen/uniform_extra_spacing"
+                    android:fontFamily="@font/opensans_regular"
+                    android:justificationMode="inter_word"
+                    android:text="@string/how_to_invite_10"
+                    android:textColor="@color/black_d_n"
+                    android:textSize="@dimen/text_sub_header_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/configure_text_9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/configure_text_8"
+                    android:fontFamily="@font/opensans_regular"
+                    android:justificationMode="inter_word"
+                    android:text="@string/how_to_invite_11"
+                    android:textColor="@color/black_d_n"
+                    android:textSize="@dimen/text_sub_header_size" />
+                <TextView
+                    android:id="@+id/configure_text_9_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/configure_text_9"
+                    android:layout_marginStart="@dimen/left_margin"
+                    android:fontFamily="@font/opensans_regular"
+                    android:justificationMode="inter_word"
+                    android:text="@string/how_to_invite_11_1"
+                    android:textColor="@color/black_d_n"
+                    android:textSize="@dimen/text_sub_header_size" />
+                <ImageView
+                    android:id="@+id/logo_icon_1"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/configure_text_9"
+                    android:layout_toEndOf="@+id/configure_text_9_1"
+                    android:padding="3dp"
+                    android:src="@drawable/wozart_logo_faq"
+                    app:tint="@color/wozart_logo_color_d_n"/>
+                <TextView
+                    android:id="@+id/configure_text_9_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/configure_text_9"
+                    android:layout_toEndOf="@+id/logo_icon_1"
+                    android:fontFamily="@font/opensans_regular"
+                    android:justificationMode="inter_word"
+                    android:text="@string/how_to_invite_11_2"
+                    android:textColor="@color/black_d_n"
+                    android:textSize="@dimen/text_sub_header_size" />
+                <TextView
+                    android:id="@+id/configure_text_9_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/left_margin"
+                    android:layout_below="@+id/configure_text_9_2"
+                    android:fontFamily="@font/opensans_regular"
+                    android:justificationMode="inter_word"
+                    android:text="@string/how_to_invite_11_3"
+                    android:textColor="@color/black_d_n"
+                    android:textSize="@dimen/text_sub_header_size" />
+
+
+                <TextView
+                    android:id="@+id/configure_text_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/configure_text_9_3"
+                    android:fontFamily="@font/opensans_regular"
+                    android:justificationMode="inter_word"
+                    android:text="@string/how_to_invite_12"
+                    android:textColor="@color/black_d_n"
+                    android:textSize="@dimen/text_sub_header_size" />
+
+                <TextView
+                    android:id="@+id/configure_text_11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/configure_text_10"
+                    android:fontFamily="@font/opensans_regular"
+                    android:justificationMode="inter_word"
+                    android:text="@string/how_to_invite_13"
+                    android:textColor="@color/black_d_n"
+                    android:textSize="@dimen/text_sub_header_size" />
+
+                <View
+                    android:id="@+id/view_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@+id/configure_text_11"
+                    android:layout_marginLeft="@dimen/uniform_spacing"
+                    android:layout_marginTop="@dimen/songs_count"
+                    android:layout_marginRight="@dimen/uniform_spacing"
+                    android:background="@color/gray" />
+
+                <TextView
+                    android:id="@+id/configure_text_12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view_list"
+                    android:layout_marginTop="@dimen/uniform_extra_spacing"
+                    android:fontFamily="@font/opensans_regular"
+                    android:justificationMode="inter_word"
+                    android:text="@string/how_to_invite_14"
+                    android:textColor="@color/black_d_n"
+                    android:textSize="@dimen/text_sub_header_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/configure_text_13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/configure_text_12"
+                    android:fontFamily="@font/opensans_regular"
+                    android:justificationMode="inter_word"
+                    android:text="@string/how_to_invite_15"
+                    android:textColor="@color/black_d_n"
+                    android:textSize="@dimen/text_sub_header_size" />
+                <ImageView
+                    android:id="@+id/logo_icon_2"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/configure_text_12"
+                    android:layout_toEndOf="@+id/configure_text_13"
+                    android:padding="3dp"
+                    android:src="@drawable/wozart_logo_faq"
+                    app:tint="@color/wozart_logo_color_d_n"/>
+                <TextView
+                    android:id="@+id/configure_text_13_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/configure_text_12"
+                    android:layout_toEndOf="@+id/logo_icon_2"
+                    android:fontFamily="@font/opensans_regular"
+                    android:justificationMode="inter_word"
+                    android:text="@string/how_to_invite_15_1"
+                    android:textColor="@color/black_d_n"
+                    android:textSize="@dimen/text_sub_header_size" />
+                <TextView
+                    android:id="@+id/configure_text_13_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/left_margin"
+                    android:layout_below="@+id/configure_text_13"
+                    android:fontFamily="@font/opensans_regular"
+                    android:justificationMode="inter_word"
+                    android:text="@string/how_to_invite_15_2"
+                    android:textColor="@color/black_d_n"
+                    android:textSize="@dimen/text_sub_header_size" />
+
+                <TextView
+                    android:id="@+id/configure_text_14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/configure_text_13_2"
+                    android:fontFamily="@font/opensans_regular"
+                    android:justificationMode="inter_word"
+                    android:text="@string/how_to_invite_16"
+                    android:textColor="@color/black_d_n"
+                    android:textSize="@dimen/text_sub_header_size" />
+
+                <TextView
+                    android:id="@+id/configure_text_15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/configure_text_14"
+                    android:fontFamily="@font/opensans_regular"
+                    android:justificationMode="inter_word"
+                    android:text="@string/how_to_invite_17"
+                    android:textColor="@color/black_d_n"
+                    android:textSize="@dimen/text_sub_header_size" />
+
+                <TextView
+                    android:id="@+id/configure_text_16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/configure_text_15"
+                    android:layout_marginTop="@dimen/uniform_spacing"
+                    android:fontFamily="@font/opensans_regular"
+                    android:justificationMode="inter_word"
+                    android:text="@string/how_to_invite_18"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_sub_header_size" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

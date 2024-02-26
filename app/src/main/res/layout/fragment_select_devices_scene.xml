@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/status_bar_height"
+    android:orientation="vertical"
+    android:scrollbars="none">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/layout_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/uniform_extra_spacing" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/inputSceneName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/uniform_extra_spacing"
+                android:layout_marginRight="@dimen/uniform_extra_spacing"
+                android:background="@drawable/curved_rectangle_bg"
+                android:hint="@string/hint_scene_name"
+                android:padding="@dimen/et_padding"
+                android:textColor="@color/black"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@+id/header" />
+
+            <TextView
+                android:id="@+id/tvSelectSceneIcon"
+                style="@style/TextViewNormal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/uniform_spacing"
+                android:layout_marginLeft="@dimen/uniform_extra_spacing"
+                android:layout_marginRight="@dimen/uniform_extra_spacing"
+                android:layout_marginTop="@dimen/uniform_extra_spacing"
+                android:text="@string/text_select_scene_icon"
+                android:textColor="@color/white"
+                android:visibility="gone" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/listScenes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="@dimen/uniform_extra_spacing"
+                android:layout_marginLeft="@dimen/uniform_spacing"
+                android:layout_marginRight="@dimen/uniform_spacing"
+                android:clipToPadding="false"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tvSelectLoadIcon"
+                style="@style/TextViewTitleSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/uniform_spacing"
+                android:layout_marginLeft="@dimen/uniform_extra_spacing"
+                android:layout_marginRight="@dimen/uniform_extra_spacing"
+                android:layout_marginTop="@dimen/uniform_extra_spacing"
+                android:text="@string/text_select_scene_load"
+                android:visibility="gone"
+                android:textColor="@color/white" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/listRooms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/uniform_spacing"
+                android:layout_marginRight="@dimen/uniform_spacing"
+                android:nestedScrollingEnabled="false" />
+
+            <Button
+                android:id="@+id/btnSceneDelete"
+                android:background="@drawable/btn_gradient"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:visibility="invisible"
+                android:layout_marginBottom="@dimen/uniform_spacing"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/top_margin"
+                android:stateListAnimator="@null"
+                android:text="@string/text_delete"
+                android:textColor="@color/colorAccent"
+                android:textAllCaps="true" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

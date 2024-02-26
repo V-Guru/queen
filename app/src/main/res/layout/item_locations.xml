@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/uniform_extra_spacing"
+        android:fontFamily="@font/radomir_tinkov_gilroy_light"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_normal_size" />
+</RelativeLayout>

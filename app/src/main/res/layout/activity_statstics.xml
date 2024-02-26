@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/uniform_extra_spacing">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/uniform_extra_spacing"
+        android:paddingBottom="@dimen/uniform_extra_spacing">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/action_btn_padding"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/text_title"
+            style="@style/TextViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/normal_margin"
+            android:layout_toRightOf="@+id/back"
+            android:text="@string/title_statistics" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            style="@style/TextViewMore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/layout_padding_medium"
+        android:layout_marginTop="@dimen/layout_padding_medium"
+        android:layout_marginRight="@dimen/layout_padding_medium">
+
+        <ImageView
+            android:id="@+id/IVpreviousMonth"
+            android:layout_width="@dimen/calendar_arrow"
+            android:layout_height="@dimen/calendar_arrow"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/ic_keyboard_arrow_left_black_24px" />
+
+        <TextView
+            android:id="@+id/text_month"
+            style="@style/TextViewMore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="October 2019"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/IVnextMonth"
+            android:layout_width="@dimen/calendar_arrow"
+            android:layout_height="@dimen/calendar_arrow"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_keyboard_arrow_right_black_24px" />
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/sectioned_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/layout_padding_medium" />
+</LinearLayout>

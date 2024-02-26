@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main_room"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/activity_horizontal_margin"
+    tools:context="com.wozart.aura.aura.ui.dashboard.rooms.AddRoomActivity">
+
+    <ProgressBar
+        android:id="@+id/secondBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="350dp"
+        android:foregroundGravity="center_horizontal"
+        android:visibility="visible" />
+
+    <RelativeLayout
+        android:id="@+id/name_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/status_bar_height"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin">
+        <include layout="@layout/layout_header" />
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/name_rl"
+        android:layout_marginTop="@dimen/normal_margin"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/input_room_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/uniform_extra_spacing"
+                    android:layout_marginRight="@dimen/uniform_extra_spacing"
+                    android:background="@drawable/curved_rectangle_bg"
+                    android:hint="@string/hint_room_name"
+                    android:maxLines="1"
+                    android:padding="@dimen/et_padding"
+                    android:textColor="@color/black_d_n"
+                    app:layout_constraintTop_toBottomOf="@+id/header" />
+
+
+                <TextView
+                    android:id="@+id/text_room_static"
+                    style="@style/TextViewSubHeader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/uniform_extra_spacing"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:shadowColor="?attr/textShadowColor"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    android:shadowRadius="2"
+                    android:textColor="?attr/primaryTextColor"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/text_room_pick"
+                    style="@style/TextViewSubHeader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/uniform_extra_spacing"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:shadowColor="?attr/textShadowColor"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    android:shadowRadius="2"
+                    android:text="@string/text_pick_wallpaper"
+                    android:textColor="?attr/primaryTextColor" />
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/wallpaper_room_grid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/uniform_spacing"
+                    android:nestedScrollingEnabled="false"
+                    android:paddingLeft="@dimen/uniform_spacing"
+                    android:paddingRight="@dimen/uniform_spacing"
+                    android:scrollbars="none" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/uniform_spacing"
+                android:paddingTop="@dimen/layout_padding"
+                android:paddingRight="@dimen/uniform_spacing">
+
+                <TextView
+                    android:id="@+id/text_rooms"
+                    style="@style/TextViewSubHeader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/uniform_spacing"
+                    android:paddingRight="@dimen/uniform_spacing"
+                    android:shadowColor="?attr/textShadowColor"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    android:shadowRadius="2"
+                    android:text="@string/text_rooms"
+                    android:textColor="?attr/primaryTextColor" />
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rooms_grid"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/normal_margin"
+                    android:nestedScrollingEnabled="false"
+                    android:scrollbars="none" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_delete_room"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/top_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginBottom="@dimen/uniform_spacing"
+                android:background="@drawable/btn_gradient"
+                android:elevation="10dp"
+                android:padding="@dimen/uniform_half_spacing"
+                android:stateListAnimator="@null"
+                android:text="@string/text_delete"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_normal_size"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

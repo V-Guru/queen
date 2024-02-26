@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_screen_d_n"
+    android:paddingHorizontal="@dimen/uniform_extra_spacing">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/uniform_extra_spacing"
+        android:paddingBottom="@dimen/uniform_extra_spacing">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/action_btn_padding"
+            app:tint="@color/black_d_n"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/ic_keyboard_backspace_black_24px" />
+
+
+        <TextView
+            android:id="@+id/text_title"
+            style="@style/TextViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/uniform_spacing"
+            android:layout_marginRight="@dimen/uniform_spacing"
+            android:layout_toStartOf="@id/btn_submit"
+            android:layout_toEndOf="@id/back"
+            android:gravity="center"
+            android:padding="6dp"
+            android:text="@string/configure_button"
+            android:textColor="@color/black_d_n" />
+
+        <TextView
+            android:id="@+id/btn_submit"
+            style="@style/TextViewMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:padding="6dp"
+            android:text="@string/text_next_configure"
+            android:textAllCaps="false"
+            android:textColor="@color/black_d_n"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/config_image_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/curved_rectangle_bg"
+            android:layout_marginTop="@dimen/uniform_extra_spacing"
+            android:layout_marginBottom="@dimen/menu_bottom_margin"
+            android:visibility="visible">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/email_set"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/uniform_extra_spacing"
+                android:textColorHint="@color/light_gray"
+                app:hintTextColor="@color/light_gray">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/input_name"
+                    style="@style/EditTextStyle"
+                    android:background="@android:color/transparent"
+                    android:enabled="false"
+                    android:hint="@string/name_device"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textColor="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+<!--            <androidx.appcompat.widget.AppCompatEditText-->
+<!--                android:id="@+id/input_name"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_margin="@dimen/uniform_extra_spacing"-->
+<!--                android:textColorHint="@color/gray"-->
+<!--                android:inputType="textCapWords|textCapSentences"-->
+<!--                android:hint="@string/name_device"-->
+<!--                android:visibility="visible"-->
+<!--                android:padding="@dimen/et_padding"-->
+<!--                android:textColor="@color/black" />-->
+
+            <RelativeLayout
+                android:id="@+id/rlRoom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/email_set"
+                android:layout_marginTop="@dimen/uniform_extra_spacing"
+                android:layout_marginStart="@dimen/uniform_extra_spacing"
+                android:layout_marginEnd="@dimen/uniform_extra_spacing">
+
+                <TextView
+                    style="@style/TextViewSubHeader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvRoom"
+                    android:text="@string/rooms_tab_text"
+                    android:textColor="@color/black"/>
+
+                <Spinner
+                    android:id="@+id/roomlistSpinner"
+                    style="@style/Widget.AppCompat.Spinner.Underlined"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="@dimen/normal_margin"
+                    android:layout_below="@+id/tvRoom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/favourite_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlRoom"
+                android:padding="@dimen/uniform_extra_spacing">
+
+                <TextView
+                    style="@style/TextViewSubHeader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/text_add_to_favourite"
+                    android:textColor="@color/black" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switchFav"
+                    style="@style/SwitchCompatStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="invisible" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/remote"
+    android:layout_width="@dimen/hundred_fifty"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/uniform_spacing"
+    card_view:cardBackgroundColor="@color/white_gray"
+    card_view:cardCornerRadius="@dimen/uniform_spacing"
+    card_view:cardElevation="@dimen/uniform_half_spacing"
+    card_view:cardMaxElevation="@dimen/uniform_half_spacing">
+
+    <RelativeLayout
+        android:id="@+id/rlScenes"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:padding="@dimen/uniform_spacing">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/appliance_image"
+            android:layout_width="@dimen/small_icon_size"
+            android:layout_height="@dimen/small_icon_size"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/uniform_spacing"
+            android:paddingTop="@dimen/uniform_spacing"
+            android:paddingBottom="@dimen/uniform_spacing"
+            card_view:srcCompat="@drawable/ic_enter_off" />
+
+        <TextView
+            android:id="@+id/remoteName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/appliance_image"
+            android:fontFamily="@font/radomir_tinkov_gilroy_light"
+            android:layout_toEndOf="@+id/appliance_image"
+            android:maxEms="10"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:padding="@dimen/uniform_half_spacing"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_normal_size" />
+
+        <TextView
+            android:id="@+id/brand_name"
+            style="@style/TextViewNormal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/remoteName"
+            android:layout_toEndOf="@+id/appliance_image"
+            android:maxEms="10"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:padding="@dimen/uniform_half_spacing"
+            android:textColor="@color/black"
+            android:textSize="@dimen/forteen_sp" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

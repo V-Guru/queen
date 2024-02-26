@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dialogue_drawable"
+    android:minWidth="@dimen/dialog_width"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvDialogTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/uniform_extra_spacing"
+        android:ellipsize="end"
+        android:fontFamily="@font/radomir_tinkov_gilroy_light"
+        android:maxLength="30"
+        android:text="@string/temp_tunable"
+        android:textColor="@color/black_d_n"
+        android:textSize="@dimen/twenty_two_sp"
+        android:textStyle="bold" />
+
+    <com.warkiz.widget.IndicatorSeekBar
+        android:id="@+id/tempBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/uniform_extra_spacing"
+        android:focusedByDefault="true"
+        app:isb_indicator_color="@color/secondairy_color"
+        app:isb_indicator_text_color="@color/black_d_n"
+        app:isb_indicator_type="circular_bubble"
+        app:isb_max="400"
+        app:isb_min="50"
+        app:isb_progress="0"
+        app:isb_show_indicator="true"
+        app:isb_text_color="@color/colorAccent"
+        app:isb_thumb_color="@color/secondairy_color"
+        app:isb_thumb_width="@dimen/twentyfive"
+        app:isb_tick_color="@color/secondairy_color"
+        app:isb_track_background_bar_size="@dimen/uniform_extra_spacing"
+        app:isb_track_progress_bar_size="@dimen/uniform_extra_spacing"
+        app:isb_track_rounded_corners="true" />
+
+    <com.skydoves.colorpickerview.ColorPickerView
+        android:id="@+id/colorPicker"
+        android:layout_width="@dimen/margin_horizontal_plus"
+        android:layout_height="@dimen/margin_horizontal_plus"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/uniform_extra_spacing"
+        android:visibility="gone"
+        app:palette="@drawable/palette"
+        app:selector="@drawable/wheel"
+        app:selector_size="@dimen/layout_padding" />
+
+
+    <TextView
+        android:id="@+id/tvbright"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/uniform_extra_spacing"
+        android:layout_marginEnd="@dimen/uniform_extra_spacing"
+        android:ellipsize="end"
+        android:fontFamily="@font/radomir_tinkov_gilroy_light"
+        android:text="@string/set_brightness"
+        android:textColor="@color/black_d_n"
+        android:textSize="@dimen/twenty_two_sp"
+        android:textStyle="bold" />
+
+    <com.warkiz.widget.IndicatorSeekBar
+        android:id="@+id/setBrightness"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/uniform_extra_spacing"
+        android:layout_marginTop="@dimen/option_size"
+        android:layout_marginEnd="@dimen/uniform_extra_spacing"
+        app:isb_indicator_color="@color/colorAccent"
+        app:isb_indicator_stay="true"
+        app:isb_indicator_type="circular_bubble"
+        app:isb_max="100"
+        app:isb_min="0"
+        app:isb_progress="0"
+        app:isb_seek_bar_type="continuous_texts_ends"
+        app:isb_show_indicator="true"
+        app:isb_text_color="@color/colorAccent"
+        app:isb_thumb_color="@color/colorAccent"
+        app:isb_track_background_bar_color="@color/secondairy_color"
+        app:isb_track_background_bar_size="@dimen/action_btn_padding"
+        app:isb_track_progress_bar_color="@color/colorAccent"
+        app:isb_track_progress_bar_size="@dimen/action_btn_padding"
+        app:isb_track_rounded_corners="true" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/uniform_extra_spacing">
+
+        <Button
+            android:id="@+id/btnEditTunnable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:background="@drawable/curved_rectangle_bg"
+            android:elevation="@dimen/uniform_half_spacing"
+            android:padding="@dimen/uniform_spacing"
+            android:text="@string/edit"
+            android:textAllCaps="false"
+            android:textColor="@color/light_black"
+            android:textSize="@dimen/text_normal_size"
+            android:visibility="gone"
+            app:backgroundTint="@color/light_gray" />
+
+        <Button
+            android:id="@+id/btnOk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/gradient_desin"
+            android:elevation="@dimen/uniform_half_spacing"
+            android:padding="@dimen/uniform_spacing"
+            android:text="@string/text_done"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_normal_size"
+            app:backgroundTint="@color/colorAccent" />
+    </RelativeLayout>
+
+
+</LinearLayout>

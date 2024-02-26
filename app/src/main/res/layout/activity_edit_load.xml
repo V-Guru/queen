@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_screen_d_n"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/layout_header" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/configure_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/uniform_spacing">
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/uniform_spacing"
+            android:textColorHint="@color/light_gray"
+            app:hintTextColor="@color/light_gray">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_load"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/gilroy_bold"
+                android:hint="@string/load_name"
+                android:imeOptions="actionNext"
+                android:inputType="textCapWords|textCapSentences"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="Light 1"
+                android:textColor="@color/black_d_n"
+                android:textSize="@dimen/text_title_small_size" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:id="@+id/sickbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.warkiz.widget.IndicatorSeekBar
+                android:id="@+id/sickbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/plus_size"
+                app:isb_indicator_color="@color/colorAccent"
+                app:isb_indicator_stay="true"
+                app:isb_indicator_type="circular_bubble"
+                app:isb_max="100"
+                app:isb_min="0"
+                app:isb_progress="0"
+                app:isb_seek_bar_type="continuous_texts_ends"
+                app:isb_show_indicator="true"
+                app:isb_text_color="@color/colorAccent"
+                app:isb_thumb_color="@color/colorAccent"
+                app:isb_track_background_bar_color="@color/secondairy_color"
+                app:isb_track_background_bar_size="@dimen/sickbar_width"
+                app:isb_track_progress_bar_color="@color/colorAccent"
+                app:isb_track_progress_bar_size="@dimen/sickbar_width" />
+        </LinearLayout>
+
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/favouriteSwitch"
+            style="@style/SwitchCompatStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/uniform_spacing"
+            android:enabled="false"
+            android:fontFamily="@font/radomir_tinkov_gilroy_light"
+            android:padding="@dimen/normal_margin"
+            android:text="@string/text_add_to_favourite"
+            android:textColor="@color/black_d_n"
+            android:textSize="@dimen/text_normal_size" />
+
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/dimmableSwitch"
+            style="@style/SwitchCompatStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:fontFamily="@font/radomir_tinkov_gilroy_light"
+            android:padding="@dimen/normal_margin"
+            android:text="@string/text_dimmable"
+            android:textColor="@color/black_d_n"
+            android:textSize="@dimen/text_normal_size" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/swAdaptive"
+            style="@style/SwitchCompatStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/radomir_tinkov_gilroy_light"
+            android:padding="@dimen/normal_margin"
+            android:text="@string/adaptive_light"
+            android:textColor="@color/black_d_n"
+            android:textSize="@dimen/text_normal_size"
+            android:visibility="gone" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/loadList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_padding_medium"
+            android:clipToPadding="false"
+            android:paddingHorizontal="@dimen/normal_margin"
+            android:paddingVertical="@dimen/uniform_spacing" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="invisible" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

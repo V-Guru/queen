@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background_screen_d_n">#121212</color>
+    <color name="wozart_logo_color_d_n">#FFFFFF</color>
+    <color name="more_text_d_n">#FDFCFC</color>
+    <color name="black_d_n">#FFFFFF</color>
+    <color name="white_smoke_d_n">#F6F5F5</color>
+    <color name="icon_color_d_n">#EDEBEB</color>
+    <color name="popup_background_d_n">#F5252424</color>
+    <color name="stroke_d_n">#FFFFFF</color>
+    <color name="card_d_n">#595959</color>
+</resources>

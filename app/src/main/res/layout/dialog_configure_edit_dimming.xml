@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dialogue_drawable"
+    android:minWidth="@dimen/dialog_width"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvDialogTitle"
+            style="@style/TextViewTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_toStartOf="@+id/btnEdit"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:marqueeRepeatLimit="2"
+            android:padding="@dimen/uniform_spacing"
+            android:text="@string/text_configure_dim" />
+
+        <TextView
+            android:id="@+id/btnEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:drawableRight="@drawable/ic_edit_new"
+            android:padding="@dimen/uniform_extra_spacing"
+            android:textSize="16sp"
+            app:drawableTint="@color/colorAccent" />
+    </RelativeLayout>
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iconDevice"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/uniform_half_spacing"
+        app:srcCompat="@drawable/ic_bed_lamp_on_new" />
+
+    <com.wozart.aura.ui.customview.rangebar.RangeBar
+        android:id="@+id/rangeBarDim"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/rangebar_height"
+        android:layout_below="@+id/dimmable_layout"
+        android:layout_marginLeft="@dimen/uniform_extra_spacing"
+        android:layout_marginRight="@dimen/uniform_extra_spacing"
+        android:visibility="gone"
+        custom:barWeight="2dp"
+        custom:connectingLineColor="@color/colorAccent"
+        custom:pinColor="@color/colorAccent"
+        custom:pinRadius="15dp"
+        custom:rangeBar="false"
+        custom:selectorColor="@color/colorAccent"
+        custom:tickColor="@color/colorAccent"
+        custom:tickEnd="100"
+        custom:tickInterval="1"
+        custom:tickStart="0" />
+
+    <com.warkiz.widget.IndicatorSeekBar
+        android:id="@+id/sickbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/uniform_spacing"
+        android:layout_marginTop="@dimen/uniform_spacing"
+        android:layout_marginRight="@dimen/uniform_spacing"
+        android:layout_marginBottom="@dimen/uniform_extra_spacing"
+        android:padding="@dimen/uniform_spacing"
+        app:isb_indicator_color="@color/colorAccent"
+        app:isb_indicator_stay="true"
+        app:isb_indicator_type="circular_bubble"
+        app:isb_max="100"
+        app:isb_min="0"
+        app:isb_progress="0"
+        app:isb_seek_bar_type="continuous"
+        app:isb_show_indicator="true"
+        app:isb_text_color="@color/colorAccent"
+        app:isb_text_right_end="100"
+        app:isb_thumb_color="@color/colorAccent"
+        app:isb_track_background_bar_color="@color/secondairy_color"
+        app:isb_track_background_bar_size="@dimen/layout_padding"
+        app:isb_track_progress_bar_color="@color/colorAccent"
+        app:isb_track_progress_bar_size="@dimen/corner_radious_card" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/btnDone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/uniform_extra_spacing"
+            android:layout_marginTop="@dimen/uniform_spacing"
+            android:layout_marginBottom="@dimen/uniform_spacing"
+            android:background="@drawable/gradient_desin"
+            android:text="@string/text_done"
+            android:padding="@dimen/normal_margin"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_normal_size" />
+    </LinearLayout>
+
+</LinearLayout>

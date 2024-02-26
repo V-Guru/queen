@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cvCard"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/plus_size"
+    android:layout_margin="@dimen/action_btn_padding"
+    app:cardBackgroundColor="@color/popup_background_d_n"
+    app:cardCornerRadius="@dimen/elevation"
+    app:cardElevation="@dimen/uniform_half_spacing">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvNumpad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/gilroy_bold"
+            android:gravity="center"
+            android:padding="@dimen/uniform_spacing"
+            android:textColor="@color/black_d_n"
+            android:textSize="@dimen/text_normal_size" />
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_centerInParent="true"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_horizontal_margin"
+    android:paddingLeft="@dimen/dialog_margin"
+    android:paddingRight="@dimen/dialog_margin"
+    android:paddingTop="@dimen/activity_horizontal_margin"
+    android:background="@color/white">
+
+
+    <TextView
+        android:id="@+id/tv_title"
+        style="@style/TextViewTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/layout_padding"
+        android:paddingTop="@dimen/dialog_margin"
+        android:text="@string/dialog_title_email_required"
+        />
+
+    <RelativeLayout
+        android:id="@+id/message_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/layout_padding"
+        android:paddingBottom="@dimen/layout_padding"
+        android:layout_below="@+id/tv_title">
+        <TextView
+            android:id="@+id/message"
+            style="@style/TextViewSubHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Are you sure you want to logout"/>
+
+        <TextView
+            android:id="@+id/cnf_message"
+            style="@style/TextViewSubHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/message"
+            android:textColor="@color/black"
+            android:layout_marginTop="@dimen/layout_padding_medium"
+            android:text="@string/text_disable_aws_connect"/>
+
+
+
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_normal_size"
+        android:layout_marginTop="@dimen/uniform_spacing"
+        android:background="@drawable/curved_rectangle_bg"
+        app:backgroundTint="@color/white_gray_item_load"
+        android:elevation="@dimen/uniform_half_spacing"
+        android:padding="@dimen/uniform_spacing"
+        android:id="@+id/btn_yes"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/message_rl"
+        android:text="@string/txt_yes"
+        android:textColor="@color/colorAccent" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_normal_size"
+        android:layout_marginTop="@dimen/uniform_spacing"
+        android:background="@drawable/gradient_desin"
+        app:backgroundTint="@color/colorAccent"
+        android:elevation="@dimen/uniform_half_spacing"
+        android:padding="@dimen/uniform_spacing"
+        android:id="@+id/btn_no"
+        android:layout_below="@+id/message_rl"
+        android:text="@string/txt_no"
+        android:textColor="@color/white" />
+
+</RelativeLayout>
+

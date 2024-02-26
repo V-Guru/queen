@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/roomCardList"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/uniform_spacing"
+    card_view:cardBackgroundColor="@color/white"
+    card_view:cardCornerRadius="@dimen/corner_radious_card">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/uniform_spacing">
+
+        <TextView
+            android:id="@+id/name_room"
+            style="@style/TextViewNormal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/action_btn_padding"
+            android:maxLength="15"
+            android:maxLines="1"
+            android:text="Living Room"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_medium_size"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal">
+
+            <LinearLayout
+                android:id="@+id/layoutInside"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/uniform_spacing">
+
+                <TextView
+                    android:id="@+id/tvIn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/radomir_tinkov_gilroy_light"
+                    android:text="IN"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_popup_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvCountInside"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/radomir_tinkov_gilroy_light"
+                    android:text="23"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_popup_size"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutOutside"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/layoutInside"
+                android:orientation="vertical"
+                android:padding="@dimen/uniform_spacing">
+
+                <TextView
+                    android:id="@+id/tvOutside"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/radomir_tinkov_gilroy_light"
+                    android:text="Out"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_popup_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvCountOutside"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/radomir_tinkov_gilroy_light"
+                    android:text="23"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_popup_size"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutMotion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/layoutOutside"
+                android:orientation="vertical"
+                android:padding="@dimen/uniform_spacing">
+
+                <TextView
+                    android:id="@+id/tvMotion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/radomir_tinkov_gilroy_light"
+                    android:text="Motion"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_popup_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvMotionDetect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/radomir_tinkov_gilroy_light"
+                    android:text="1"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_popup_size"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutTemp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/layoutMotion"
+                android:orientation="vertical"
+                android:padding="@dimen/uniform_spacing">
+
+                <TextView
+                    android:id="@+id/tvTemp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/radomir_tinkov_gilroy_light"
+                    android:text="Temperature"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_popup_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvTempValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/radomir_tinkov_gilroy_light"
+                    android:text="1"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_popup_size"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

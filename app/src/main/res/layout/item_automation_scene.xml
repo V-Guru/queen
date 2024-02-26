@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_scene_auto"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:layout_margin="@dimen/elevation"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackgroundBorderless"
+    card_view:cardCornerRadius="@dimen/one_dp">
+
+
+    <LinearLayout
+        android:id="@+id/layout_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rlLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/scenesIconAuto"
+                android:layout_width="@dimen/plus_size"
+                android:layout_height="@dimen/plus_size"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/uniform_spacing"
+                android:padding="@dimen/action_btn_padding"
+                android:src="@drawable/ic_clock_icon_" />
+
+            <TextView
+                android:id="@+id/scheduleTimes"
+                style="@style/TextViewNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/uniform_spacing"
+                android:layout_marginEnd="@dimen/one_dp"
+                android:padding="@dimen/uniform_half_spacing"
+                android:text="@string/time_"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_sub_header_size" />
+
+
+            <RelativeLayout
+                android:id="@+id/scheduleRoutines"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/more_menu_icon"
+                android:layout_marginTop="@dimen/one_dp"
+                android:background="@android:color/transparent"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/tvSunday"
+                    style="@style/TextWeekDay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/text_s"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvMonday"
+                    style="@style/TextWeekDay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/tvSunday"
+                    android:text="@string/text_m"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvTuesday"
+                    style="@style/TextWeekDay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/tvMonday"
+                    android:text="@string/text_t"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvWednesday"
+                    style="@style/TextWeekDay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/tvTuesday"
+                    android:text="@string/text_w"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvThursday"
+                    style="@style/TextWeekDay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/tvWednesday"
+                    android:text="@string/text_t"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvFriday"
+                    style="@style/TextWeekDay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/tvThursday"
+                    android:text="@string/text_f"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvSaturday"
+                    style="@style/TextWeekDay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/tvFriday"
+                    android:text="@string/text_s"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/scheduleEndTimes"
+                    style="@style/TextViewNormal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="@dimen/normal_margin"
+                    android:paddingBottom="5dp"
+                    android:text="Time"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_normal_size"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/text_trigger"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/scheduleTimes"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/one_dp"
+                android:fontFamily="@font/radomir_tinkov_gilroy_light"
+                android:paddingHorizontal="@dimen/uniform_half_spacing"
+                android:paddingBottom="@dimen/uniform_half_spacing"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/forteen_sp" />
+
+        </RelativeLayout>
+    </LinearLayout>
+    <!--</RelativeLayout>-->
+</androidx.cardview.widget.CardView>

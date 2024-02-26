@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerInParent="true"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_horizontal_margin"
+    android:paddingLeft="@dimen/dialog_margin"
+    android:paddingRight="@dimen/dialog_margin"
+    android:paddingTop="@dimen/activity_horizontal_margin"
+    android:background="@drawable/dialogue_drawable">
+
+
+    <TextView
+        android:id="@+id/tv_title"
+        style="@style/TextViewTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="@dimen/normal_margin"
+        android:text="Specific Time"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextViewTitle"
+        android:id="@+id/done"
+        android:padding="@dimen/uniform_half_spacing"
+        android:layout_alignParentEnd="true"
+        android:textColor="@color/colorAccent"
+        android:text="Done"
+        />
+
+    <RelativeLayout
+        android:id="@+id/message_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/one_dp"
+        android:paddingBottom="@dimen/one_dp"
+        android:layout_below="@+id/done">
+        <TextView
+            android:id="@+id/message"
+            style="@style/TextViewSubHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black_d_n"
+            android:text="Start Time"/>
+
+        <TimePicker
+            android:layout_width="wrap_content"
+            android:id="@+id/start_time_picker"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/message"
+            android:visibility="visible"
+            android:layout_margin="@dimen/uniform_spacing"
+            android:numbersTextColor="@color/black_d_n"
+            android:numbersSelectorColor="@color/black_d_n"
+            android:numbersInnerTextColor="@color/colorAccent"
+            android:timePickerMode="spinner"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/end_layout"
+        android:paddingTop="@dimen/one_dp"
+        android:layout_below="@+id/message_rl"
+        android:paddingBottom="@dimen/one_dp">
+        <TextView
+            android:id="@+id/end_message"
+            style="@style/TextViewSubHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black_d_n"
+            android:text="End Time"/>
+
+        <TimePicker
+            android:layout_width="wrap_content"
+            android:id="@+id/end_time_picker"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/end_message"
+            android:visibility="visible"
+            android:layout_margin="@dimen/uniform_spacing"
+            android:numbersTextColor="@color/black_d_n"
+            android:numbersSelectorColor="@color/black_d_n"
+            android:numbersInnerTextColor="@color/colorAccent"
+            android:timePickerMode="spinner"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
+

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/uniform_extra_spacing"
+    app:cardCornerRadius="@dimen/one_dp"
+    tools:ignore="contentDescription">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/uniform_spacing">
+        <TextView
+            android:id="@+id/allHomes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gilroy_bold"
+            android:textSize="@dimen/text_dialog_header"
+            android:padding="@dimen/uniform_spacing"
+            android:text="@string/all_homes"
+            android:textAllCaps="false"
+            android:textColor="@color/colorAccent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/homesRv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:layout_below="@+id/allHomes"
+            android:layout_marginTop="@dimen/uniform_spacing"
+            android:padding="@dimen/uniform_half_spacing"
+             />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/uniform_spacing"
+            android:layout_below="@+id/homesRv">
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:padding="@dimen/uniform_half_spacing"
+                android:layout_centerVertical="true"
+                android:id="@+id/image_add"
+                android:src="@drawable/ic_add_home_dialog"
+                />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/addHome"
+            android:fontFamily="@font/opensans_regular"
+            android:textSize="@dimen/text_sub_header_size"
+            android:layout_toEndOf="@+id/image_add"
+            android:gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:text="@string/text_create_home"
+            android:padding="@dimen/uniform_half_spacing"
+            android:textColor="@color/colorAccent"
+            />
+        </RelativeLayout>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dialogue_drawable"
+    android:minWidth="@dimen/dialog_width"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_margin"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/btnEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:gravity="end"
+            android:padding="@dimen/uniform_extra_spacing"
+            android:textSize="16sp"
+            app:drawableEndCompat="@drawable/ic_edit_new"
+            app:drawableTint="@color/colorAccent" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:paddingBottom="@dimen/home_plus_size"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/layout_top"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/curved_rectangle_bg"
+                android:orientation="horizontal"
+                android:padding="@dimen/uniform_extra_spacing">
+
+                <ImageView
+                    android:id="@+id/ivOpenCurtain"
+                    android:layout_width="@dimen/top_margin"
+                    android:layout_height="@dimen/top_margin"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/uniform_spacing"
+                    android:padding="@dimen/uniform_spacing"
+                    android:src="@drawable/ic_curtain_icons_curtain_open" />
+
+                <View
+                    android:layout_width="0.8dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/uniform_extra_spacing"
+                    android:background="@color/colorAccent"
+                    android:padding="@dimen/uniform_spacing" />
+
+                <ImageView
+                    android:id="@+id/ivStop"
+                    android:layout_width="@dimen/top_margin"
+                    android:layout_height="@dimen/top_margin"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/uniform_spacing"
+                    android:padding="@dimen/uniform_spacing"
+                    android:src="@drawable/ic_stop_black_24dp" />
+
+                <View
+                    android:layout_width="0.8dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/uniform_extra_spacing"
+                    android:layout_marginEnd="@dimen/uniform_extra_spacing"
+                    android:background="@color/colorAccent"
+                    android:padding="@dimen/uniform_spacing" />
+
+                <ImageView
+                    android:id="@+id/ivCloseCurtain"
+                    android:layout_width="@dimen/top_margin"
+                    android:layout_height="@dimen/top_margin"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/uniform_spacing"
+                    android:padding="@dimen/uniform_spacing"
+                    android:src="@drawable/ic_curtain_icons_curtain_close" />
+            </LinearLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

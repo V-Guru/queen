@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="CustomTextView">
+        <attr name="fontName" format="enum">
+            <enum name="Roboto_Bold" value="1"/>
+            <enum name="Roboto_Italic" value="2"/>
+            <enum name="Roboto_Light" value="3"/>
+            <enum name="Roboto_Medium" value="4"/>
+            <enum name="Roboto_Regular" value="5"/>
+            <enum name="Roboto_Thin" value="6"/>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="RangeBar">
+        <attr name="tickStart" format="float"/>
+        <attr name="tickEnd" format="float"/>
+        <attr name="tickInterval" format="float"/>
+        <attr name="tickHeight" format="dimension"/>
+        <attr name="tickColor" format="color"/>
+        <attr name="barWeight" format="dimension"/>
+        <attr name="rangeBarColor" format="reference|color"/>
+        <attr name="textColor" format="reference|color"/>
+        <attr name="pinColor" format="reference|color"/>
+        <attr name="selectorSize" format="dimension"/>
+        <attr name="selectorBoundaryColor" format="reference|color"/>
+        <attr name="selectorBoundarySize" format="dimension"/>
+        <attr name="pinPadding" format="dimension"/>
+        <attr name="pinMinFont" format="dimension"/>
+        <attr name="pinMaxFont" format="dimension"/>
+        <attr name="rangeBarPaddingBottom" format="dimension"/>
+        <attr name="selectorColor" format="reference|color"/>
+        <attr name="rangeBar" format="boolean"/>
+        <attr name="temporaryPins" format="boolean"/>
+        <attr name="connectingLineWeight" format="dimension"/>
+        <attr name="connectingLineColor" format="reference|color"/>
+        <attr name="pinRadius" format="dimension"/>
+        <attr name="textSize" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="Pinview">
+        <attr name="pinBackground" format="reference"/>
+        <attr name="pinLength" format="integer"/>
+        <attr name="pinWidth" format="dimension"/>
+        <attr name="pinHeight" format="dimension"/>
+        <attr name="splitWidth" format="dimension"/>
+        <attr name="cursorVisible" format="boolean"/>
+        <attr name="password" format="boolean"/>
+        <attr name="forceKeyboard" format ="boolean"/>
+        <attr name="hint" format="string"/>
+        <attr name="inputType"/>
+    </declare-styleable>
+    <attr name="inputType" format="enum">
+        <enum name="text" value="0"/>
+        <enum name="number" value="1"/>
+    </attr>
+    <declare-styleable name="ColorPickerView">
+        <!-- sets a drawable of the palette. the default palette is HSV drawable palette built by HSV (hue, saturation, value) color model. -->
+        <attr name="palette" format="reference" />
+        <!-- sets a drawable of the selector. -->
+        <attr name="selector" format="integer" />
+        <!-- sets a width/height square size of the selector. -->
+        <attr name="selector_size" format="dimension" />
+        <!-- sets an alpha of thr selector. -->
+        <attr name="alpha_selector" format="float" />
+        <!-- sets an alpha of the flag. -->
+        <attr name="alpha_flag" format="float" />
+        <!-- sets a preference name for persisting and restoring status of the selector and slideBars. -->
+        <attr name="preferenceName" format="string" />
+        <!-- sets a debounce duration of the invoking color listener. -->
+        <attr name="debounceDuration" format="integer" />
+        <!-- set an initial position of the selector using a specific color. This attribute will work with only a default HSV palette. -->
+        <attr name="initialColor" format="color" />
+        <!-- sets the color listener's trigger action mode. -->
+        <attr name="actionMode" format="enum">
+            <!-- trigger the listener always when tapped by a user.  -->
+            <enum name="always" value="0" />
+            <!-- trigger the listener only the last color when user release tapping. -->
+            <enum name="last" value="1" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="AlphaSlideBar">
+        <!-- sets a customized selector drawable. -->
+        <attr name="selector_AlphaSlideBar" format="integer" />
+        <!-- sets a color of the border. -->
+        <attr name="borderColor_AlphaSlideBar" format="color" />
+        <!-- sets a size of the border. -->
+        <attr name="borderSize_AlphaSlideBar" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="BrightnessSlideBar">
+        <!-- sets a customized selector drawable. -->
+        <attr name="selector_BrightnessSlider" format="integer" />
+        <!-- sets a color of the border. -->
+        <attr name="borderColor_BrightnessSlider" format="color" />
+        <!-- sets a size of the border. -->
+        <attr name="borderSize_BrightnessSlider" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="AlphaTileView">
+        <!-- sets width/height square size of the title. -->
+        <attr name="tileSize" format="integer" />
+        <!-- a color of the odd location in patterns. -->
+        <attr name="tileOddColor" format="color" />
+        <!-- a color of the even location in patterns. -->
+        <attr name="tileEvenColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="HoloCircleSeekBar">
+        <attr name="wheel_size" format="integer" />
+        <attr name="pointer_size" format="dimension" />
+        <attr name="max" format="integer"/>
+        <attr name="show_text" format="boolean"/>
+        <attr name="start_angle" format="integer"/>
+        <attr name="end_angle" format="integer"/>
+        <attr name="text_size" format="dimension"/>
+        <attr name="init_position" format="integer"/>
+        <attr name="wheel_active_color" format="string"/>
+        <attr name="wheel_unactive_color" format="string"/>
+        <attr name="pointer_color" format="string"/>
+        <attr name="pointer_halo_color" format="string"/>
+        <attr name="text_color" format="string"/>
+    </declare-styleable>
+</resources>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_screen_d_n"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/uniform_extra_spacing">
+
+    <RelativeLayout
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/uniform_extra_spacing"
+        android:paddingBottom="@dimen/uniform_extra_spacing">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/action_btn_padding"
+            android:src="@drawable/ic_back"
+            android:tint="@color/black_d_n" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/gilroy_bold"
+            android:gravity="center"
+            android:padding="6dp"
+            android:text="@string/wozart_aura_security"
+            android:textColor="@color/black_d_n"
+            android:textSize="@dimen/text_normal_size" />
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top_layout">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/top_layout"
+            android:orientation="vertical"
+            android:theme="@style/AppTheme">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_feedback"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/elevation"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/uniform_spacing"
+                app:cardElevation="@dimen/uniform_half_spacing">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:padding="@dimen/uniform_spacing">
+
+                    <TextView
+                        android:id="@+id/text_bugs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_toStartOf="@+id/icon_click"
+                        android:fontFamily="@font/gilroy_bold"
+                        android:gravity="center_vertical"
+                        android:justificationMode="inter_word"
+                        android:padding="@dimen/uniform_spacing"
+                        android:text="@string/wozart_aura_security_1"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_sub_header_size" />
+
+                    <ImageView
+                        android:id="@+id/icon_click"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_keyboard_arrow_right_black_24dp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:id="@+id/layout_details_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/card_feedback"
+                android:layout_margin="@dimen/uniform_half_spacing"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/text_aura"
+                    style="@style/TextViewNormal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/uniform_spacing"
+                    android:layout_marginEnd="@dimen/uniform_spacing"
+                    android:justificationMode="inter_word"
+                    android:text="@string/wozart_aura_security_2"
+                    android:textColor="@color/black_d_n" />
+
+            </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_faq"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_details_1"
+                android:layout_margin="@dimen/elevation"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/uniform_spacing"
+                app:cardElevation="@dimen/uniform_half_spacing">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:padding="@dimen/uniform_spacing">
+
+                    <TextView
+                        android:id="@+id/faq"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@+id/FAQ_"
+                        android:fontFamily="@font/gilroy_bold"
+                        android:gravity="center_vertical"
+                        android:justificationMode="inter_word"
+                        android:padding="@dimen/uniform_spacing"
+                        android:text="@string/wozart_aura_security_3"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_sub_header_size" />
+
+                    <ImageView
+                        android:id="@+id/FAQ_"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_keyboard_arrow_right_black_24dp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:id="@+id/layout_details_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/card_faq"
+                android:layout_margin="@dimen/uniform_half_spacing"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/text_aura_1"
+                    style="@style/TextViewNormal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/uniform_spacing"
+                    android:layout_marginEnd="@dimen/uniform_spacing"
+                    android:justificationMode="inter_word"
+                    android:text="@string/wozart_aura_security_4"
+                    android:textColor="@color/black_d_n" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_aura_list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_screen_d_n"
+    android:paddingHorizontal="@dimen/uniform_extra_spacing">
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/uniform_extra_spacing"
+        android:paddingTop="@dimen/activity_horizontal_margin"
+        android:src="@drawable/ic_back"/>
+    <TextView
+        android:id="@+id/tv_title"
+        style="@style/TextViewTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/title_margin_bottom"
+        android:layout_toEndOf="@+id/back"
+        android:paddingStart="@dimen/activity_horizontal_margin"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:ems="20"
+        android:paddingBottom="@dimen/uniform_extra_spacing"
+        android:paddingEnd="@dimen/padding_customize_layout"
+        android:gravity="center_horizontal"
+        android:paddingTop="@dimen/activity_horizontal_margin"
+        android:text="@string/title_aura_list"
+        android:textColor="@color/black_d_n"/>
+
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgScan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/uniform_spacing"
+        android:background="@drawable/filled_circle"
+        android:padding="@dimen/uniform_spacing"
+        app:srcCompat="@drawable/ic_scan"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listSwitches"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/imgScan"
+        android:layout_below="@id/tv_title">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/tvRestartDevice"
+        style="@style/TextViewNormal"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black_d_n"
+        android:layout_above="@id/imgScan"
+        android:layout_marginBottom="@dimen/uniform_spacing"
+        android:layout_marginTop="@dimen/scan_margin"
+        android:gravity="center_horizontal"
+        android:text="@string/device_not_visible"/>
+
+    <TextView
+        android:id="@+id/tvScanSwitch"
+        style="@style/TextViewNormal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black_d_n"
+        android:layout_above="@id/imgScan"
+        android:layout_marginBottom="@dimen/uniform_spacing"
+        android:layout_marginTop="@dimen/scan_margin"
+        android:gravity="center_horizontal"
+        android:text="@string/text_scan_for_new"/>
+</RelativeLayout>

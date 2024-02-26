@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_screen_d_n"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/layout_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:paddingHorizontal="@dimen/uniform_extra_spacing"
+        android:scrollbars="none"
+        app:layout_constraintTop_toBottomOf="@+id/header">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/layout_padding">
+
+            <TextView
+                android:id="@+id/text_enter_scene"
+                style="@style/TextViewNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/header"
+                android:layout_marginLeft="@dimen/uniform_spacing"
+                android:layout_marginRight="@dimen/uniform_spacing"
+                android:text="Enter Scene Name"
+                android:textColor="@color/black_d_n"
+                tools:ignore="NotSibling" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/inputSceneName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_enter_scene"
+                android:layout_marginLeft="@dimen/uniform_spacing"
+                android:layout_marginTop="@dimen/uniform_spacing"
+                android:layout_marginRight="@dimen/uniform_spacing"
+                android:background="@drawable/curved_rectangle_bg"
+                android:focusedByDefault="true"
+                android:hint="@string/hint_scene_name"
+                android:inputType="textCapWords|textCapSentences"
+                android:maxLines="1"
+                android:padding="@dimen/et_padding"
+                android:textColor="@color/black"
+                android:textColorHint="@color/light_gray"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tvSelectSceneIcon"
+                style="@style/TextViewNormal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/inputSceneName"
+                android:layout_marginLeft="@dimen/uniform_spacing"
+                android:layout_marginTop="@dimen/uniform_spacing"
+                android:layout_marginRight="@dimen/uniform_spacing"
+                android:layout_marginBottom="@dimen/uniform_spacing"
+                android:text="@string/text_select_scene_icon"
+                android:textColor="@color/black_d_n"
+                android:visibility="gone" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/listScenes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvSelectSceneIcon"
+                android:layout_marginLeft="@dimen/uniform_spacing"
+                android:layout_marginRight="@dimen/uniform_spacing"
+                android:layout_marginBottom="@dimen/uniform_extra_spacing"
+                android:clipToPadding="false"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+            <TextView
+                android:id="@+id/tvFavoriteButton"
+                style="@style/TextViewSubHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/listScenes"
+                android:layout_marginStart="@dimen/uniform_extra_spacing"
+                android:layout_marginTop="@dimen/uniform_extra_spacing"
+                android:shadowColor="?attr/textShadowColor"
+                android:text="@string/remote_btn_fav"
+                android:textColor="@color/black_d_n"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvFavButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvFavoriteButton"
+                android:layout_marginTop="@dimen/uniform_spacing"
+                android:clipToPadding="false"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/uniform_spacing"
+                android:paddingRight="@dimen/uniform_spacing"
+                android:visibility="gone"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+            <TextView
+                android:id="@+id/tvSelectLoadIcon"
+                style="@style/TextViewNormal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rvFavButton"
+                android:layout_marginLeft="@dimen/uniform_spacing"
+                android:layout_marginTop="@dimen/uniform_half_spacing"
+                android:layout_marginRight="@dimen/uniform_spacing"
+                android:layout_marginBottom="@dimen/uniform_spacing"
+                android:text="@string/text_select_scene_load"
+                android:textColor="@color/black_d_n" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/listRooms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvSelectLoadIcon"
+                android:layout_marginLeft="@dimen/uniform_spacing"
+                android:layout_marginRight="@dimen/uniform_spacing"
+                android:clipToPadding="false"
+                android:paddingBottom="@dimen/uniform_extra_spacing" />
+
+            <LinearLayout
+                android:id="@+id/llAdvance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/listRooms"
+                android:layout_marginTop="@dimen/uniform_spacing"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/device_item_size"
+                android:visibility="visible">
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switchAdvance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:checked="false"
+                    android:fontFamily="@font/radomir_tinkov_gilroy_light"
+                    android:padding="@dimen/normal_margin"
+                    android:text="@string/advance_feature"
+                    android:textColor="@color/black_d_n"
+                    android:textSize="@dimen/text_normal_size"
+                    android:visibility="gone" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvEnableDisable"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/uniform_spacing"
+                    android:visibility="gone"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="@dimen/uniform_spacing">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tvEnableDisable"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="@font/radomir_tinkov_gilroy_light"
+                            android:padding="@dimen/uniform_spacing"
+                            android:text="@string/enable_disable_automation"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_normal_size" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:padding="@dimen/uniform_spacing"
+                            android:src="@drawable/ic_keyboard_arrow_right_black_24dp" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/tvAdvanceSetting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/radomir_tinkov_gilroy_light"
+                    android:padding="@dimen/uniform_spacing"
+                    android:text="@string/advance_feature"
+                    android:textColor="@color/black_d_n"
+                    android:textSize="@dimen/text_normal_size"
+                    android:visibility="gone" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/listAutomations"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/uniform_spacing"
+                    android:layout_marginRight="@dimen/uniform_spacing"
+                    android:clipToPadding="false"
+                    android:paddingBottom="@dimen/uniform_extra_spacing"
+                    android:visibility="gone"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnSceneDelete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginBottom="@dimen/layout_padding"
+                android:background="@drawable/curved_rectangle_bg"
+                android:fontFamily="@font/gilroy_bold"
+                android:stateListAnimator="@null"
+                android:text="@string/text_delete"
+                android:textAllCaps="false"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/text_title_small_size"
+                android:visibility="invisible" />
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <include
+        android:id="@+id/progress_layout"
+        layout="@layout/layout_refresh_home"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header" />
+</androidx.constraintlayout.widget.ConstraintLayout>

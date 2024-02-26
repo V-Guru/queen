@@ -1,0 +1,879 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_screen_d_n"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/uniform_extra_spacing">
+
+    <RelativeLayout
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/uniform_extra_spacing"
+        android:paddingBottom="@dimen/uniform_extra_spacing">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/action_btn_padding"
+            android:src="@drawable/ic_back"
+            android:tint="@color/black_d_n" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/gilroy_bold"
+            android:gravity="center"
+            android:padding="6dp"
+            android:text="@string/wozart_aura_configuration"
+            android:textColor="@color/black_d_n"
+            android:textSize="@dimen/text_normal_size" />
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top_layout"
+        android:paddingBottom="@dimen/margin_top_geo">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/top_layout"
+            android:layout_marginBottom="@dimen/uniform_large_spacing"
+            android:orientation="vertical"
+            android:theme="@style/AppTheme">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_feedback"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/elevation"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/uniform_spacing"
+                app:cardElevation="@dimen/uniform_half_spacing">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:padding="@dimen/uniform_spacing">
+
+                    <TextView
+                        android:id="@+id/text_bugs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@+id/icon_click"
+                        android:fontFamily="@font/gilroy_bold"
+                        android:gravity="center_vertical"
+                        android:justificationMode="inter_word"
+                        android:padding="@dimen/uniform_spacing"
+                        android:text="@string/wozart_aura_configuration_1"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_sub_header_size"
+                        tools:targetApi="o" />
+
+                    <ImageView
+                        android:id="@+id/icon_click"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_keyboard_arrow_right_black_24dp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:id="@+id/layout_details_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/card_feedback"
+                android:layout_margin="@dimen/uniform_half_spacing"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/text_aura"
+                    style="@style/TextViewNormal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/uniform_spacing"
+                    android:layout_marginEnd="@dimen/uniform_spacing"
+                    android:justificationMode="inter_word"
+                    android:text="@string/wozart_aura_configuration_2"
+                    android:textColor="@color/black_d_n"
+                    tools:targetApi="o" />
+
+            </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_faq"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_details_1"
+                android:layout_margin="@dimen/elevation"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/uniform_spacing"
+                app:cardElevation="@dimen/uniform_half_spacing">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:padding="@dimen/uniform_spacing">
+
+                    <TextView
+                        android:id="@+id/faq"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@+id/FAQ_"
+                        android:fontFamily="@font/gilroy_bold"
+                        android:gravity="center_vertical"
+                        android:justificationMode="inter_word"
+                        android:padding="@dimen/uniform_spacing"
+                        android:text="@string/wozart_aura_configuration_3"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_sub_header_size"
+                        tools:targetApi="o" />
+
+                    <ImageView
+                        android:id="@+id/FAQ_"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_keyboard_arrow_right_black_24dp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:id="@+id/layout_details_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/card_faq"
+                android:layout_margin="@dimen/uniform_half_spacing"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/text_aura_1"
+                    style="@style/TextViewNormal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/uniform_spacing"
+                    android:layout_marginEnd="@dimen/uniform_spacing"
+                    android:justificationMode="inter_word"
+                    android:text="@string/wozart_aura_configuration_4"
+                    android:textColor="@color/black_d_n"
+                    tools:targetApi="o" />
+
+            </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_faq_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_details_2"
+                android:layout_margin="@dimen/elevation"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/uniform_spacing"
+                app:cardElevation="@dimen/uniform_half_spacing">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:padding="@dimen/uniform_spacing">
+
+                    <TextView
+                        android:id="@+id/faq_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@+id/FAQ_1"
+                        android:fontFamily="@font/gilroy_bold"
+                        android:gravity="center_vertical"
+                        android:justificationMode="inter_word"
+                        android:padding="@dimen/uniform_spacing"
+                        android:text="@string/wozart_aura_configuration_5"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_sub_header_size"
+                        tools:targetApi="o" />
+
+                    <ImageView
+                        android:id="@+id/FAQ_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_keyboard_arrow_right_black_24dp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:id="@+id/layout_details_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/card_faq_1"
+                android:layout_margin="@dimen/uniform_half_spacing"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/text_aura_2"
+                    style="@style/TextViewNormal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/uniform_spacing"
+                    android:layout_marginEnd="@dimen/uniform_spacing"
+                    android:justificationMode="inter_word"
+                    android:text="@string/wozart_aura_configuration_6"
+                    android:textColor="@color/black_d_n"
+                    tools:targetApi="o" />
+
+            </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_faq_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_details_3"
+                android:layout_margin="@dimen/elevation"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/uniform_spacing"
+                app:cardElevation="@dimen/uniform_half_spacing">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:padding="@dimen/uniform_spacing">
+
+                    <TextView
+                        android:id="@+id/faq_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@+id/img_arrow"
+                        android:fontFamily="@font/gilroy_bold"
+                        android:gravity="center_vertical"
+                        android:justificationMode="inter_word"
+                        android:padding="@dimen/uniform_spacing"
+                        android:text="@string/wozart_aura_configuration_7"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_sub_header_size"
+                        tools:targetApi="o" />
+
+                    <ImageView
+                        android:id="@+id/img_arrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_keyboard_arrow_right_black_24dp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:id="@+id/layout_details_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/card_faq_2"
+                android:layout_margin="@dimen/uniform_half_spacing"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/text_aura_3"
+                    style="@style/TextViewNormal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/uniform_spacing"
+                    android:layout_marginEnd="@dimen/uniform_spacing"
+                    android:justificationMode="inter_word"
+                    android:text="@string/wozart_aura_configuration_8"
+                    android:textColor="@color/black_d_n"
+                    tools:targetApi="o" />
+            </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_faq_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_details_4"
+                android:layout_margin="@dimen/elevation"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/uniform_spacing"
+                app:cardElevation="@dimen/uniform_half_spacing">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:padding="@dimen/uniform_spacing">
+
+                    <TextView
+                        android:id="@+id/faq_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@+id/img_arrow_1"
+                        android:fontFamily="@font/gilroy_bold"
+                        android:gravity="center_vertical"
+                        android:justificationMode="inter_word"
+                        android:padding="@dimen/uniform_spacing"
+                        android:text="@string/wozart_aura_configuration_9"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_sub_header_size"
+                        tools:targetApi="o" />
+
+                    <ImageView
+                        android:id="@+id/img_arrow_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_keyboard_arrow_right_black_24dp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:id="@+id/layout_details_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/card_faq_3"
+                android:layout_margin="@dimen/uniform_half_spacing"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/text_aura_4"
+                    style="@style/TextViewNormal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/uniform_spacing"
+                    android:layout_marginEnd="@dimen/uniform_spacing"
+                    android:justificationMode="inter_word"
+                    android:text="@string/wozart_aura_configuration_10"
+                    android:textColor="@color/black_d_n"
+                    tools:targetApi="o" />
+            </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_faq_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_details_5"
+                android:layout_margin="@dimen/elevation"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/uniform_spacing"
+                app:cardElevation="@dimen/uniform_half_spacing">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:padding="@dimen/uniform_spacing">
+
+                    <TextView
+                        android:id="@+id/faq_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@+id/img_arrow_2"
+                        android:fontFamily="@font/gilroy_bold"
+                        android:gravity="center_vertical"
+                        android:justificationMode="inter_word"
+                        android:padding="@dimen/uniform_spacing"
+                        android:text="@string/wozart_aura_configuration_11"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_sub_header_size"
+                        tools:targetApi="o" />
+
+                    <ImageView
+                        android:id="@+id/img_arrow_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_keyboard_arrow_right_black_24dp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:id="@+id/layout_details_6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/card_faq_4"
+                android:layout_margin="@dimen/uniform_half_spacing"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/text_aura_5"
+                    style="@style/TextViewNormal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/uniform_spacing"
+                    android:layout_marginEnd="@dimen/uniform_spacing"
+                    android:justificationMode="inter_word"
+                    android:text="@string/wozart_aura_configuration_12"
+                    android:textColor="@color/black_d_n"
+                    tools:targetApi="o" />
+            </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_faq_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_details_6"
+                android:layout_margin="@dimen/elevation"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/uniform_spacing"
+                app:cardElevation="@dimen/uniform_half_spacing">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:padding="@dimen/uniform_spacing">
+
+                    <TextView
+                        android:id="@+id/faq_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@+id/img_arrow_3"
+                        android:fontFamily="@font/gilroy_bold"
+                        android:gravity="center_vertical"
+                        android:justificationMode="inter_word"
+                        android:padding="@dimen/uniform_spacing"
+                        android:text="@string/wozart_aura_configuration_13"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_sub_header_size"
+                        tools:targetApi="o" />
+
+                    <ImageView
+                        android:id="@+id/img_arrow_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_keyboard_arrow_right_black_24dp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:id="@+id/layout_details_7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/card_faq_5"
+                android:layout_margin="@dimen/uniform_half_spacing"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/text_aura_6"
+                    style="@style/TextViewNormal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/uniform_spacing"
+                    android:layout_marginEnd="@dimen/uniform_spacing"
+                    android:justificationMode="inter_word"
+                    android:text="@string/wozart_aura_configuration_14"
+                    android:textColor="@color/black_d_n"
+                    tools:targetApi="o" />
+            </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_faq_6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_details_7"
+                android:layout_margin="@dimen/elevation"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/uniform_spacing"
+                app:cardElevation="@dimen/uniform_half_spacing">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:padding="@dimen/uniform_spacing">
+
+                    <TextView
+                        android:id="@+id/faq_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@+id/img_arrow_4"
+                        android:fontFamily="@font/gilroy_bold"
+                        android:gravity="center_vertical"
+                        android:justificationMode="inter_word"
+                        android:padding="@dimen/uniform_spacing"
+                        android:text="@string/wozart_aura_configuration_15"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_sub_header_size"
+                        tools:targetApi="o" />
+
+                    <ImageView
+                        android:id="@+id/img_arrow_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_keyboard_arrow_right_black_24dp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:id="@+id/layout_details_8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/card_faq_6"
+                android:layout_margin="@dimen/uniform_half_spacing"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/text_aura_7"
+                    style="@style/TextViewNormal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/uniform_spacing"
+                    android:layout_marginEnd="@dimen/uniform_spacing"
+                    android:justificationMode="inter_word"
+                    android:text="@string/wozart_aura_configuration_16"
+                    android:textColor="@color/black_d_n"
+                    tools:targetApi="o" />
+            </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_faq_7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_details_8"
+                android:layout_margin="@dimen/elevation"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/uniform_spacing"
+                app:cardElevation="@dimen/uniform_half_spacing">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:padding="@dimen/uniform_spacing">
+
+                    <TextView
+                        android:id="@+id/faq_7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@+id/img_arrow_5"
+                        android:fontFamily="@font/gilroy_bold"
+                        android:gravity="center_vertical"
+                        android:justificationMode="inter_word"
+                        android:padding="@dimen/uniform_spacing"
+                        android:text="@string/wozart_aura_configuration_17"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_sub_header_size"
+                        tools:targetApi="o" />
+
+                    <ImageView
+                        android:id="@+id/img_arrow_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_keyboard_arrow_right_black_24dp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:id="@+id/layout_details_9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/card_faq_7"
+                android:layout_margin="@dimen/uniform_half_spacing"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/text_aura_8"
+                    style="@style/TextViewNormal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/uniform_spacing"
+                    android:layout_marginEnd="@dimen/uniform_spacing"
+                    android:justificationMode="inter_word"
+                    android:text="@string/wozart_aura_configuration_18"
+                    android:textColor="@color/black_d_n"
+                    tools:targetApi="o" />
+            </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_faq_8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_details_9"
+                android:layout_margin="@dimen/elevation"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/uniform_spacing"
+                app:cardElevation="@dimen/uniform_half_spacing">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:padding="@dimen/uniform_spacing">
+
+                    <TextView
+                        android:id="@+id/faq_8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@+id/img_arrow_6"
+                        android:fontFamily="@font/gilroy_bold"
+                        android:gravity="center_vertical"
+                        android:justificationMode="inter_word"
+                        android:padding="@dimen/uniform_spacing"
+                        android:text="@string/wozart_aura_configuration_25"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_sub_header_size"
+                        tools:targetApi="o" />
+
+                    <ImageView
+                        android:id="@+id/img_arrow_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_keyboard_arrow_right_black_24dp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:id="@+id/layout_details_10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/card_faq_8"
+                android:layout_margin="@dimen/uniform_half_spacing"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/text_aura_9"
+                    style="@style/TextViewNormal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/uniform_spacing"
+                    android:layout_marginEnd="@dimen/uniform_spacing"
+                    android:justificationMode="inter_word"
+                    android:text="@string/wozart_aura_configuration_26"
+                    android:textColor="@color/black_d_n"
+                    tools:targetApi="o" />
+            </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_faq_9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_details_10"
+                android:layout_margin="@dimen/elevation"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/uniform_spacing"
+                app:cardElevation="@dimen/uniform_half_spacing">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:padding="@dimen/uniform_spacing">
+
+                    <TextView
+                        android:id="@+id/faq_9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@+id/img_arrow_7"
+                        android:fontFamily="@font/gilroy_bold"
+                        android:gravity="center_vertical"
+                        android:justificationMode="inter_word"
+                        android:padding="@dimen/uniform_spacing"
+                        android:text="@string/wozart_aura_configuration_19"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_sub_header_size"
+                        tools:targetApi="o" />
+
+                    <ImageView
+                        android:id="@+id/img_arrow_7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_keyboard_arrow_right_black_24dp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:id="@+id/layout_details_11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/card_faq_9"
+                android:layout_margin="@dimen/uniform_half_spacing"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/text_aura_10"
+                    style="@style/TextViewNormal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/uniform_spacing"
+                    android:layout_marginEnd="@dimen/uniform_spacing"
+                    android:justificationMode="inter_word"
+                    android:text="@string/wozart_aura_configuration_20"
+                    android:textColor="@color/black_d_n"
+                    tools:targetApi="o" />
+            </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_faq_10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_details_11"
+                android:layout_margin="@dimen/elevation"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/uniform_spacing"
+                app:cardElevation="@dimen/uniform_half_spacing">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:padding="@dimen/uniform_spacing">
+
+                    <TextView
+                        android:id="@+id/faq_10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@+id/img_arrow_8"
+                        android:fontFamily="@font/gilroy_bold"
+                        android:gravity="center_vertical"
+                        android:justificationMode="inter_word"
+                        android:padding="@dimen/uniform_spacing"
+                        android:text="@string/wozart_aura_configuration_21"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_sub_header_size"
+                        tools:targetApi="o" />
+
+                    <ImageView
+                        android:id="@+id/img_arrow_8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_keyboard_arrow_right_black_24dp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:id="@+id/layout_details_12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/card_faq_10"
+                android:layout_margin="@dimen/uniform_half_spacing"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/text_aura_11"
+                    style="@style/TextViewNormal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/uniform_spacing"
+                    android:layout_marginEnd="@dimen/uniform_spacing"
+                    android:justificationMode="inter_word"
+                    android:text="@string/wozart_aura_configuration_22"
+                    android:textColor="@color/black_d_n"
+                    tools:targetApi="o" />
+            </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_faq_11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_details_12"
+                android:layout_margin="@dimen/elevation"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/uniform_spacing"
+                app:cardElevation="@dimen/uniform_half_spacing">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:padding="@dimen/uniform_spacing">
+
+                    <TextView
+                        android:id="@+id/faq_11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@+id/img_arrow_9"
+                        android:fontFamily="@font/gilroy_bold"
+                        android:gravity="center_vertical"
+                        android:justificationMode="inter_word"
+                        android:padding="@dimen/uniform_spacing"
+                        android:text="@string/wozart_aura_configuration_23"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_sub_header_size"
+                        tools:targetApi="o" />
+
+                    <ImageView
+                        android:id="@+id/img_arrow_9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_keyboard_arrow_right_black_24dp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:id="@+id/layout_details_13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/card_faq_11"
+                android:layout_margin="@dimen/uniform_half_spacing"
+                android:layout_marginBottom="@dimen/uniform_large_spacing"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/text_aura_12"
+                    style="@style/TextViewNormal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/uniform_spacing"
+                    android:layout_marginEnd="@dimen/uniform_spacing"
+                    android:justificationMode="inter_word"
+                    android:text="@string/wozart_aura_configuration_24"
+                    android:textColor="@color/black_d_n"
+                    tools:targetApi="o" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

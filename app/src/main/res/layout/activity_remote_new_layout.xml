@@ -1,0 +1,621 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_black_screen">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/layout_header"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/header">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/uniform_extra_spacing"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/horizontal_contact_height">
+
+            <TextView
+                android:id="@+id/tvChannelShortcut"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginHorizontal="@dimen/uniform_extra_spacing"
+                android:fontFamily="@font/radomir_tinkov_gilroy_light"
+                android:maxLines="1"
+                android:padding="@dimen/uniform_spacing"
+                android:text="@string/channel_shortcut"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_normal_size"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvShortcut"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:orientation="horizontal"
+                android:padding="@dimen/uniform_extra_spacing"
+                android:visibility="gone"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/radomir_tinkov_gilroy_light"
+                android:gravity="center_horizontal|center_vertical"
+                android:maxLines="1"
+                android:padding="@dimen/uniform_spacing"
+                android:text="@string/press_hold_to_learn"
+                android:textColor="@color/white"
+                android:textSize="@dimen/forteen_sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/uniform_extra_spacing"
+                android:weightSum="3">
+
+                <RelativeLayout
+                    android:id="@+id/rlPower"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/uniform_half_spacing"
+                    android:layout_weight="1"
+                    android:background="@drawable/curved_radius_ten_gray"
+                    android:onClick="powerClick"
+                    android:padding="@dimen/uniform_spacing">
+
+                    <ImageView
+                        android:id="@+id/ivPower"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:onClick="powerClick"
+                        android:padding="@dimen/uniform_spacing"
+                        android:src="@drawable/ic_ir_remote_icons_on_icon"
+                        app:tint="@color/Red" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlTv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/uniform_half_spacing"
+                    android:layout_weight="1"
+                    android:background="@drawable/curved_radius_ten_gray"
+                    android:onClick="sourceClick"
+                    android:padding="@dimen/uniform_spacing">
+
+                    <ImageView
+                        android:id="@+id/ivTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:onClick="sourceClick"
+                        android:padding="@dimen/uniform_spacing"
+                        android:src="@drawable/ic_ir_remote_icons_tv_av" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlMenu"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/uniform_half_spacing"
+                    android:layout_weight="1"
+                    android:background="@drawable/curved_radius_ten_gray"
+                    android:onClick="menuOpen"
+                    android:padding="@dimen/uniform_spacing">
+
+                    <ImageView
+                        android:id="@+id/ivMenu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:onClick="menuOpen"
+                        android:padding="@dimen/uniform_spacing"
+                        android:src="@drawable/ic_ir_remote_icons_menu" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/uniform_extra_spacing"
+                android:weightSum="3">
+
+                <RelativeLayout
+                    android:id="@+id/rlMute"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/uniform_half_spacing"
+                    android:layout_weight="1"
+                    android:background="@drawable/curved_radius_ten_gray"
+                    android:onClick="mutePressed"
+                    android:padding="@dimen/uniform_spacing">
+
+                    <ImageView
+                        android:id="@+id/ivMute"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:onClick="mutePressed"
+                        android:padding="@dimen/uniform_spacing"
+                        android:src="@drawable/ic_ir_remote_icons_mute" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlNumber"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/uniform_half_spacing"
+                    android:layout_weight="1"
+                    android:background="@drawable/curved_radius_ten_gray"
+                    android:onClick="numberClicked"
+                    android:padding="@dimen/uniform_spacing">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/opensans_regular"
+                        android:onClick="numberClicked"
+                        android:padding="@dimen/uniform_spacing"
+                        android:text="@string/number"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/twenty_five_sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlReturn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/uniform_half_spacing"
+                    android:layout_weight="1"
+                    android:background="@drawable/curved_radius_ten_gray"
+                    android:onClick="returnClicked"
+                    android:padding="@dimen/uniform_spacing">
+
+                    <ImageView
+                        android:id="@+id/ivReturn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:onClick="returnClicked"
+                        android:padding="@dimen/uniform_spacing"
+                        android:src="@drawable/ic_ir_remote_icons_back" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/uniform_extra_spacing"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/uniform_extra_spacing"
+                android:weightSum="3">
+
+                <RelativeLayout
+                    android:id="@+id/rlVolume"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/uniform_half_spacing"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/curved_radius_ten_gray"
+                    android:padding="@dimen/uniform_spacing">
+
+                    <ImageView
+                        android:id="@+id/ivVolumeUp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:onClick="volumeUpClick"
+                        android:padding="@dimen/uniform_spacing"
+                        android:src="@drawable/ic_ir_remote_icons_volume_up" />
+
+                    <TextView
+                        android:id="@+id/tvVolume"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/ivVolumeUp"
+                        android:layout_centerHorizontal="true"
+                        android:maxLines="1"
+                        android:padding="@dimen/uniform_half_spacing"
+                        android:text="@string/volume"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/forteen_sp"
+                        android:visibility="invisible" />
+
+                    <ImageView
+                        android:id="@+id/ivVolumeDown"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvVolume"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:onClick="volumeDownClick"
+                        android:padding="@dimen/uniform_spacing"
+                        android:src="@drawable/ic_ir_remote_icons_volume_down" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/uniform_extra_spacing"
+                    android:layout_marginEnd="@dimen/uniform_extra_spacing"
+                    android:layout_weight="2"
+                    android:padding="@dimen/uniform_spacing">
+
+                    <RelativeLayout
+                        android:id="@+id/rlLeftArrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:onClick="leftArrowClick"
+                        android:padding="@dimen/uniform_half_spacing">
+
+                        <ImageView
+                            android:id="@+id/ivLeftArrow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/uniform_spacing"
+                            android:onClick="leftArrowClick"
+                            android:padding="@dimen/uniform_spacing"
+                            android:src="@drawable/ic_keyboard_arrow_left_black_24px"
+                            app:tint="@color/white" />
+                    </RelativeLayout>
+
+
+                    <ImageView
+                        android:id="@+id/ivUpArrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="@dimen/uniform_spacing"
+                        android:onClick="upArrowClick"
+                        android:padding="@dimen/uniform_spacing"
+                        android:src="@drawable/ic_baseline_keyboard_arrow_up_24"
+                        app:tint="@color/white" />
+
+                    <RelativeLayout
+                        android:id="@+id/rlOK"
+                        android:layout_width="@dimen/scenes_icon_size"
+                        android:layout_height="@dimen/scenes_icon_size"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/circle_gray"
+                        android:onClick="okClick">
+
+                        <TextView
+                            android:id="@+id/tvOk"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/gilroy_bold"
+                            android:onClick="okClick"
+                            android:text="@string/txt_ok"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_normal_size" />
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/rlRightArrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/uniform_spacing"
+                        android:onClick="rightArrowClick"
+                        android:padding="@dimen/uniform_spacing"
+                        android:src="@drawable/ic_keyboard_arrow_right_black_24dp"
+                        app:tint="@color/white" />
+
+                    <ImageView
+                        android:id="@+id/rlBottomArrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:onClick="bottomArrowClick"
+                        android:padding="@dimen/uniform_spacing"
+                        android:src="@drawable/ic_keyboard_arrow_down_black_24dp"
+                        app:tint="@color/white" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlChannel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/uniform_half_spacing"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/curved_radius_ten_gray"
+                    android:padding="@dimen/uniform_spacing">
+
+                    <ImageView
+                        android:id="@+id/ivChannelUp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:onClick="channelUp"
+                        android:padding="@dimen/uniform_spacing"
+                        android:src="@drawable/ic_remote_icons__channel" />
+
+                    <TextView
+                        android:id="@+id/tvChannel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/ivChannelUp"
+                        android:layout_centerHorizontal="true"
+                        android:padding="@dimen/uniform_half_spacing"
+                        android:text="@string/channel"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/forteen_sp"
+                        android:visibility="invisible" />
+
+                    <ImageView
+                        android:id="@+id/ivChannnelDown"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvChannel"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:onClick="channelDown"
+                        android:padding="@dimen/uniform_spacing"
+                        android:src="@drawable/ic_remote_icons__channel_down" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/uniform_extra_spacing"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/uniform_extra_spacing"
+                android:weightSum="4">
+
+                <RelativeLayout
+                    android:id="@+id/rlBackwrd"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/uniform_half_spacing"
+                    android:layout_weight="1"
+                    android:background="@drawable/curved_radius_ten_gray"
+                    android:onClick="backWard"
+                    android:padding="@dimen/uniform_spacing">
+
+                    <ImageView
+                        android:id="@+id/ivForward"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:onClick="backWard"
+                        android:padding="@dimen/uniform_spacing"
+                        android:src="@drawable/ic_fast_rewind_button" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlPause"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/uniform_half_spacing"
+                    android:layout_weight="1"
+                    android:background="@drawable/curved_radius_ten_gray"
+                    android:onClick="pauseButton"
+                    android:padding="@dimen/uniform_spacing">
+
+                    <ImageView
+                        android:id="@+id/ivPause"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:onClick="pauseButton"
+                        android:padding="@dimen/uniform_spacing"
+                        android:src="@drawable/remote_pause_button" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlPlay"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/uniform_half_spacing"
+                    android:layout_weight="1"
+                    android:background="@drawable/curved_radius_ten_gray"
+                    android:onClick="playButton"
+                    android:padding="@dimen/uniform_spacing">
+
+                    <ImageView
+                        android:id="@+id/ivPlay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:onClick="playButton"
+                        android:padding="@dimen/uniform_spacing"
+                        android:src="@drawable/remote_play_button" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlForward"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/uniform_half_spacing"
+                    android:layout_weight="1"
+                    android:background="@drawable/curved_radius_ten_gray"
+                    android:onClick="forwardButton"
+                    android:padding="@dimen/uniform_spacing">
+
+                    <ImageView
+                        android:id="@+id/ivBackward"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:onClick="forwardButton"
+                        android:padding="@dimen/uniform_spacing"
+                        android:src="@drawable/ic_fast_forward_remote" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/uniform_extra_spacing"
+                android:weightSum="4">
+
+                <RelativeLayout
+                    android:id="@+id/rlSetting"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/uniform_half_spacing"
+                    android:layout_weight="1"
+                    android:background="@drawable/curved_radius_ten_gray"
+                    android:onClick="openSettings"
+                    android:padding="@dimen/uniform_spacing">
+
+                    <ImageView
+                        android:id="@+id/ivSetting"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:onClick="openSettings"
+                        android:padding="@dimen/uniform_spacing"
+                        android:src="@drawable/ic_settings_black_24dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlStop"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/uniform_half_spacing"
+                    android:layout_weight="1"
+                    android:background="@drawable/curved_radius_ten_gray"
+                    android:onClick="stopButton"
+                    android:padding="@dimen/uniform_spacing">
+
+                    <ImageView
+                        android:id="@+id/ivStop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:onClick="stopButton"
+                        android:padding="@dimen/uniform_spacing"
+                        android:src="@drawable/ic_stop_black_24dp"
+                        app:tint="@color/Red" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlHome"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/uniform_half_spacing"
+                    android:layout_weight="1"
+                    android:background="@drawable/curved_radius_ten_gray"
+                    android:onClick="openHome"
+                    android:padding="@dimen/uniform_spacing">
+
+                    <ImageView
+                        android:id="@+id/ivHome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:onClick="openHome"
+                        android:padding="@dimen/uniform_spacing"
+                        android:src="@drawable/ic_home"
+                        app:tint="@color/gray" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlBack"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/uniform_half_spacing"
+                    android:layout_weight="1"
+                    android:background="@drawable/curved_radius_ten_gray"
+                    android:onClick="backButton"
+                    android:padding="@dimen/uniform_spacing">
+
+                    <ImageView
+                        android:id="@+id/ivBack"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/plus_size"
+                        android:layout_centerInParent="true"
+                        android:onClick="backButton"
+                        android:padding="@dimen/uniform_spacing"
+                        android:src="@drawable/ic_remote_icons__exit" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCreateNew"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/home_plus_size"
+                android:background="@drawable/gradient_desin"
+                android:elevation="@dimen/action_btn_padding"
+                android:fontFamily="@font/gilroy_bold"
+                android:onClick="addButtonCustom"
+                android:padding="@dimen/uniform_spacing"
+                android:text="@string/can_add_more_button"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_normal_size"
+                app:backgroundTint="@color/colorAccent" />
+
+
+            <TextView
+                android:id="@+id/tvInternet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/uniform_extra_spacing"
+                android:fontFamily="@font/radomir_tinkov_gilroy_light"
+                android:maxLines="1"
+                android:padding="@dimen/uniform_spacing"
+                android:text="@string/internet_channel"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_normal_size"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvInternet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:paddingHorizontal="@dimen/uniform_extra_spacing"
+                android:paddingBottom="@dimen/plus_size"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="4" />
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <include
+        android:id="@+id/progress_bar"
+        layout="@layout/layout_refresh_home"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

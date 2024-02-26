@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_screen_d_n"
+    android:clipToPadding="false"
+    android:orientation="vertical">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/activity_horizontal_margin">
+
+
+            <ImageView
+                android:id="@+id/logo_iv"
+                android:layout_width="@dimen/bottom_height"
+                android:layout_height="@dimen/grid_wallpaper_width_"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/option_size"
+                android:src="@drawable/ic_wozart_new_logo_svg"
+                app:tint="@color/wozart_logo_color_d_n" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top_geo"
+                android:orientation="vertical"
+                android:paddingHorizontal="@dimen/uniform_spacing">
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="@dimen/normal_margin"
+                        android:textColorHint="@color/light_gray"
+                        app:hintTextColor="@color/hint"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent="0.45">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/input_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:fontFamily="@font/radomir_tinkov_gilroy_light"
+                            android:hint="@string/first_name"
+                            android:imeOptions="actionNext"
+                            android:inputType="textPersonName|textCapSentences"
+                            android:maxLines="1"
+                            android:paddingStart="0dp"
+                            android:paddingEnd="0dp"
+                            android:singleLine="true"
+                            android:textColor="@color/black_d_n"
+                            android:textSize="@dimen/text_normal_size" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/last_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/normal_margin"
+                        android:textColorHint="@color/light_gray"
+                        app:hintTextColor="@color/hint"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent="0.45">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/last_input_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:fontFamily="@font/radomir_tinkov_gilroy_light"
+                            android:hint="@string/last_name"
+                            android:imeOptions="actionNext"
+                            android:inputType="textPersonName|textCapSentences"
+                            android:maxLines="1"
+                            android:paddingStart="0dp"
+                            android:paddingEnd="0dp"
+                            android:singleLine="true"
+                            android:textColor="@color/black_d_n"
+                            android:textSize="@dimen/text_normal_size" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/email_set"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/normal_margin"
+                    android:textColorHint="@color/light_gray"
+                    app:hintTextColor="@color/hint">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/email_input"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:enabled="false"
+                        android:fontFamily="@font/radomir_tinkov_gilroy_light"
+                        android:hint="@string/hint_email_id"
+                        android:imeOptions="actionNext"
+                        android:inputType="textEmailAddress"
+                        android:maxLines="1"
+                        android:paddingStart="0dp"
+                        android:paddingEnd="0dp"
+                        android:singleLine="true"
+                        android:textColor="@color/black_d_n"
+                        android:textSize="@dimen/text_normal_size" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_pin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/light_gray"
+                    app:hintTextColor="@color/hint">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/phone_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/phone_number"
+                        android:imeOptions="actionNext"
+                        android:inputType="phone"
+                        android:maxLength="13"
+                        android:maxLines="1"
+                        android:paddingStart="0dp"
+                        android:paddingEnd="0dp"
+                        android:singleLine="true"
+                        android:textColor="@color/black_d_n"
+                        android:textSize="@dimen/text_normal_size" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <ProgressBar
+                    android:id="@+id/progress_bar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/uniform_spacing"
+                    android:visibility="gone" />
+
+                <com.wozart.aura.ui.customview.CustomButton
+                    android:id="@+id/btn_submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/plus_size"
+                    android:layout_marginVertical="@dimen/top_margin"
+                    android:background="@drawable/gradient_desin"
+                    android:elevation="@dimen/action_btn_padding"
+                    android:fontFamily="@font/gilroy_bold"
+                    android:gravity="center_horizontal"
+                    android:stateListAnimator="@null"
+                    android:text="@string/text_save"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_title_small_size"
+                    android:textStyle="bold"
+                    app:elevation="2dp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

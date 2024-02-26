@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_scene_auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/elevation"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackgroundBorderless"
+    card_view:cardBackgroundColor="@color/white_gray"
+    card_view:cardCornerRadius="@dimen/normal_margin">
+
+    <LinearLayout
+        android:id="@+id/layout_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/uniform_spacing"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/curtainOpen"
+            android:layout_width="@dimen/top_margin"
+            android:layout_height="@dimen/top_margin"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/uniform_spacing"
+            android:padding="@dimen/uniform_spacing"
+            android:src="@drawable/ic_curtain_icons_curtain_open" />
+
+        <View
+            android:layout_width="0.8dp"
+            android:layout_height="match_parent"
+            android:padding="@dimen/uniform_spacing"
+            android:background="@color/colorAccent"
+            android:layout_marginStart="@dimen/uniform_extra_spacing"
+            />
+        <ImageView
+            android:id="@+id/curtainStop"
+            android:layout_width="@dimen/top_margin"
+            android:layout_height="@dimen/top_margin"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/uniform_spacing"
+            android:padding="@dimen/uniform_spacing"
+            android:src="@drawable/ic_stop_black_24dp" />
+
+        <View
+            android:layout_width="0.8dp"
+            android:layout_height="match_parent"
+            android:padding="@dimen/uniform_spacing"
+            android:background="@color/colorAccent"
+           android:layout_marginStart="@dimen/uniform_extra_spacing"
+            android:layout_marginEnd="@dimen/uniform_extra_spacing"
+            />
+        <ImageView
+            android:id="@+id/curtainClose"
+            android:layout_width="@dimen/top_margin"
+            android:layout_height="@dimen/top_margin"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/uniform_spacing"
+            android:padding="@dimen/uniform_spacing"
+            android:src="@drawable/ic_curtain_icons_curtain_close" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background_screen_d_n">
+
+    <LinearLayout
+        android:id="@+id/menu_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/menu_margin"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/normal_margin"
+        android:paddingEnd="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/normal_margin">
+
+        <ImageView
+            android:id="@+id/ivMenu"
+            android:layout_width="@dimen/more_menu_icon"
+            android:layout_height="@dimen/more_menu_icon"
+            android:scaleType="fitXY"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_logout"
+            app:tint="@color/icon_color_d_n" />
+
+        <TextView
+            android:id="@+id/tvMenu"
+            style="@style/TextViewMore"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="@dimen/layout_padding_medium"
+            android:text="Statistics" />
+        <TextView
+            android:id="@+id/badge_notification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/tvMenu"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/item_count"
+            android:textColor="#FFF"
+            android:textSize="16sp"
+            android:visibility="gone"
+            android:layout_marginLeft="@dimen/normal_margin"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/separator_view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/menu_layout"
+        android:layout_marginBottom="@dimen/normal_margin"
+        android:layout_marginTop="@dimen/normal_margin"
+        android:background="@color/divider_color"
+        android:visibility="gone" />
+</RelativeLayout>

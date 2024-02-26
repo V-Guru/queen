@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_screen_d_n"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/layout_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true">
+
+        <include
+            android:id="@+id/header"
+            layout="@layout/layout_header" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/inputSceneName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_header"
+        android:layout_marginStart="@dimen/uniform_extra_spacing"
+        android:layout_marginTop="@dimen/one_dp"
+        android:layout_marginEnd="@dimen/uniform_extra_spacing">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/uniform_spacing"
+            app:hintTextColor="@color/light_gray">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:hint="@string/hint_automation_name"
+                android:imeOptions="actionNext"
+                android:inputType="textCapWords|textCapSentences"
+                android:maxLines="1"
+                android:paddingStart="0dp"
+                android:paddingEnd="0dp"
+                android:fontFamily="@font/radomir_tinkov_gilroy_light"
+                android:singleLine="true"
+                android:textSize="@dimen/text_sub_header_size"
+                android:textStyle="bold" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/details_action"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/inputSceneName"
+        android:layout_marginTop="@dimen/uniform_spacing"
+        android:paddingHorizontal="@dimen/uniform_extra_spacing">
+
+        <TextView
+            android:id="@+id/text_details"
+            style="@style/TextViewNormal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/action_details"
+            android:textColor="@color/black_d_n"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/selection_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/details_action"
+        android:layout_marginStart="@dimen/uniform_extra_spacing"
+        android:layout_marginTop="@dimen/uniform_spacing"
+        android:layout_marginEnd="@dimen/uniform_extra_spacing">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/arrive"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/action_btn_padding"
+            app:cardCornerRadius="@dimen/uniform_spacing">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/am_arrive"
+                    android:layout_width="@dimen/weekday_height"
+                    android:layout_height="@dimen/weekday_height"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/uniform_spacing"
+                    android:src="@drawable/ic_arriving_new" />
+
+                <TextView
+                    android:id="@+id/text_arrive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/am_arrive"
+                    android:padding="@dimen/uniform_half_spacing"
+                    android:fontFamily="@font/radomir_tinkov_gilroy_light"
+                    android:text="@string/am_arrive"
+                    android:textColor="@color/light_black"
+                    android:textSize="@dimen/text_normal_size"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/left_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/uniform_spacing"
+                    android:src="@drawable/ic_keyboard_arrow_right_black_24dp"
+                    app:tint="@color/light_black" />
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/leave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/arrive"
+            android:layout_margin="@dimen/action_btn_padding"
+            app:cardCornerRadius="@dimen/uniform_spacing">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/leaving_icon"
+                    android:layout_width="@dimen/weekday_height"
+                    android:layout_height="@dimen/weekday_height"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/uniform_spacing"
+                    android:src="@drawable/ic_leaving_new" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/leaving_icon"
+                    android:fontFamily="@font/radomir_tinkov_gilroy_light"
+                    android:padding="@dimen/uniform_half_spacing"
+                    android:text="@string/leave_out"
+                    android:textColor="@color/light_black"
+                    android:textSize="@dimen/text_normal_size"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/left_arrow_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/uniform_spacing"
+                    android:src="@drawable/ic_keyboard_arrow_right_black_24dp"
+                    app:tint="@color/light_black" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/timing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/leave"
+            android:layout_margin="@dimen/action_btn_padding"
+            app:cardCornerRadius="@dimen/uniform_spacing">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/time_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/uniform_spacing"
+                    android:src="@drawable/ic_clock_icon_new" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/elevation"
+                    android:layout_toEndOf="@+id/time_icon"
+                    android:fontFamily="@font/radomir_tinkov_gilroy_light"
+                    android:padding="@dimen/uniform_half_spacing"
+                    android:text="@string/time_occour"
+                    android:textColor="@color/light_black"
+                    android:textSize="@dimen/text_normal_size"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/left_arrow_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/uniform_spacing"
+                    android:src="@drawable/ic_keyboard_arrow_right_black_24dp"
+                    app:tint="@color/light_black" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/motion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/timing"
+            android:layout_margin="@dimen/action_btn_padding"
+            app:cardCornerRadius="@dimen/uniform_spacing">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/motion_icon"
+                    android:layout_width="@dimen/weekday_height"
+                    android:layout_height="@dimen/weekday_height"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/uniform_spacing"
+                    android:src="@drawable/ic_universal_sensor" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/motion_icon"
+                    android:fontFamily="@font/radomir_tinkov_gilroy_light"
+                    android:padding="@dimen/uniform_half_spacing"
+                    android:text="@string/sense_title"
+                    android:textColor="@color/light_black"
+                    android:textSize="@dimen/text_normal_size"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/left_arrow_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/uniform_spacing"
+                    android:src="@drawable/ic_keyboard_arrow_right_black_24dp"
+                    app:tint="@color/light_black" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/enableCard"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/weekday_height"
+        android:layout_below="@+id/selection_layout"
+        android:layout_margin="@dimen/uniform_extra_spacing"
+        android:background="@drawable/curved_rectangle_bg"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/uniform_spacing"
+            android:fontFamily="@font/radomir_tinkov_gilroy_light"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="2"
+            android:text="@string/automationEnable"
+            android:textColor="@color/light_black"
+            android:textSize="@dimen/text_title_size" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switchenable"
+            style="@style/SwitchCompatStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/uniform_half_spacing" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

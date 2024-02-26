@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    tools:ignore="contentDescription">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:paddingLeft="@dimen/uniform_extra_spacing"
+        android:paddingRight="@dimen/uniform_extra_spacing"
+        android:paddingBottom="@dimen/uniform_extra_spacing"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/allRooms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/uniform_spacing"
+            android:padding="@dimen/uniform_spacing"
+            android:text="@string/all_rooms"
+            android:textAllCaps="true"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/text_popup_size"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/roomsRv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dialog_padding"
+            android:layout_marginBottom="20dp"
+            android:paddingBottom="@dimen/uniform_extra_spacing"
+
+            />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_yes"
+                android:layout_alignParentRight="true"
+                android:text="@string/txt_move"
+                android:textColor="@color/colorAccent"
+                android:padding="@dimen/normal_margin"
+                android:background="@android:color/transparent"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_no"
+                android:layout_toLeftOf="@id/btn_yes"
+                android:text="@string/txt_cancel"
+                android:padding="@dimen/normal_margin"
+                android:background="@android:color/transparent"
+                android:textColor="@color/gray" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

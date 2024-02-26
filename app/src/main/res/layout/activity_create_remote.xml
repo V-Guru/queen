@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_create_remote"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_screen_d_n"
+    android:paddingHorizontal="@dimen/uniform_extra_spacing">
+
+    <RelativeLayout
+        android:id="@+id/header_remote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/uniform_extra_spacing"
+        android:paddingBottom="@dimen/uniform_extra_spacing">
+
+        <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/action_btn_padding"
+            android:src="@drawable/ic_back"
+            app:tint="@color/black_d_n" />
+
+        <TextView
+            android:id="@+id/aura_sense"
+            style="@style/TextViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/btn_save"
+            android:layout_toEndOf="@+id/back_btn"
+            android:gravity="center"
+            android:padding="@dimen/action_btn_padding"
+            android:text="@string/create_remote"
+            android:textColor="@color/black_d_n"
+            android:textSize="@dimen/text_popup_size" />
+
+        <TextView
+            android:id="@+id/btn_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/gilroy_bold"
+            android:padding="@dimen/action_btn_padding"
+            android:text="@string/text_next"
+            android:textColor="@color/black_d_n"
+            android:textSize="@dimen/text_normal_size"
+            android:textStyle="bold"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header_remote"
+        android:layout_marginLeft="@dimen/uniform_half_spacing"
+        android:layout_marginTop="@dimen/uniform_spacing"
+        android:layout_marginRight="@dimen/uniform_half_spacing">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/icon_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/normal_margin"
+            android:clipToPadding="false"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"/>
+    </RelativeLayout>
+</RelativeLayout>

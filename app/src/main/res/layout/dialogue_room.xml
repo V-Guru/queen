@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        app:cardCornerRadius="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/ivClose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/uniform_spacing"
+                android:src="@drawable/ic_close_black_24dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/uniform_spacing"
+                android:layout_toEndOf="@+id/ivClose"
+                android:fontFamily="@font/gilroy_bold"
+                android:text="@string/choose_room"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_title_size" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cardView"
+        android:paddingBottom="@dimen/uniform_extra_spacing">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/rlAddRoom"
+            android:clipToPadding="false"
+            android:paddingHorizontal="@dimen/uniform_spacing"
+            android:paddingVertical="@dimen/uniform_spacing"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+        <LinearLayout
+            android:id="@+id/rlAddRoom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:padding="@dimen/uniform_spacing">
+
+            <TextView
+                android:id="@+id/addHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_add_home_dialog"
+                android:drawablePadding="@dimen/normal_margin"
+                android:fontFamily="@font/gilroy_bold"
+                android:gravity="center_vertical"
+                android:padding="@dimen/uniform_extra_spacing"
+                android:text="@string/add_room"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/text_normal_size" />
+
+            <TextView
+                android:id="@+id/tvSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/home_plus_size"
+                android:layout_marginEnd="@dimen/home_plus_size"
+                android:background="@drawable/gradient_desin"
+                android:fontFamily="@font/gilroy_bold"
+                android:gravity="center"
+                android:padding="@dimen/one_dp"
+                android:text="@string/apply_room"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_normal_size"
+                android:visibility="visible" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

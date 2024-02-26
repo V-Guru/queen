@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/btn_deselect">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/icon_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        app:srcCompat="@drawable/ic_delete_white" />
+
+    <FrameLayout
+        android:id="@+id/removable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?colorSurface">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?selectableItemBackground"
+            android:paddingBottom="@dimen/activity_vertical_margin">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/icon"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:background="@drawable/ic_device_bg"
+                android:importantForAccessibility="no"
+                android:padding="@dimen/uniform_extra_spacing"
+                android:scaleType="centerInside"
+                app:layout_constraintBottom_toBottomOf="@id/configured_node_info_container"
+                app:layout_constraintEnd_toStartOf="@id/node_name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/node_name"
+                app:srcCompat="@drawable/ic_mesh_white" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/node_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:ellipsize="marquee"
+                android:singleLine="true"
+                android:text="Nrf Mesh Node"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/icon"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/configured_node_info_container"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="@id/node_name"
+                app:layout_constraintStart_toStartOf="@id/node_name"
+                app:layout_constraintTop_toBottomOf="@id/node_name">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/unicast_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Address:"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+                    android:textColor="?android:textColorSecondary"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="HardcodedText" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/unicast"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="0x0001"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/unicast_title"
+                    app:layout_constraintTop_toTopOf="@id/unicast_title"
+                    tools:ignore="HardcodedText" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/company_identifier_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Company"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+                    android:textColor="?android:textColorSecondary"
+                    app:layout_constraintStart_toStartOf="@+id/unicast_title"
+                    app:layout_constraintTop_toBottomOf="@+id/unicast" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/company_identifier"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:paddingEnd="@dimen/normal_margin"
+                    android:text="Nordic Semiconductor"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/unicast"
+                    app:layout_constraintTop_toBottomOf="@+id/unicast"
+                    tools:ignore="RtlSymmetry" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/elements_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Element"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+                    android:textColor="?android:textColorSecondary"
+                    app:layout_constraintStart_toStartOf="@+id/unicast_title"
+                    app:layout_constraintTop_toBottomOf="@+id/company_identifier" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/elements"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4"
+                    android:textColor="@color/secondairy_color"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="@+id/unicast"
+                    app:layout_constraintTop_toBottomOf="@+id/company_identifier"
+                    tools:ignore="HardcodedText" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/models_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Model"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+                    android:textColor="?android:textColorSecondary"
+                    app:layout_constraintStart_toStartOf="@+id/unicast_title"
+                    app:layout_constraintTop_toBottomOf="@+id/elements" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/models"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="29"
+                    android:textColor="@color/secondairy_color"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="@+id/unicast"
+                    app:layout_constraintTop_toBottomOf="@+id/elements"
+                    tools:ignore="HardcodedText" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+</FrameLayout>

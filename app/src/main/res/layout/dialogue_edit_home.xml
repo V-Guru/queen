@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_centerInParent="true"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_horizontal_margin"
+    android:paddingLeft="@dimen/dialog_margin"
+    android:paddingRight="@dimen/dialog_margin"
+    android:paddingTop="@dimen/activity_horizontal_margin"
+    android:background="@drawable/dialogue_drawable">
+
+
+    <TextView
+        android:id="@+id/tv_title"
+        style="@style/TextViewTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/dialog_margin"
+        android:text="Edit Home or Delete Home"
+        />
+
+    <RelativeLayout
+        android:id="@+id/message_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/one_dp"
+        android:paddingBottom="@dimen/one_dp"
+        android:layout_below="@+id/tv_title">
+        <TextView
+            android:id="@+id/message"
+            style="@style/TextViewSubHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black_d_n"
+            android:text="Are you sure you want to Edit | Delete"/>
+
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_normal_size"
+        android:layout_marginTop="@dimen/one_dp"
+        android:background="@drawable/curved_rectangle_bg"
+        app:backgroundTint="@color/white_smoke_d_n"
+        android:elevation="@dimen/uniform_half_spacing"
+        android:padding="@dimen/uniform_spacing"
+        android:id="@+id/btn_delete_home"
+        android:textAllCaps="false"
+        android:layout_below="@+id/message_rl"
+        android:text="@string/text_delete"
+        android:textColor="@color/light_black" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_normal_size"
+        android:layout_marginTop="@dimen/one_dp"
+        android:elevation="@dimen/uniform_half_spacing"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/gradient_desin"
+        app:backgroundTint="@color/colorAccent"
+        android:padding="@dimen/uniform_spacing"
+        android:id="@+id/btn_edit"
+        android:textAllCaps="false"
+        android:layout_below="@+id/message_rl"
+        android:text="@string/text_edit"
+        android:textColor="@color/white"
+        tools:ignore="NotSibling" />
+
+</RelativeLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:scrollbars="none"
+    android:background="@color/background_screen_d_n">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/layout_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingHorizontal="@dimen/uniform_extra_spacing"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/textView"
+                android:fontFamily="@font/gilroy_bold"
+                android:textSize="@dimen/text_menu_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/uniform_spacing"
+                android:padding="@dimen/action_btn_padding"
+                app:layout_constraintTop_toBottomOf="@+id/layout_header"
+                android:text="@string/text_time"
+                android:textColor="@color/black_d_n" />
+
+            <TextView
+                android:id="@+id/tvSlectSenseRange"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:textSize="@dimen/text_normal_size"
+                android:fontFamily="@font/radomir_tinkov_gilroy_light"
+                android:layout_marginTop="@dimen/uniform_spacing"
+                android:padding="@dimen/action_btn_padding"
+                android:text="@string/sense_range"
+                app:layout_constraintTop_toBottomOf="@+id/header"
+                android:textColor="@color/black_d_n" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/sense_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/action_btn_padding"
+                android:paddingTop="@dimen/uniform_extra_spacing"
+                android:paddingBottom="@dimen/uniform_extra_spacing"
+                android:clipToPadding="false"
+                android:nestedScrollingEnabled="false"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

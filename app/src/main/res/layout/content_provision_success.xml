@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_screen_d_n"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.wozart.aura.ui.wifisettings.ProvisionSuccessActivity"
+    tools:showIn="@layout/activity_provision_success">
+
+    <TextView
+        android:id="@+id/success_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="@string/success_text"
+        android:textAlignment="center"
+        android:fontFamily="@font/gilroy_bold"
+        android:textSize="@dimen/text_title_small_size"
+        android:textColor="@color/black_d_n"
+        app:layout_constraintBottom_toTopOf="@id/done_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/done_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="@dimen/grid_image"
+        android:layout_marginEnd="@dimen/plus_size"
+        android:layout_marginStart="@dimen/plus_size"
+        app:backgroundTint="@color/colorAccent"
+        android:background="@drawable/gradient_desin"
+        android:text="@string/done"
+        android:textAllCaps="false"
+        android:textSize="@dimen/text_title_small_size"
+        android:textColor="@color/white"
+        android:fontFamily="@font/gilroy_bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

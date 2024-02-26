@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_cutain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_screen_d_n">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/layout_header"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/header">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/uniform_extra_spacing"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/input_device_name"
+                style="@style/EditTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/layout_padding"
+                android:layout_marginEnd="@dimen/layout_padding"
+                android:inputType="textCapSentences"
+                android:background="@drawable/dialogue_drawable_remote"
+                android:backgroundTintMode="screen"
+                android:gravity="center_vertical"
+                android:hint="@string/name_curtain"
+                android:maxLines="1"
+                android:padding="@dimen/uniform_extra_spacing"
+                android:textColor="@color/black_d_n"
+                app:layout_constraintTop_toBottomOf="@+id/header" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/layout_padding"
+                android:layout_marginTop="@dimen/uniform_extra_spacing"
+                android:layout_marginEnd="@dimen/layout_padding"
+                android:background="@drawable/dialogue_drawable_remote"
+                android:backgroundTintMode="screen"
+                android:padding="@dimen/uniform_extra_spacing">
+
+                <Spinner
+                    android:id="@+id/spinnerRoom"
+                    style="@style/Widget.AppCompat.Spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:spinnerMode="dropdown"/>
+
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switchFav"
+                style="@style/SwitchCompatStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/layout_padding"
+                android:layout_marginTop="@dimen/uniform_extra_spacing"
+                android:layout_marginEnd="@dimen/layout_padding"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_normal_size"
+                android:padding="@dimen/uniform_spacing"
+                android:text="@string/text_add_to_favourite"
+                android:textColor="@color/black_d_n"
+                android:fontFamily="@font/radomir_tinkov_gilroy_light"/>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/tvMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/gilroy_bold"
+            android:gravity="center"
+            android:lineSpacingExtra="3dp"
+            android:text="@string/message_info"
+            android:textColor="@color/hint"
+            android:textSize="@dimen/twenty_two_sp"
+            app:layout_constraintBottom_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="parent" />
+
+        <com.wozart.aura.ui.customview.CustomButton
+            android:id="@+id/btnTest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/scan_margin"
+            android:layout_marginTop="@dimen/plus_size"
+            android:layout_marginEnd="@dimen/scan_margin"
+            android:background="@drawable/gradient_desin"
+            android:fontFamily="@font/gilroy_bold"
+            android:text="@string/test_open"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_title_size"
+            android:visibility="visible"
+            app:layout_constraintTop_toBottomOf="@+id/tvMessage" />
+
+        <com.wozart.aura.ui.customview.CustomButton
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/scan_margin"
+            android:layout_marginTop="@dimen/plus_size"
+            android:layout_marginEnd="@dimen/scan_margin"
+            android:background="@drawable/gradient_desin"
+            android:fontFamily="@font/gilroy_bold"
+            android:text="@string/text_save"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_title_size"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/tvMessage" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

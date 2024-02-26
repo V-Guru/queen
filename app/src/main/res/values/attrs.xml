@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="primaryTextColor" format="reference|color"/>
+    <attr name="hintTextColor" format="reference|color"/>
+    <attr name="textShadowColor" format="reference|color"/>
+    <attr name="accentTextColor" format="reference|color"/>
+    <attr name="listItemBackgroundColor" format="reference|color"/>
+    <attr name="popupBackgroundColor" format="reference|color"/>
+    <attr name="backgroundCardColor" format="reference|color"/>
+
+    <attr name="secondaryTextColor" format="reference|color"/>
+    <attr name="disabledTextColor" format="reference|color"/>
+    <attr name="dividerColor" format="reference|color"/>
+    <attr name="activeIconColor" format="reference|color"/>
+    <attr name="inActiveIconColor" format="reference|color"/>
+    <attr name="statusBarColor" format="reference|color"/>
+    <attr name="appBarColor" format="reference|color"/>
+    <attr name="backgroundColor" format="reference|color"/>
+    <attr name="cardAndDialogBackgroundColor" format="reference|color"/>
+    <attr name="loadBgOut" format="reference|color"/>
+    <attr name="loadBgIn" format="reference|color"/>
+
+    <attr name="activeIconPrimaryColor" format="reference|color"/>
+    <attr name="activeIconSecondaryColor" format="reference|color"/>
+    <attr name="activeIconBorderColor" format="reference|color"/>
+
+    <attr name="inactiveIconPrimaryColor" format="reference|color"/>
+    <attr name="inactiveIconSecondaryColor" format="reference|color"/>
+    <attr name="inactiveIconBorderColor" format="reference|color"/>
+
+
+</resources>

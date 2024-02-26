@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--TODO Statics Menu-->
+    <string-array name="menus">
+        <item>Members</item>
+        <item>Wozart devices</item>
+        <item>Messages</item>
+        <item>Invites</item>
+        <item>How to use</item>
+        <item>Voice control</item>
+        <item>Help</item>
+        <item>About us</item>
+        <item>Set themes</item>
+        <item>Logout</item>
+    </string-array>
+
+    <!--TODO Statics Image-->
+    <string-array name="menu_images">
+        <item>ic_share_icon_new_</item>
+        <item>ic_device_icon_final</item>
+        <item>ic_notification_icon_final_</item>
+        <item>ic_invite</item>
+        <item>ic_information_icon_final</item>
+        <item>ic_voice_control_final_new</item>
+        <item>ic_help_icon_new_</item>
+        <item>ic_about_final_icon</item>
+        <item>ic_theme</item>
+        <item>ic_logout_icon_final_new</item>
+    </string-array>
+
+    <string-array name="satatistics">
+        <item>Weekly</item>
+        <item>Monthly</item>
+        <item>Yearly</item>
+    </string-array>
+    <string-array name="dimming_value">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+</resources>

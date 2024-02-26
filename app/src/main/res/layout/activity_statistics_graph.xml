@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/activity_horizontal_margin"
+    android:orientation="vertical"
+    android:id="@+id/activity_main"
+    android:layout_marginTop="@dimen/status_bar_height"
+    android:background="@color/white"
+    tools:context="com.wozart.aura.aura.ui.dashboard.more.StatsticsActivity">
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/action_btn_padding"
+            android:src="@drawable/ic_back"/>
+        <TextView
+            android:id="@+id/text_title"
+            style="@style/TextViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/back"
+            android:layout_marginLeft="@dimen/normal_margin"
+            android:text="Light 1"
+            />
+        <TextView
+            android:id="@+id/text_time"
+            style="@style/TextViewSubHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_title"
+            android:layout_toRightOf="@+id/back"
+            android:layout_marginTop="@dimen/min_padding"
+            android:layout_marginLeft="@dimen/normal_margin"
+            android:text="October 2019"
+            />
+        <TextView
+            android:id="@+id/text_powerConsumption"
+            style="@style/TextViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_padding_medium"
+            android:layout_marginLeft="@dimen/normal_margin"
+            android:layout_below="@+id/text_time"
+            android:text="@string/text_power_consumption"
+            />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/chart_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/layout_padding_medium"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/colorAccent"
+        android:padding="@dimen/normal_padding">
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/chart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/normal_padding"
+            />
+    </RelativeLayout>
+
+</LinearLayout>

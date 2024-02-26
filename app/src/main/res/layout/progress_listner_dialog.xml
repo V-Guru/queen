@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/dialog_backgroud"
+    android:layout_gravity="bottom"
+    android:gravity="bottom"
+    android:id="@+id/progress_layout"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/normal_margin"
+            android:gravity="center_horizontal|center"
+            android:textSize="@dimen/text_sub_header_size"
+            android:fontFamily="@font/gilroy_bold"
+            android:id="@+id/tvTitle"
+            android:textColor="@color/black"
+            android:padding="@dimen/action_btn_padding"
+            android:text="@string/remote_click" />
+
+        <ProgressBar
+            android:id="@+id/progressbar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/normal_margin"
+            android:layout_marginTop="@dimen/layout_padding"
+            android:backgroundTint="@color/white"
+            android:layout_gravity="center|center_vertical"
+            android:indeterminate="true"
+            android:indeterminateTint="#1a09d6"
+            android:max="100" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvText"
+            app:layout_constraintTop_toBottomOf="@+id/progressbar"
+            style="@style/TextViewTitle"
+            android:textColor="@color/black"
+            android:gravity="center_horizontal"
+            android:layout_margin="@dimen/uniform_spacing"
+            android:text="@string/listening" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnStop"
+            app:layout_constraintTop_toBottomOf="@+id/tvText"
+            android:layout_marginHorizontal="@dimen/plus_size"
+            android:background="@drawable/gradient_desin"
+            android:layout_marginTop="@dimen/uniform_half_spacing"
+            android:layout_marginBottom="@dimen/uniform_spacing"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_normal_size"
+            android:fontFamily="@font/gilroy_bold"
+            android:text="@string/stop_learning"/>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

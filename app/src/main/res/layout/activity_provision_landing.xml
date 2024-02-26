@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_screen_d_n"
+    tools:context="com.wozart.aura.ui.wifisettings.ProvisionLanding">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_screen_d_n"
+        tools:ignore="ExtraText">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:titleTextColor="@color/black">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/uniform_spacing"
+                android:src="@drawable/ic_back"
+                app:tint="@color/black_d_n" />
+
+            <TextView
+                android:id="@+id/textTitle"
+                style="@style/TextViewNormal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/uniform_spacing"
+                android:layout_marginRight="@dimen/home_plus_size"
+                android:text="Connect to Wozart"
+                android:textColor="@color/black_d_n"
+                android:textSize="@dimen/text_title_size"
+                android:textStyle="bold" />
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <include layout="@layout/content_provision_landing" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

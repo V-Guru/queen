@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerVertical="true"
+    android:paddingVertical="@dimen/uniform_extra_spacing"
+    android:paddingHorizontal="@dimen/uniform_extra_spacing">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:padding="@dimen/action_btn_padding"
+        app:tint="@color/black_d_n"
+        app:srcCompat="@drawable/ic_keyboard_backspace_black_24px" />
+
+    <TextView
+        android:id="@+id/tvNext"
+        style="@style/TextViewMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:padding="6dp"
+        android:text="@string/text_next"
+        android:textAllCaps="false"
+        android:textColor="@color/black_d_n"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        style="@style/TextViewTitleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/uniform_spacing"
+        android:layout_marginRight="@dimen/uniform_spacing"
+        android:layout_toStartOf="@id/tvNext"
+        android:layout_toEndOf="@id/home"
+        android:gravity="center"
+        android:padding="6dp"
+        android:text="@string/text_title_create_automation"
+        android:textColor="@color/black_d_n" />
+</RelativeLayout>

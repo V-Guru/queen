@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_screen_d_n"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.wozart.aura.ui.wifisettings.WifiScan">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_screen_d_n"
+        tools:ignore="ExtraText,MissingConstraints">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/action_btn_padding"
+                android:src="@drawable/ic_back"
+                app:tint="@color/black_d_n" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textTitle"
+                android:gravity="center"
+                android:layout_marginRight="@dimen/home_plus_size"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_title_size"
+                android:textColor="@color/black_d_n"
+                style="@style/TextViewNormal"
+                android:text="Select Wi-Fi"/>
+        </androidx.appcompat.widget.Toolbar>>
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <include layout="@layout/content_wifi_scan" />
+</androidx.constraintlayout.widget.ConstraintLayout>

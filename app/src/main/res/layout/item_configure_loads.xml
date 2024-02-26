@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingRight="1dp"
+    android:paddingLeft="1dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/load_layout"
+        android:layout_width="wrap_content"
+        android:background="@drawable/image_border_selected"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_load"
+            style="@style/TextViewLoadName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:padding="@dimen/uniform_half_spacing"
+            android:textColor="@color/gray"
+            android:text="Bulb"
+            />
+        <ImageView
+            android:id="@+id/img_load"
+            android:layout_width="@dimen/load_switch_image_width"
+            android:layout_height="@dimen/load_switch_image_width"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/uniform_extra_spacing"
+            android:layout_marginLeft="@dimen/uniform_extra_spacing"
+            android:layout_marginRight="@dimen/uniform_extra_spacing"
+            android:layout_below="@+id/tv_load"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/ic_bulb_off_new"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/load_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/load_layout"
+        android:background="@null"
+        android:visibility="visible">
+        <ImageView
+            android:layout_width="@dimen/triangle_width"
+            android:layout_height="@dimen/triangle_height"
+            android:layout_centerInParent="true"
+            android:background="@drawable/triangle"/>
+    </RelativeLayout>
+</RelativeLayout>

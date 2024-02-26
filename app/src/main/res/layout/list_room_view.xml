@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/roomCardList"
+    android:layout_width="match_parent"
+    android:layout_height="110dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:layout_marginLeft="@dimen/uniform_extra_spacing"
+    android:layout_marginRight="@dimen/uniform_extra_spacing"
+    android:layout_marginTop="@dimen/one_dp"
+    android:foreground="?android:attr/selectableItemBackgroundBorderless"
+    card_view:cardBackgroundColor="@color/white"
+    card_view:cardCornerRadius="@dimen/corner_radious_card"
+    tools:ignore="contentDescription">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/uniform_half_spacing"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/name_room"
+                style="@style/TextViewNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:textColor="@color/black"
+                android:layout_margin="5dp"
+                android:textSize="@dimen/text_medium_size"
+                android:maxLines="1"
+                android:maxLength="15"
+                android:text="Living Room"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TextViewNormal"
+                android:id="@+id/text_on"
+                android:layout_margin="@dimen/uniform_half_spacing"
+                android:textStyle="bold"
+                android:layout_toStartOf="@+id/switch_on"
+                android:textColor="@color/black"
+                android:text="All off"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_marginRight="@dimen/uniform_half_spacing"
+                android:background="@drawable/circle_no_theme"
+                android:id="@+id/switch_on"
+                android:layout_alignParentEnd="true">
+                <ImageView
+                    android:id="@+id/on_switch"
+                    style="@style/SwitchCompatStyle"
+                    android:layout_width="35dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_power_off"
+                    android:layout_margin="@dimen/uniform_half_spacing"
+                    android:padding="@dimen/uniform_half_spacing"
+                    android:layout_height="35dp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:layout_below="@+id/name_room">
+                <LinearLayout
+                    android:id="@+id/layoutTotalDevices"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/uniform_spacing">
+
+                    <TextView
+                        android:id="@+id/tvTotalDevicesTitle"
+                        style="@style/TextViewDevicesHeaderRoom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:shadowColor="?attr/textShadowColor"
+                        android:shadowDx="1"
+                        android:shadowDy="1"
+
+                        android:shadowRadius="2"
+                        android:text="@string/total_devices"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/totalDevicesCountTv"
+                        style="@style/TextViewAccesory"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:shadowColor="?attr/textShadowColor"
+                        android:shadowDx="1"
+                        android:shadowDy="1"
+                        android:shadowRadius="2"
+                        android:text="23"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/device_on_layout"
+                    android:orientation="vertical"
+                    android:padding="@dimen/uniform_spacing"
+                    android:layout_toRightOf="@+id/layoutTotalDevices">
+
+                    <TextView
+                        android:id="@+id/tvDeviceOnCountTitle"
+                        style="@style/TextViewDevicesHeaderRoom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:shadowColor="?attr/textShadowColor"
+                        android:shadowDx="1"
+                        android:shadowDy="1"
+                        android:shadowRadius="2"
+                        android:text="@string/devices_on"
+                        android:textColor="@color/black"
+                        app:layout_constraintLeft_toRightOf="@id/tvTotalDevicesTitle"
+                        app:layout_constraintTop_toBottomOf="@id/homeTitleTv" />
+
+                    <TextView
+                        android:id="@+id/devicesOnCountTv"
+                        style="@style/TextViewAccesory"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:shadowColor="?attr/textShadowColor"
+                        android:shadowDx="1"
+                        android:shadowDy="1"
+                        android:shadowRadius="2"
+                        android:text="23"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="@+id/tvDeviceOnCountTitle"
+                        app:layout_constraintTop_toBottomOf="@+id/tvDeviceOnCountTitle" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/uniform_extra_spacing"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:padding="8dp"
+                    android:layout_toRightOf="@+id/device_on_layout">
+
+                    <TextView
+                        style="@style/TextViewDevicesHeaderRoom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:shadowColor="?attr/textShadowColor"
+                        android:shadowDx="1"
+                        android:shadowDy="1"
+                        android:shadowRadius="2"
+                        android:text="@string/devices_off"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/devicesOffCountTv"
+                        style="@style/TextViewAccesory"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:shadowColor="?attr/textShadowColor"
+                        android:shadowDx="1"
+                        android:shadowDy="1"
+                        android:shadowRadius="2"
+                        android:text="23"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </FrameLayout>
+</androidx.cardview.widget.CardView>

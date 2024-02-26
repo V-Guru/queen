@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/actionOpen"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_curtain_icons_curtain_open"
+        android:title="@string/open_curtain" />
+    <item
+        android:id="@+id/actionStop"
+        android:orderInCategory="101"
+        android:icon="@drawable/ic_stop_black_24dp"
+        android:title="@string/stop" />
+
+    <item
+        android:id="@+id/actionClose"
+        android:orderInCategory="102"
+        android:icon="@drawable/ic_curtain_icons_curtain_close"
+        android:title="@string/close_curtaing" />
+</menu>

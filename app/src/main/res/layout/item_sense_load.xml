@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_scene"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/device_item_size"
+    android:layout_margin="@dimen/elevation"
+    android:background="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    android:elevation="@dimen/uniform_half_spacing"
+    android:focusable="true"
+    card_view:cardCornerRadius="@dimen/corner_radious_card"
+    tools:ignore="contentDescription">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/scenesTitle"
+                style="@style/TextViewNormal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_toStartOf="@+id/ivSelect"
+                android:gravity="center"
+                android:maxLines="1"
+                android:padding="@dimen/uniform_half_spacing"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_extra_small_size" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivSelect"
+                android:layout_width="@dimen/uniform_extra_spacing"
+                android:layout_height="@dimen/uniform_extra_spacing"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/elevation"
+                android:layout_marginEnd="@dimen/elevation"
+                android:background="@drawable/ic_round_stroke"
+                android:src="@drawable/ic_tick" />
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/sense_icon"
+            android:layout_width="@dimen/small_icon_size"
+            android:layout_height="@dimen/small_icon_size"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center|center_vertical"
+            android:padding="@dimen/uniform_half_spacing"
+            card_view:srcCompat="@drawable/ic_motion_idle" />
+
+        <TextView
+            android:id="@+id/text_display"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:paddingBottom="@dimen/uniform_half_spacing"
+            android:fontFamily="@font/radomir_tinkov_gilroy_light"
+            android:gravity="center_horizontal"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_normal_size" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

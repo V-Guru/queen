@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/device_item_size"
+    android:layout_margin="@dimen/uniform_half_spacing"
+    android:id="@+id/deviceCard"
+    app:cardBackgroundColor="@color/white"
+    android:elevation="@dimen/uniform_half_spacing"
+    android:foreground="?android:attr/selectableItemBackgroundBorderless"
+    app:cardCornerRadius="@dimen/corner_radious_card">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/uniform_half_spacing">
+        <TextView
+            android:id="@+id/roomName"
+            style="@style/TextViewNormal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_toStartOf="@+id/imgSelect"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_medium_size" />
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgSelect"
+            android:layout_width="@dimen/uniform_extra_spacing"
+            android:layout_height="@dimen/uniform_extra_spacing"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/ic_round_stroke"
+            app:srcCompat="@drawable/ic_tick" />
+        <ImageView
+            android:id="@+id/deiceIcon"
+            style="@style/TextViewNormal"
+            android:layout_width="@dimen/device_icon_size"
+            android:layout_height="@dimen/device_icon_size"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/deviceName"
+            style="@style/TextViewNormal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/deiceIcon"
+            android:maxLines="1"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/black"
+            android:ellipsize="end"
+            android:textSize="@dimen/text_medium_size" />
+
+        <TextView
+            android:id="@+id/deviceStatus"
+            style="@style/TextViewNormal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/deviceName"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_small_size" />
+
+        <TextView
+            android:id="@+id/error"
+            style="@style/TextViewNormal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/deviceName"
+            android:layout_centerHorizontal="true"
+            android:text="@string/no_response"
+            android:textColor="@color/Red"
+            android:textSize="@dimen/text_small_size"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

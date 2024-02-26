@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/ivClose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/uniform_extra_spacing"
+                android:src="@drawable/ic_close_black_24dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/uniform_spacing"
+                android:layout_toEndOf="@+id/ivClose"
+                android:fontFamily="@font/gilroy_bold"
+                android:padding="@dimen/uniform_extra_spacing"
+                android:text="@string/title_automation_selection"
+                android:textColor="@color/black_d_n"
+                android:textSize="@dimen/text_title_size" />
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/cardView">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/info_disable_enable_automation"
+            android:textColor="@color/black"
+            android:layout_marginTop="@dimen/elevation"
+            android:padding="@dimen/uniform_spacing"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/tvEmptyText"
+            android:textSize="@dimen/text_normal_size"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/elevation"
+            android:layout_marginLeft="@dimen/uniform_spacing"
+            android:layout_marginRight="@dimen/uniform_spacing"
+            android:padding="@dimen/uniform_spacing"
+            android:layout_below="@+id/tvEmptyText"
+            android:layout_above="@+id/tvSave" />
+
+        <TextView
+            android:id="@+id/tvSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/plus_size"
+            android:layout_marginEnd="@dimen/plus_size"
+            android:layout_marginBottom="@dimen/layout_padding"
+            android:background="@drawable/gradient_desin"
+            android:elevation="@dimen/uniform_spacing"
+            android:fontFamily="@font/gilroy_bold"
+            android:gravity="center"
+            android:padding="@dimen/uniform_extra_spacing"
+            android:text="@string/done"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_normal_size" />
+    </RelativeLayout>
+</RelativeLayout>

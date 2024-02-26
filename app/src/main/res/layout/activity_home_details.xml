@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.wozart.aura.ui.home.HomeDetailsActivity">
+
+    <include
+        android:id="@+id/top_layout"
+        layout="@layout/layout_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top_layout"
+        android:layout_marginTop="@dimen/uniform_spacing"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/input_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/uniform_extra_spacing"
+            android:layout_marginRight="@dimen/uniform_extra_spacing"
+            android:background="@drawable/curved_rectangle_bg"
+            android:hint="@string/text_my_home"
+            android:inputType="textCapSentences"
+            android:padding="@dimen/et_padding"
+            android:textColor="@color/black"
+            android:textColorHint="@color/hint"
+            android:visibility="visible" />
+
+
+        <TextView
+            android:id="@+id/text_home_static"
+            style="@style/TextViewMainHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/uniform_extra_spacing"
+            android:layout_marginTop="@dimen/uniform_extra_spacing"
+            android:layout_marginRight="@dimen/uniform_extra_spacing"
+            android:shadowColor="?attr/textShadowColor"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="2"
+            android:textColor="?attr/primaryTextColor"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/text_Location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/uniform_extra_spacing"
+            android:layout_marginTop="@dimen/uniform_spacing"
+            android:layout_marginRight="@dimen/uniform_extra_spacing"
+            android:padding="@dimen/uniform_half_spacing"
+            android:saveEnabled="false"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/set_location"
+                style="@style/TextViewSubHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/uniform_spacing"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="2"
+                android:text="@string/location"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/location_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/set_location"
+                android:layout_marginTop="@dimen/uniform_spacing"
+                android:background="@drawable/curved_rectangle_bg"
+                android:enabled="true"
+                android:hint="@string/location_hint"
+                android:onClick="setLocation"
+                android:padding="@dimen/uniform_spacing"
+                android:textColor="@color/black"
+                android:textColorHint="@color/hint" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/text_change_back"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/uniform_extra_spacing"
+            android:layout_marginTop="@dimen/uniform_spacing"
+            android:visibility="gone"
+            android:layout_marginRight="@dimen/uniform_extra_spacing"
+            android:padding="@dimen/uniform_half_spacing">
+
+            <TextView
+                android:id="@+id/text_pick"
+                style="@style/TextViewSubHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="2"
+                android:text="@string/text_pick_wallpaper"
+                android:textColor="@color/white" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/radio_background"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_add_wallpaper_home" />
+
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/wallpaper_grid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/uniform_spacing"
+            android:visibility="gone"
+            android:layout_marginBottom="@dimen/uniform_extra_spacing"
+            android:paddingHorizontal="@dimen/uniform_extra_spacing" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/btn_delete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_margin="@dimen/option_size"
+            android:background="@drawable/curved_rectangle_bg"
+            android:elevation="@dimen/uniform_half_spacing"
+            android:fontFamily="@font/gilroy_bold"
+            android:stateListAnimator="@null"
+            android:text="@string/text_delete"
+            android:textAllCaps="true"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/text_title_size"
+            android:textStyle="bold"
+            app:backgroundTint="@color/white" />
+
+    </LinearLayout>
+</RelativeLayout>

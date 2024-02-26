@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_screen_d_n"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/uniform_extra_spacing">
+
+    <RelativeLayout
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/uniform_extra_spacing"
+        android:paddingBottom="@dimen/uniform_extra_spacing">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/action_btn_padding"
+            android:src="@drawable/ic_back"
+            android:tint="@color/black_d_n" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/gilroy_bold"
+            android:gravity="center"
+            android:padding="6dp"
+            android:text="How to use"
+            android:textColor="@color/black_d_n"
+            android:textSize="@dimen/text_normal_size" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top_layout"
+        android:orientation="vertical"
+        android:theme="@style/AppTheme">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/aura_configure_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/elevation"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="@dimen/uniform_spacing"
+            app:cardElevation="@dimen/uniform_half_spacing">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:padding="@dimen/uniform_spacing">
+
+                <TextView
+                    android:id="@+id/aura_configure"
+                    style="@style/TextViewTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/uniform_half_spacing"
+                    android:text="@string/how_to_configure"
+                    android:textColor="@color/black" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="@dimen/uniform_spacing"
+                    android:src="@drawable/ic_keyboard_arrow_right_black_24dp" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/aura_create_home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/elevation"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="@dimen/uniform_spacing"
+            app:cardElevation="@dimen/uniform_half_spacing">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:padding="@dimen/uniform_spacing">
+
+                <TextView
+                    android:id="@+id/aura_home"
+                    style="@style/TextViewTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/uniform_half_spacing"
+                    android:text="Add Home"
+                    android:textColor="@color/black" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="@dimen/uniform_spacing"
+                    android:src="@drawable/ic_keyboard_arrow_right_black_24dp" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/aura_create_room"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/aura_create_home"
+            android:layout_margin="@dimen/elevation"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="@dimen/uniform_spacing"
+            app:cardElevation="@dimen/uniform_half_spacing">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:padding="@dimen/uniform_spacing">
+
+                <TextView
+                    android:id="@+id/aura_room"
+                    style="@style/TextViewTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/uniform_half_spacing"
+                    android:text="Add Room"
+                    android:textColor="@color/black" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="@dimen/uniform_spacing"
+                    android:src="@drawable/ic_keyboard_arrow_right_black_24dp" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/aura_create_scenes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/aura_create_room"
+            android:layout_margin="@dimen/elevation"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="@dimen/uniform_spacing"
+            app:cardElevation="@dimen/uniform_half_spacing">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:padding="@dimen/uniform_spacing">
+
+                <TextView
+                    android:id="@+id/aura_scenes"
+                    style="@style/TextViewTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/uniform_half_spacing"
+                    android:text="@string/how_to_scene"
+                    android:textColor="@color/black" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="@dimen/uniform_spacing"
+                    android:src="@drawable/ic_keyboard_arrow_right_black_24dp" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/aura_create_automation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/aura_create_scenes"
+            android:layout_margin="@dimen/elevation"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="@dimen/uniform_spacing"
+            app:cardElevation="@dimen/uniform_half_spacing">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:padding="@dimen/uniform_spacing">
+
+                <TextView
+                    android:id="@+id/aura_automation"
+                    style="@style/TextViewTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/uniform_half_spacing"
+                    android:text="@string/how_to_automation"
+                    android:textColor="@color/black" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="@dimen/uniform_spacing"
+                    android:src="@drawable/ic_keyboard_arrow_right_black_24dp" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/aura_invite_member"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/aura_create_automation"
+            android:layout_margin="@dimen/elevation"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="@dimen/uniform_spacing"
+            app:cardElevation="@dimen/uniform_half_spacing">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:padding="@dimen/uniform_spacing">
+
+                <TextView
+                    android:id="@+id/aura_invitation"
+                    style="@style/TextViewTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/uniform_half_spacing"
+                    android:text="@string/how_to_invite"
+                    android:textColor="@color/black" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="@dimen/uniform_spacing"
+                    android:src="@drawable/ic_keyboard_arrow_right_black_24dp" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</RelativeLayout>

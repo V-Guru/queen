@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background_screen_d_n"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/elevation">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/border_image"
+            android:layout_width="@dimen/statistics_load_border_width"
+            android:layout_height="@dimen/statistics_load_border_width"
+            android:layout_centerVertical="true">
+
+            <ImageView
+                android:id="@+id/IVdevice"
+                android:layout_width="@dimen/statistics_load_border_width"
+                android:layout_height="@dimen/statistics_load_border_width"
+                android:layout_centerInParent="true"
+                android:padding="@dimen/action_btn_padding" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/uniform_spacing"
+            android:layout_toEndOf="@+id/border_image">
+
+            <TextView
+                android:id="@+id/device_name"
+                style="@style/TextViewSubHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="device" />
+
+            <TextView
+                android:id="@+id/device_status"
+                style="@style/TextViewSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/device_name"
+                android:text="Connected"
+                android:textColor="@color/colorAccent" />
+        </RelativeLayout>
+        <ProgressBar
+            android:layout_width="@dimen/plus_size"
+            android:layout_height="@dimen/plus_size"
+            android:layout_alignParentEnd="true"
+            android:paddingEnd="@dimen/normal_margin"
+            android:id="@+id/loader"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutExtended"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/uniform_spacing"
+        android:background="@color/background_screen_d_n"
+        android:orientation="horizontal"
+        android:visibility="visible">
+        <LinearLayout
+            android:id="@+id/layoutDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="0.05"
+                app:srcCompat="@drawable/ic_move"
+                tools:ignore="NestedWeights" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="2"
+                android:text="@string/txt_move"
+                android:textColor="?attr/accentTextColor"
+                android:textSize="@dimen/text_small_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutConnect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="0.05"
+                android:rotation="90"
+                app:srcCompat="@drawable/ic_move"
+                tools:ignore="NestedWeights" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="2"
+                android:text="@string/switch_role"
+                android:textColor="?attr/accentTextColor"
+                android:textSize="@dimen/text_small_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutDelete"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/uniform_extra_spacing">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="0.05"
+                app:srcCompat="@drawable/ic_delete"
+                tools:ignore="NestedWeights" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="2"
+                android:text="@string/txt_delete"
+                android:textColor="?attr/accentTextColor"
+                android:textSize="@dimen/text_small_size" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_upgrade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_screen_d_n"
+        android:orientation="horizontal"
+        android:padding="@dimen/action_btn_padding"
+        android:visibility="visible">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:text="@string/upgrade_firmware"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/text_normal_size" />
+    </LinearLayout>
+
+</LinearLayout>

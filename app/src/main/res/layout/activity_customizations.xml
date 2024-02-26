@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_screen_d_n"
+    android:paddingHorizontal="@dimen/uniform_extra_spacing"
+    tools:context="com.wozart.aura.ui.dashboard.more.CustomizationActivity">
+
+    <RelativeLayout
+        android:id="@+id/layout_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:paddingTop="@dimen/uniform_extra_spacing"
+        android:paddingBottom="@dimen/uniform_extra_spacing">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="6dp"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/text_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/gilroy_bold"
+            android:gravity="center_horizontal"
+            android:padding="6dp"
+            android:text="@string/title_customization"
+            android:textSize="@dimen/text_normal_size" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/noDevicetv"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:gravity="center">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textSize="@dimen/twenty_two_sp"
+            android:textColor="@color/gray"
+            android:padding="@dimen/uniform_spacing"
+            android:fontFamily="@font/gilroy_bold"
+            android:includeFontPadding="false"
+            android:text="@string/customization_empty_devices" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:id="@+id/btnOpenWebsite"
+            android:clickable="true"
+            android:fontFamily="@font/radomir_tinkov_gilroy_light"
+            android:textSize="@dimen/text_normal_size"
+            android:padding="@dimen/one_dp"
+            android:elevation="@dimen/uniform_spacing"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_marginStart="@dimen/home_plus_size"
+            android:layout_marginEnd="@dimen/home_plus_size"
+            android:text="@string/buy_now"
+            />
+
+    </LinearLayout>
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/customization_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_header"
+        android:layout_marginTop="@dimen/normal_margin" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar_set"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="visible" />
+
+</RelativeLayout>

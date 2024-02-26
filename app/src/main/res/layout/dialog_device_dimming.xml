@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dialogue_drawable"
+    android:minWidth="@dimen/dialog_width"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/tvDialogTitle"
+        style="@style/TextViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/uniform_extra_spacing"
+        android:ellipsize="end"
+        android:maxLength="30"
+        android:text="@string/text_configure_dim" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iconDevice"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/uniform_spacing"
+        android:tint="@color/black"
+        app:srcCompat="@drawable/ic_bed_lamp_on_new" />
+
+    <com.wozart.aura.ui.customview.rangebar.RangeBar
+        android:id="@+id/rangeBarDim"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/rangebar_height"
+        android:layout_below="@+id/dimmable_layout"
+        android:layout_marginLeft="@dimen/uniform_extra_spacing"
+        android:layout_marginRight="@dimen/uniform_extra_spacing"
+        android:visibility="gone"
+        custom:barWeight="2dp"
+        custom:connectingLineColor="@color/secondairy_color"
+        custom:pinColor="@color/colorAccent"
+        custom:pinRadius="15dp"
+        custom:rangeBar="false"
+        custom:selectorColor="@color/colorAccent"
+        custom:tickColor="@color/secondairy_color"
+        custom:tickEnd="100"
+        custom:tickInterval="1"
+        custom:tickStart="0" />
+
+    <com.warkiz.widget.IndicatorSeekBar
+        android:id="@+id/sickbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dimmable_layout"
+        android:layout_marginLeft="@dimen/uniform_extra_spacing"
+        android:layout_marginTop="@dimen/sickbar_top_margin"
+        android:layout_marginRight="@dimen/uniform_extra_spacing"
+        app:isb_indicator_color="@color/colorAccent"
+        app:isb_indicator_stay="true"
+        app:isb_indicator_type="circular_bubble"
+        app:isb_max="100"
+        app:isb_min="0"
+        app:isb_progress="0"
+        app:isb_seek_bar_type="continuous_texts_ends"
+        app:isb_show_indicator="true"
+        app:isb_text_color="@color/colorAccent"
+        app:isb_thumb_color="@color/colorAccent"
+        app:isb_track_background_bar_color="@color/secondairy_color"
+        app:isb_track_background_bar_size="@dimen/sickbar_width"
+        app:isb_track_progress_bar_color="@color/colorAccent"
+        app:isb_track_progress_bar_size="@dimen/sickbar_width" />
+
+    <Button
+        android:id="@+id/btnDone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_margin="@dimen/uniform_extra_spacing"
+        android:layout_marginTop="@dimen/uniform_spacing"
+        android:layout_marginEnd="@dimen/uniform_extra_spacing"
+        android:layout_marginBottom="@dimen/uniform_extra_spacing"
+        android:background="@drawable/curved_rectangle_bg"
+        android:elevation="@dimen/uniform_half_spacing"
+        android:padding="@dimen/uniform_spacing"
+        android:text="@string/text_done"
+        android:textColor="@color/light_black"
+        android:textSize="@dimen/text_normal_size"
+        app:backgroundTint="@color/white_gray_item_load" />
+</LinearLayout>

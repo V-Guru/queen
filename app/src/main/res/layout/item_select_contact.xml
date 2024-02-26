@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/contact_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/normal_margin"
+        android:paddingBottom="@dimen/normal_margin">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_contact"
+            android:layout_width="@dimen/contact_logo"
+            android:layout_height="@dimen/contact_logo"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/normal_margin"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/img_contact">
+
+            <TextView
+                android:id="@+id/tv_contact_name"
+                style="@style/TextViewContactName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="Drona Sahoo"
+                android:textStyle="normal"
+                />
+
+            <TextView
+                android:id="@+id/tv_email"
+                style="@style/TextViewEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_contact_name"
+                android:text="drona.sahoo@gmail.com"
+
+                 />
+
+
+            <CheckBox
+                android:id="@+id/check_select_contact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</RelativeLayout>
